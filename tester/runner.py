@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import sys
 import importlib as il
 import os
@@ -45,7 +47,16 @@ class run:
 
         self.curr = self.i()
 
+        print(self.__dict__)
+
         #define functions
+        functions = []
         for k in self.__dict__:
             if not k.startswith('_') and not k == "excecute" and not k == "curr" and not k == "i":
-                self.curr = self.__dict__[k](self.curr)
+                functions.append(k)
+
+        print(functions)
+
+        #run functions
+        for j in functions:
+            self.curr = self.__dict__[j](self.curr)

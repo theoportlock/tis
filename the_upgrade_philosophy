@@ -13,18 +13,3 @@ low but increases with:
 
 # possibility of the upgrade to achieve that aim
 Humans generally achieve this aim. If the tool learns similarly to humans and surpasses their abilities, that trend should continue
-
-# parts of the system
-input
-	takes a bitarray datastream of the environment
-combinations
-	finds all combinations of active bits of an array
-actions
-	randomly activates bits in output array
-
-# runner
-look through the 2**n plane first to find functions
-look at current directory to find those function
-if the functions are found then:
-	look through the higher pairs/triples 
-	unpack 2d comb array to find order of functions and begin run of program

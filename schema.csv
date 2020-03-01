@@ -1,5 +1,0 @@
-source,target,weight
-bitarrin,addnewelement,      0.00
-addnewelement,splitter,      0.00
-splitter,combinations,      0.00
-combinations,bitarrin,      0.00

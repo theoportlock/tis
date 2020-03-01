@@ -1,0 +1,6 @@
+strict graph "" {
+	bitarrin -- addnewelement	[weight=0.0];
+	bitarrin -- combinations	[weight=0.0];
+	addnewelement -- splitter	[weight=0.0];
+	splitter -- combinations	[weight=0.0];
+}

@@ -1,10 +1,4 @@
 #!/usr/bin/env python
-import time
-print("comb start")
-time.sleep(2)
-print("comb done")
-
-'''
 import IO.binadder as binadder
 
 def a(arr):
@@ -18,4 +12,3 @@ def a(arr):
                 matches = 0
         out.append(matches)
     return out
-'''

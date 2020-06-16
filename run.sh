@@ -1,2 +1,1 @@
-#!/bin/bash
-python3 tester/main.py -f IO -s config.csv 
+python3 tester/main.py -s tester/schema.csv

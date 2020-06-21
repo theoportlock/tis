@@ -7,11 +7,8 @@ def a(input_array,memory_array):
             converted_input.append(2**i)
 
     for j in converted_input:
-        print(j)
-        print(input_array)
         if j & input_array == j:
-            print("true")
-            ind = "{:.10e}".format(j)
+            ind = "{:.50e}".format(j)
             memory_array[ind] = memory_array.get(ind, [j, 0.0])
             memory_array[ind][1] += 1
             memory_array[ind][0] = j

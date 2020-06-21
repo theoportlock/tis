@@ -1,3 +1,0 @@
-source,target,weight
-cd ../,python3 combinations.py,0
-python3 combinations.py,./run.sh,0

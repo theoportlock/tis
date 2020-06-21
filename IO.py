@@ -5,5 +5,5 @@ def file2arr(fil):
 
 def arr2file(arr,nam):
     import numpy as np
-    with open(nam,"w+") as of:
+    with open(nam,"w") as of:
         of.write(str(bin(arr))[2:-1])

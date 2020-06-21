@@ -10,6 +10,6 @@ def a(arr):
 
 if __name__ == "__main__":
     import IO
-    in_file = "input.bin"
-    out_file = "combinations.bin"
+    in_file = "input"
+    out_file = "combout"
     IO.arr2file(a(IO.file2arr(in_file)),out_file)

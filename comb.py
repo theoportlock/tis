@@ -14,6 +14,9 @@ def a(input_array,memory_array):
             memory_array[ind][0] = j
     print(memory_array)
     return memory_array
+'''
+array[array1 & array2 = array1]
+'''
 
 if __name__ == "__main__":
     import os.path

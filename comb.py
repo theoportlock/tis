@@ -3,10 +3,12 @@ def a(input_array,memory_array):
     '''Takes an array of binary digits and returns an array of all combinations of that array'''
     converted_input = []
     for i in range(input_array.bit_length()):
+        # conversion to see only the active bits in an array
         if 2**i & input_array == 2**i:
             converted_input.append(2**i)
 
     for j in converted_input:
+        # find the active combination and add one to the charge
         if j & input_array == j:
             ind = "{:.50e}".format(j)
             memory_array[ind] = memory_array.get(ind, [j, 0.0])

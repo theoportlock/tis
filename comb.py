@@ -7,7 +7,7 @@ def a(input_array,memory_array):
         if 2**i & input_array == 2**i:
             converted_input.append(2**i)
 
-    for j in converted_input:
+    for j,k in enumerate(converted_input):
         # find the active combination and add one to the charge
         if j & input_array == j:
             ind = "{:.50e}".format(j)

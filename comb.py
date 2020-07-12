@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
+from pprint import pprint
 def a(input_array,memory_array):
-    import numpy as np
     import powerset
     '''Takes an array of binary digits and returns an array of all combinations of that array'''
     converted_input = []
@@ -9,15 +9,14 @@ def a(input_array,memory_array):
         if 2**i & input_array == 2**i:
             converted_input.append(2**i)
 
-    converted_input_np = np.array(converted_input)
-    for j in powerset.a(converted_input_np):
+    for j in powerset.a(converted_input):
         k = sum(j)
         if k & input_array == k:
             ind = "{:.50e}".format(k)
             memory_array[ind] = memory_array.get(ind, [k, 0.0])
             memory_array[ind][1] += 1
             memory_array[ind][0] = k
-    print(memory_array)
+    pprint(memory_array)
     return memory_array
 
 '''

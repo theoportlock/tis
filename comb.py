@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-from pprint import pprint
 def a(input_array,memory_array):
     import powerset
     '''Takes an array of binary digits and returns an array of all combinations of that array'''
@@ -16,7 +15,12 @@ def a(input_array,memory_array):
             memory_array[ind] = memory_array.get(ind, [k, 0.0])
             memory_array[ind][1] += 1
             memory_array[ind][0] = k
-    pprint(memory_array)
+    #import pandas as pd
+    #import matplotlib.pyplot as plt
+    #df = pd.DataFrame(memory_array,index=["Loc","charge"]).transpose()
+    #print(df)
+    #df.plot.bar(x="Loc",y="charge")
+    #plt.show()
     return memory_array
 
 '''

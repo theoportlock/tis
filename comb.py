@@ -8,24 +8,16 @@ def a(input_array,memory_array):
         if 2**i & input_array == 2**i:
             converted_input.append(2**i)
 
+    out = 0
     for j in powerset.a(converted_input):
         k = sum(j)
         if k & input_array == k:
-            ind = "{:.50e}".format(k)
-            memory_array[ind] = memory_array.get(ind, [k, 0.0])
-            memory_array[ind][1] += 1
-            memory_array[ind][0] = k
-    #import pandas as pd
-    #import matplotlib.pyplot as plt
-    #df = pd.DataFrame(memory_array,index=["Loc","charge"]).transpose()
-    #print(df)
-    #df.plot.bar(x="Loc",y="charge")
-    #plt.show()
+            memory_array.add(k)
+            for l in memory_array:
+                if k & l == k and k != l and k != 0 and l != 0:
+                    out = out | (l-k)
+    print(bin(out))
     return memory_array
-
-'''
-array[array1 & array2 = array1]
-'''
 
 if __name__ == "__main__":
     import os.path
@@ -36,5 +28,6 @@ if __name__ == "__main__":
     out_file = "memout"
 
     if not os.path.isfile(out_file):
-        pickle.dump(dict(), open(out_file,"wb"))
+        pickle.dump(set(), open(out_file,"wb"))
+
     pickle.dump(a(IO.file2arr(in_file),pickle.load(open(out_file,"rb"))),open(out_file,"wb"))

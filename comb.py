@@ -14,7 +14,6 @@ def a(input_array,memory_array):
         return converted_input
 
     converted_input = convert(input_array)
-
     out = 0
     for j in powerset(converted_input):
         k = sum(j)

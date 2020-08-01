@@ -14,3 +14,7 @@ def set2file(setnam,filename):
     with open(filename,"w") as of:
         for i in setnam:
             of.write(str(bin(i))[:1:-1]+"\n")
+
+def text2arr(filename):
+    with open(filename) as tf:
+        return list(map(int,''.join(format(ord(x),'b') for x in tf.read ())))

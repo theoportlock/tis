@@ -60,14 +60,14 @@ Sources of data	documents/publication/chapters/bitarray_datastreams/bitarray_dat
 Summary	documents/publication/chapters/action/action.tex	/^\\section{The random-pianist method}$/;"	s
 Summary	documents/publication/chapters/memory/memory.tex	/^\\section{Transfer and Storage}$/;"	s
 Tandem data input	documents/publication/chapters/bitarray_datastreams/bitarray_datastreams.tex	/^\\section{Binary conversion}$/;"	s
+TestIO	test_IO.py	/^class TestIO(unittest.TestCase):$/;"	c
 The aims of the upgrade	documents/publication/chapters/introduction/introduction.tex	/^AXIOM PCA PLOT$/;"	s
 The combination problem of scale	documents/publication/chapters/combinations/combinations.tex	/^\\subsection{Classical combinatorics}$/;"	u
 The combinations array	documents/publication/chapters/combinations/combinations.tex	/^PREVIOUSLY ATTEMPTED SOLUTIONS IN DEEP LEARNING, THE HUMAN BRAIN, AND FOLDER MANAGEMENT$/;"	s
 The random-pianist method	documents/publication/chapters/action/action.tex	/^\\section{Chapter introduction}$/;"	s
 Time resolution	documents/publication/chapters/bitarray_datastreams/bitarray_datastreams.tex	/^\\section{Tandem data input}$/;"	s
 Transfer and Storage	documents/publication/chapters/memory/memory.tex	/^\\section{Delay function}$/;"	s
-a	comb.py	/^def a(input_array,memory_array):$/;"	f
-arr2file	IO.py	/^def arr2file(arr,nam):$/;"	f
+arr2file	IO.py	/^def arr2file(arr,filename):$/;"	f
 chapters  action  action	documents/publication/the_upgrade.tex	/^\\include{chapters\/memory\/memory}$/;"	i
 chapters  appendix  appendix	documents/publication/the_upgrade.tex	/^\\chapter{Acknowledgements}$/;"	i
 chapters  bitarray_datastreams  bitarray_datastreams	documents/publication/the_upgrade.tex	/^\\include{chapters\/introduction\/introduction}$/;"	i
@@ -76,6 +76,11 @@ chapters  conclusion  conclusion	documents/publication/the_upgrade.tex	/^\\inclu
 chapters  introduction  introduction	documents/publication/the_upgrade.tex	/^\\mainmatter$/;"	i
 chapters  memory  memory	documents/publication/the_upgrade.tex	/^\\include{chapters\/combinations\/combinations}$/;"	i
 chapters  running_the_upgrade  running_the_upgrade	documents/publication/the_upgrade.tex	/^\\include{chapters\/action\/action}$/;"	i
-convert	comb.py	/^    def convert(arr):$/;"	f	function:a
-file2arr	IO.py	/^def file2arr(fil):$/;"	f
-powerset	comb.py	/^    def powerset(items):$/;"	f	function:a
+comb	comb.py	/^def comb(input_array,memory_array):$/;"	f
+convert	comb.py	/^    def convert(arr):$/;"	f	function:comb
+file2arr	IO.py	/^def file2arr(filename):$/;"	f
+file2set	IO.py	/^def file2set(filename):$/;"	f
+powerset	comb.py	/^    def powerset(items):$/;"	f	function:comb
+set2file	IO.py	/^def set2file(setnam,filename):$/;"	f
+test_file2set	test_IO.py	/^    def test_file2set(self):$/;"	m	class:TestIO
+test_set2file	test_IO.py	/^    def test_set2file(self):$/;"	m	class:TestIO

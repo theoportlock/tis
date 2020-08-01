@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-def a(input_array,memory_array):
+def comb(input_array,memory_array):
     '''Takes an array of binary digits and returns an array of all combinations of that array'''
     from itertools import compress, product
     def powerset(items):
@@ -34,17 +34,14 @@ def a(input_array,memory_array):
 
 if __name__ == "__main__":
     import os.path
-    import pickle
     import IO
 
     in_file = "input"
-    out_file = "memout"
+    memory_file = "memout"
 
     # Create memout if one doesn't exist
-    if not os.path.isfile(out_file):
-        pickle.dump(set(), open(out_file,"wb"))
+    if not os.path.isfile(memory_file):
+        IO.set2file(set(), memory_file)
 
     # Run and save
-    pickle.dump(
-            a(IO.file2arr(in_file), pickle.load(open(out_file,"rb"))),
-            open(out_file,"wb"))
+    IO.set2file(comb(IO.file2arr(in_file), IO.file2set(memory_file)), memory_file)

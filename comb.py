@@ -21,7 +21,7 @@ def comb(input_array, memory_array):
         if k & input_array == k:
             memory_array.add(k)
             for l in memory_array:
-                if k & l == k and k != l and k != 0 and l != 0:
+                if k & l == k:
                     out |= (l - k)
                     print("k = ", bin(k))
                     print("l = ", bin(l))

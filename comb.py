@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 def comb(input_array, memory_array):
     '''Takes an array of binary digits and returns an array of all combinations of that array'''
+
     from itertools import compress, product
     def powerset(items):
         # finds all combinations of list elements
@@ -14,10 +15,8 @@ def comb(input_array, memory_array):
                 converted_input.append(2**i)
         return converted_input
 
-    converted_input = convert(input_array)
     out = 0
-    print(powerset(converted_input))
-    for j in powerset(converted_input):
+    for j in powerset(convert(input_array):
         k = sum(j)
         if k & input_array == k:
             memory_array.add(k)
@@ -29,8 +28,8 @@ def comb(input_array, memory_array):
                     print("l-k=", bin(l-k))
                     print("out=", bin(out))
 
-    print("inp=", bin(input_array))
     out -= (out & input_array)
+    print("inp=", bin(input_array))
     print("pred", bin(out))
     return memory_array, out
 

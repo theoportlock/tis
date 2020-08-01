@@ -1,0 +1,81 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+AI saftey and responsibility	documents/proposal/proposal.tex	/^NUMENTA \\cite{numentahome}, ALPHA GO, ETC$/;"	u
+AI saftey and responsibility	documents/publication/chapters/introduction/introduction.tex	/^NUMENTA \\cite{numentahome}, ALPHA GO, ETC$/;"	s
+Abstract	documents/publication/the_upgrade.tex	/^\\maketitle$/;"	c
+Acknowledgements	documents/publication/the_upgrade.tex	/^\\bibliography{library}$/;"	c
+Action	documents/publication/chapters/action/action.tex	/^\\chapter{Action}$/;"	c
+Action	documents/publication/chapters/introduction/introduction.tex	/^In this chapter, a method to persist the activation of  elements of the combinatoric matrix is proposed.$/;"	b
+Appendix	documents/publication/chapters/appendix/appendix.tex	/^\\chapter{Appendix}$/;"	c
+Bibliography	documents/proposal/proposal.tex	/^\\section*{Significance of research}$/;"	s
+Binary conversion	documents/publication/chapters/bitarray_datastreams/bitarray_datastreams.tex	/^\\section{Sources of data}$/;"	s
+Bitarray datastreams	documents/publication/chapters/bitarray_datastreams/bitarray_datastreams.tex	/^\\chapter{Bitarray datastreams}$/;"	c
+Bitarray datastreams	documents/publication/chapters/introduction/introduction.tex	/^In this chapter, an explaination and justification of software for The Upgrade is given$/;"	b
+Chapter breakdown	documents/publication/chapters/introduction/introduction.tex	/^JUSTIFY THE WRITING OF THIS MANUAL $/;"	s
+Chapter introduction	documents/publication/chapters/action/action.tex	/^\\chapter{Action}$/;"	s
+Chapter introduction	documents/publication/chapters/appendix/appendix.tex	/^\\chapter{Appendix}$/;"	s
+Chapter introduction	documents/publication/chapters/bitarray_datastreams/bitarray_datastreams.tex	/^\\chapter{Bitarray datastreams}$/;"	s
+Chapter introduction	documents/publication/chapters/combinations/combinations.tex	/^\\chapter{Combinations}$/;"	s
+Chapter introduction	documents/publication/chapters/conclusion/conclusion.tex	/^\\chapter{Conclusion}$/;"	s
+Chapter introduction	documents/publication/chapters/memory/memory.tex	/^\\chapter{Memory}$/;"	s
+Chapter introduction	documents/publication/chapters/running_the_upgrade/2-running_the_upgrade.tex	/^\\chapter{Running The Upgrade}$/;"	s
+Chapter summary	documents/publication/chapters/combinations/combinations.tex	/^PROBABILITIES OF PROBABILITIES$/;"	s
+Classical combinatorics	documents/publication/chapters/combinations/combinations.tex	/^\\section{Chapter introduction}$/;"	u
+Combinations	documents/publication/chapters/combinations/combinations.tex	/^\\chapter{Combinations}$/;"	c
+Combinations	documents/publication/chapters/introduction/introduction.tex	/^In this chapter, the conversion of external data to a stream of binary data is discussed.$/;"	b
+Combinations of combinations	documents/publication/chapters/combinations/combinations.tex	/^SKEW ADJUSTMENT$/;"	u
+Conclusion	documents/publication/chapters/conclusion/conclusion.tex	/^\\chapter{Conclusion}$/;"	c
+Core principles	documents/proposal/proposal.tex	/^\\section*{Project aims}$/;"	u
+Core principles	documents/publication/chapters/introduction/introduction.tex	/^\\section{The aims of the upgrade}$/;"	u
+Delay function	documents/publication/chapters/memory/memory.tex	/^\\section{Persistance of activation}$/;"	s
+How morality changes over time	documents/publication/chapters/introduction/introduction.tex	/^Morality is the set of priciples derived by humans that distinguish between right and wrong actions. An action is concidered moraly virtuous (good) if its consequences increase the probability of achieving a desired end. These ends vary between individuals. As it is with the legal system, an estimation of common "good" is essential for the arbritration of an action. Having a consensus of shared values permits also the use of the golden rule; the principle of treating others as you want to be treated, the basis of which forms the idea of justice. The search for this consensus is done at a personal scale during adolesence, or at a collective scale when we vote, complete polls, or protest.$/;"	u
+How the upgrade aligns with current moral beliefs	documents/proposal/proposal.tex	/^\\subsection*{Core principles}$/;"	u
+How the upgrade aligns with current moral beliefs	documents/publication/chapters/introduction/introduction.tex	/^\\subsection{Core principles}$/;"	u
+Introduction	documents/proposal/proposal.tex	/^\\newpage$/;"	s
+Introduction	documents/publication/chapters/introduction/introduction.tex	/^\\chapter{Introduction}$/;"	c
+Majority moral opinion	documents/proposal/proposal.tex	/^\\section*{Introduction}$/;"	u
+Majority moral opinion	documents/publication/chapters/introduction/introduction.tex	/^\\section{Moral systems}$/;"	u
+Memory	documents/publication/chapters/introduction/introduction.tex	/^In this chapter, implementation and benefits of conversion of the bitarray datastream into a combinatoric matrix are discussed.$/;"	b
+Memory	documents/publication/chapters/memory/memory.tex	/^\\chapter{Memory}$/;"	c
+Methods	documents/proposal/proposal.tex	/^JUSTIFY THE WRITING OF THIS MANUAL $/;"	s
+Methods	documents/recruitment/recruitment.tex	/^The aim of this study is to create a tool that will make more moral choices than those made by a human. $/;"	s
+Moral systems	documents/publication/chapters/introduction/introduction.tex	/^\\chapter{Introduction}$/;"	s
+Persistance of activation	documents/publication/chapters/memory/memory.tex	/^\\section{Chapter introduction}$/;"	s
+Previous attempts to achieve these ends	documents/proposal/proposal.tex	/^\\subsection*{How the upgrade aligns with current moral beliefs}$/;"	u
+Previous attempts to achieve these ends	documents/publication/chapters/introduction/introduction.tex	/^\\subsection{How the upgrade aligns with current moral beliefs}$/;"	u
+Probability of The Upgrade to succeed	documents/proposal/proposal.tex	/^AN APPEAL TO THE UPGRADE FOR ALIGNING WITH THE PREFERENCES OF PEOPLES MORAL SYSTEMS$/;"	u
+Probability of The Upgrade to succeed	documents/publication/chapters/introduction/introduction.tex	/^AN APPEAL TO THE UPGRADE FOR ALIGNING WITH THE PREFERENCES OF PEOPLES MORAL SYSTEMS$/;"	s
+Project aims	documents/proposal/proposal.tex	/^Morality is the set of priciples that distinguish between right and wrong actions. An action is concidered "good" if its consequences increase the probability of achieving a desired end. These ends vary between individuals. As it is with the legal system, an estimation of common "good" is essential for the arbritration of an action. The search for this consensus is done at a personal or a collective scale when we vote, poll, or protest. The ability to change a moral system comes only from identifying inconsitencies within it. As a consequence, shared values are refined over time. $/;"	s
+Project aims	documents/recruitment/recruitment.tex	/^In our lives, we try to make decisions that increase the possiblity of a moral outcome. As humans, we are imperfect moral agents restrained by the shackles of our biology.  As it is with the legal system, an estimation of common "good" is essential for the arbritration of an action. The search for this consensus is done at a personal or a collective scale when we vote, poll, or protest. Any Artificial General Intelligent (AGI) system should adhere to the consensus morality of the time which it exists. Current attempts have fallen short at achieving these aims and resulted in hyperspecific reward seeking behaviour.$/;"	s
+Running The Upgrade	documents/publication/chapters/introduction/introduction.tex	/^\\section{Chapter breakdown}$/;"	b
+Running The Upgrade	documents/publication/chapters/running_the_upgrade/2-running_the_upgrade.tex	/^\\chapter{Running The Upgrade}$/;"	c
+Significance of research	documents/proposal/proposal.tex	/^\\section*{Methods}$/;"	s
+Significance of research	documents/recruitment/recruitment.tex	/^Separate from traditional neural network architectures, Hirachical Temporal Memory (HTM) is a technique developed by Numenta that more closely resembles the connections between axons in the brain. In this study, the guiding principles of HTM combined with a novel system for self validation will be designed to evaluate \\emph{ab initio} learning of a new machine learning model. Python will be used principally for development, testing, and validation.$/;"	s
+Slicing the combinations array	documents/publication/chapters/combinations/combinations.tex	/^\\section{The combinations array}$/;"	s
+Sources of data	documents/publication/chapters/bitarray_datastreams/bitarray_datastreams.tex	/^\\section{Chapter introduction}$/;"	s
+Summary	documents/publication/chapters/action/action.tex	/^\\section{The random-pianist method}$/;"	s
+Summary	documents/publication/chapters/memory/memory.tex	/^\\section{Transfer and Storage}$/;"	s
+Tandem data input	documents/publication/chapters/bitarray_datastreams/bitarray_datastreams.tex	/^\\section{Binary conversion}$/;"	s
+The aims of the upgrade	documents/publication/chapters/introduction/introduction.tex	/^AXIOM PCA PLOT$/;"	s
+The combination problem of scale	documents/publication/chapters/combinations/combinations.tex	/^\\subsection{Classical combinatorics}$/;"	u
+The combinations array	documents/publication/chapters/combinations/combinations.tex	/^PREVIOUSLY ATTEMPTED SOLUTIONS IN DEEP LEARNING, THE HUMAN BRAIN, AND FOLDER MANAGEMENT$/;"	s
+The random-pianist method	documents/publication/chapters/action/action.tex	/^\\section{Chapter introduction}$/;"	s
+Time resolution	documents/publication/chapters/bitarray_datastreams/bitarray_datastreams.tex	/^\\section{Tandem data input}$/;"	s
+Transfer and Storage	documents/publication/chapters/memory/memory.tex	/^\\section{Delay function}$/;"	s
+a	comb.py	/^def a(input_array,memory_array):$/;"	f
+arr2file	IO.py	/^def arr2file(arr,nam):$/;"	f
+chapters  action  action	documents/publication/the_upgrade.tex	/^\\include{chapters\/memory\/memory}$/;"	i
+chapters  appendix  appendix	documents/publication/the_upgrade.tex	/^\\chapter{Acknowledgements}$/;"	i
+chapters  bitarray_datastreams  bitarray_datastreams	documents/publication/the_upgrade.tex	/^\\include{chapters\/introduction\/introduction}$/;"	i
+chapters  combinations  combinations	documents/publication/the_upgrade.tex	/^\\include{chapters\/bitarray_datastreams\/bitarray_datastreams}$/;"	i
+chapters  conclusion  conclusion	documents/publication/the_upgrade.tex	/^\\include{chapters\/running_the_upgrade\/running_the_upgrade}$/;"	i
+chapters  introduction  introduction	documents/publication/the_upgrade.tex	/^\\mainmatter$/;"	i
+chapters  memory  memory	documents/publication/the_upgrade.tex	/^\\include{chapters\/combinations\/combinations}$/;"	i
+chapters  running_the_upgrade  running_the_upgrade	documents/publication/the_upgrade.tex	/^\\include{chapters\/action\/action}$/;"	i
+convert	comb.py	/^    def convert(arr):$/;"	f	function:a
+file2arr	IO.py	/^def file2arr(fil):$/;"	f
+powerset	comb.py	/^    def powerset(items):$/;"	f	function:a

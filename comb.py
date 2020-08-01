@@ -22,9 +22,14 @@ def a(input_array,memory_array):
             memory_array.add(k)
             for l in memory_array:
                 if k & l == k and k != l and k != 0 and l != 0:
-                    out = out | (l-k)
-    print(bin(out))
-    IO.arr2file(out,"input")
+                    out |= l - k
+                    print("k = ",bin(k))
+                    print("l = ",bin(l))
+                    print("l-k=",bin(l-k))
+                    print("out = ",bin(out))
+
+    print("final = ",bin(out))
+    #IO.arr2file(out,"input")
     return memory_array
 
 if __name__ == "__main__":

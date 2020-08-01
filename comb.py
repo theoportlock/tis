@@ -4,7 +4,7 @@ def comb(input_array, memory_array):
     from itertools import compress, product
     def powerset(items):
         # finds all combinations of list elements
-        return(set(compress(items, mask)) for mask in product(*[[0,1]]*len(items)))
+        return list(set(compress(items, mask)) for mask in product(*[[0,1]]*len(items)))[1:]
 
     def convert(arr):
         # conversion to see only the active bits
@@ -16,6 +16,7 @@ def comb(input_array, memory_array):
 
     converted_input = convert(input_array)
     out = 0
+    print(powerset(converted_input))
     for j in powerset(converted_input):
         k = sum(j)
         if k & input_array == k:
@@ -28,7 +29,6 @@ def comb(input_array, memory_array):
                     print("l-k=", bin(l-k))
                     print("out=", bin(out))
 
-    print("out=", bin(out))
     print("inp=", bin(input_array))
     out -= (out & input_array)
     print("pred", bin(out))

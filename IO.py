@@ -25,21 +25,15 @@ def set2file(setnam,filename):
         for i in setnam:
             of.write(str(bin(i))[:1:-1]+"\n")
 
-def text2arr(filename):
+def text2int(filename):
     # opens textfile as one integer
-    with open(filename) as tf:
-        return sum(list(map(int,''.join(format(ord(x),'b') for x in tf.read()))))
+    with open(filename, "rb") as tf:
+        #return sum(list(map(int,''.join(format(ord(x),'b') for x in tf.read()))))
+        return int.from_bytes(tf.read(), byteorder="little")
 
-def powerset(items):
-    # finds all combinations of list elements
-    from itertools import compress, product
-    return list(set(compress(items, mask)) for mask in product(*[[0,1]]*len(items)))[1:]
-
-def convert(arr):
-    # conversion to see only the active bits
-    converted_input = []
-    for i in range(arr.bit_length()):
-        if 2**i & arr == 2**i:
-            converted_input.append(2**i)
-    return converted_input
+def int2text(arr, filename):
+    # saves the integer as a text to file
+    with open(filename, "wb") as tf:
+        #print(bytearray(arr))
+        tf.write(arr.to_bytes((arr.bit_length() + 7) // 8, 'little') or b'\0')
 

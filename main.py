@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 import IO
+import functions as f
+import sys
 
-def a(input_int):
+def comb(input_int):
     '''Takes an array of binary digits and returns an array of all combinations of that array'''
 
     # Create memory if one doesn't exist and load
@@ -9,7 +11,7 @@ def a(input_int):
 
     # Finds all combinations of active bits in an integer
     predict = 0
-    for j in IO.powerset(IO.convert(input_int)):
+    for j in f.powerset(f.convert(input_int)):
         k = sum(j)
         if k & input_int == k:
             memory_array.add(k)
@@ -28,7 +30,10 @@ def a(input_int):
     print("pred", bin(predict)[:1:-1])
 
     IO.set2file(memory_array, "memory")
-    IO.int2file(predict, "predict")
+    IO.int2text(predict, "predict")
 
 if __name__ == "__main__":
-    a(IO.file2int("input"))
+    if len(sys.argv) == 2:
+        comb(IO.text2int(sys.argv[1]))
+    else:
+        comb(IO.text2int("input"))

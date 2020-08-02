@@ -1,9 +1,9 @@
 import unittest
 import IO
-import comb
+import main
 
 class TestComb(unittest.TestCase):
-    def test_comb(self):
+    def test_abcd(self):
         data = ["10001000011", #ABCD
                 "10001010001", #ABXD
                 "10000000000", #A
@@ -14,4 +14,6 @@ class TestComb(unittest.TestCase):
         for i in data:
             with open("input", 'w') as of:
                 of.write(i)
-            comb.a(IO.file2int("input"))
+            main.comb(IO.file2int("input"))
+
+    #def test_text(self):

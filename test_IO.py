@@ -15,7 +15,27 @@ class TestIO(unittest.TestCase):
         if os.path.isfile(f):
             os.remove(f)
 
-    def test_text2arr(self):
-        result = IO.text2arr("README.md")
-        print("README is = ", result)
-        assert type(result) == int
+    def test_text2int(self):
+        f1 = "testfile1"
+        f2 = "testfile2"
+        if os.path.isfile(f1):
+            os.remove(f1)
+        if os.path.isfile(f2):
+            os.remove(f2)
+
+        with open(f1,"w") as of:
+            of.write("test")
+
+        result1 = IO.text2int(f1)
+        assert type(result1) == int
+        print("result1 = ", result1)
+
+        IO.int2text(result1, f2)
+        result2 = IO.text2int(f2)
+        print("result2 = ", result2)
+        assert result1 == result2
+
+        if os.path.isfile(f1):
+            os.remove(f1)
+        if os.path.isfile(f2):
+            os.remove(f2)

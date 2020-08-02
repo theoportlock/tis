@@ -28,12 +28,11 @@ def set2file(setnam,filename):
 def text2int(filename):
     # opens textfile as one integer
     with open(filename, "rb") as tf:
-        #return sum(list(map(int,''.join(format(ord(x),'b') for x in tf.read()))))
-        return int.from_bytes(tf.read(), byteorder="little")
+        return int.from_bytes(tf.read(), byteorder="big")
 
 def int2text(arr, filename):
     # saves the integer as a text to file
     with open(filename, "wb") as tf:
         #print(bytearray(arr))
-        tf.write(arr.to_bytes((arr.bit_length() + 7) // 8, 'little') or b'\0')
+        tf.write(arr.to_bytes((arr.bit_length() + 7) // 8, 'big') or b'\0')
 

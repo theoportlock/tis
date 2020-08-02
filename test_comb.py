@@ -1,9 +1,14 @@
 import unittest
+import os
 import IO
 import main
 
 class TestComb(unittest.TestCase):
     def test_abcd(self):
+        # Tests ability to recognise binary sequences
+        f = "memory"
+        if os.path.isfile(f):
+            os.remove(f)
         data = ["10001000011", #ABCD
                 "10001010001", #ABXD
                 "10000000000", #A
@@ -16,4 +21,17 @@ class TestComb(unittest.TestCase):
                 of.write(i)
             main.comb(IO.file2int("input"))
 
-    #def test_text(self):
+    def test_text(self):
+        # same as test_abcd but with text
+        f = "memory"
+        if os.path.isfile(f):
+            os.remove(f)
+        data = ["abc",
+                "ab",
+                "a",]
+        for i in data:
+            with open("input", 'w') as of:
+                of.write(i)
+            main.comb(IO.text2int("input"))
+            with open("predict", "r") as of:
+                print(i, " predicts ", of.read())

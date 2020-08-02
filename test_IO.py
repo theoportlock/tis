@@ -1,15 +1,21 @@
 import unittest
+import os
 import IO
 
 class TestIO(unittest.TestCase):
-    def test_set2file(self):
+    def test_setfileio(self):
+        f = "testfile"
+        if os.path.isfile(f):
+            os.remove(f)
         testset = set([1,2,3,4,5,6,7,8])
-        outfile = "outputfile"
-        print(testset)
-        print(outfile)
-        IO.set2file(testset,outfile)
+        IO.set2file(testset,f)
+        assert os.path.exists(f) == True
+        result = IO.file2set(f)
+        assert result == testset
+        if os.path.isfile(f):
+            os.remove(f)
 
-    def test_file2set(self):
-        outfile = "outputfile"
-        print("output file is read as ",IO.file2set(outfile))
-        assert type(IO.file2set(outfile)) == set
+    def test_text2arr(self):
+        result = IO.text2arr("README.md")
+        print("README is = ", result)
+        assert type(result) == int

@@ -1,51 +1,34 @@
 #!/usr/bin/env python3
-def comb(input_array, memory_array):
+import IO
+
+def a(input_int):
     '''Takes an array of binary digits and returns an array of all combinations of that array'''
 
-    from itertools import compress, product
-    def powerset(items):
-        # finds all combinations of list elements
-        return list(set(compress(items, mask)) for mask in product(*[[0,1]]*len(items)))[1:]
+    # Create memory if one doesn't exist and load
+    memory_array = IO.mem2set()
 
-    def convert(arr):
-        # conversion to see only the active bits
-        converted_input = []
-        for i in range(input_array.bit_length()):
-            if 2**i & input_array == 2**i:
-                converted_input.append(2**i)
-        return converted_input
-
-    out = 0
-    for j in powerset(convert(input_array):
+    # Finds all combinations of active bits in an integer
+    predict = 0
+    for j in IO.powerset(IO.convert(input_int)):
         k = sum(j)
-        if k & input_array == k:
+        if k & input_int == k:
             memory_array.add(k)
             for l in memory_array:
                 if k & l == k:
-                    out |= (l - k)
-                    print("k = ", bin(k))
-                    print("l = ", bin(l))
-                    print("l-k=", bin(l-k))
-                    print("out=", bin(out))
+                    predict |= (l - k)
+                    '''
+                    print("k = ", bin(k)[:1:-1])
+                    print("l = ", bin(l)[:1:-1])
+                    print("l-k=", bin(l-k)[:1:-1])
+                    print("out=", bin(predict)[:1:-1])
+                    '''
 
-    out -= (out & input_array)
-    print("inp=", bin(input_array))
-    print("pred", bin(out))
-    return memory_array, out
+    predict -= (predict & input_int)
+    print("inp=", bin(input_int)[:1:-1])
+    print("pred", bin(predict)[:1:-1])
+
+    IO.set2file(memory_array, "memory")
+    IO.int2file(predict, "predict")
 
 if __name__ == "__main__":
-    import os.path
-    import IO
-
-    in_file = "input"
-    memory_file = "memout"
-    prediction_file = "prediction_file"
-
-    # Create memout if one doesn't exist
-    if not os.path.isfile(memory_file):
-        IO.set2file(set(), memory_file)
-
-    # Run and save
-    output = comb(IO.file2arr(in_file), IO.file2set(memory_file))
-    IO.set2file(output[0], memory_file)
-    IO.arr2file(output[1], prediction_file)
+    a(IO.file2int("input"))

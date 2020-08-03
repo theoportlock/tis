@@ -28,8 +28,15 @@ class TestComb(unittest.TestCase):
             os.remove(f)
         data = ["abc",
                 "ab",
-                "a",]
+                "b",
+                "bc",
+                "ac",
+                "abc",
+                "b",
+                "a"]
         for i in data:
+            if os.path.isfile("predict"):
+                os.remove("predict")
             with open("input", 'w') as of:
                 of.write(i)
             main.comb(IO.text2int("input"))

@@ -26,8 +26,8 @@ def comb(input_int):
                     '''
 
     predict -= (predict & input_int)
-    print("inp=", bin(input_int)[:1:-1])
-    print("pred", bin(predict)[:1:-1])
+    print("inp=", bin(input_int)[2:])
+    print("pred", bin(predict)[2:])
 
     IO.set2file(memory_array, "memory")
     IO.int2text(predict, "predict")

@@ -3,7 +3,6 @@ import IO
 import functions as f
 import sys
 
-
 def comb(input_int):
     ''' Takes an integer, converts to binary, finds predicted bits based on a
     memory file, then updates a "memory" and "predict" file

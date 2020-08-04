@@ -10,3 +10,17 @@ def convert(arr):
         if 2**i & arr == 2**i:
             converted_input.append(2**i)
     return converted_input
+
+def basechanger(integer_list, prevbase, newbase):
+    ''' make a list of integers based on a decimal
+    '''
+
+    # for i in integer_list:
+    # UNFINISHED
+
+    dec = str(integer)
+    output = []
+    for position, digit in enumerate(dec[::-1]):
+        int(digit) * prevbase * position
+        #output.append(int(digit) * (10 * position / base))
+    return output

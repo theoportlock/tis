@@ -3,7 +3,7 @@ import os
 import IO
 import main
 
-class TestComb(unittest.TestCase):
+class TestMain(unittest.TestCase):
     def test_abcd(self):
         # Tests ability to recognise binary sequences
         f = "memory"
@@ -34,11 +34,38 @@ class TestComb(unittest.TestCase):
                 "abc",
                 "b",
                 "a"]
-        for i in data:
+        for i in data[1:]:
+            # cleanup prediction and memory
             if os.path.isfile("predict"):
                 os.remove("predict")
+            if os.path.isfile("memory"):
+                os.remove("memory")
+
+            # remember abc
+            with open("input", 'w') as of:
+                of.write(data[0])
+            main.comb(IO.text2int("input"))
+
+            # run prediction
             with open("input", 'w') as of:
                 of.write(i)
             main.comb(IO.text2int("input"))
             with open("predict", "r") as of:
                 print(i, " predicts ", of.read())
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+0000000100000000100000100001
+0000000100000000000000000000 = -3
+0000000100000000100000000000 = -2

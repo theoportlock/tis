@@ -7,12 +7,11 @@ def comb(input_int):
     ''' Takes an integer, converts to binary, finds predicted bits based on a
     memory file, then updates a "memory" and "predict" file
     '''
-
     # create memory if one doesn't exist and load
     memory_list = IO.mem2set()
 
-    predict_int = 0
     # finds all combinations of active bits in an integer
+    predict_int = 0
     for comb_list in f.powerset(f.convert(input_int)):
         comb_int = sum(comb_list)
         memory_list.add(comb_int)
@@ -27,11 +26,8 @@ def comb(input_int):
                 print("out=       ", bin(predict_int)[:1:-1])
                 '''
     # for difference:  predict_int -= (predict_int & input_int)
-    '''
     print("inp=", bin(input_int)[2:])
     print("pred", bin(predict_int)[2:])
-    '''
-
     # save the prediction and memory
     IO.set2file(memory_list, "memory")
     IO.int2text(predict_int, "predict")

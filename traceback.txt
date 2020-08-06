@@ -1,0 +1,45 @@
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/pudb/__init__.py", line 153, in runscript
+    dbg._runscript(mainpyfile)
+  File "/usr/lib/python3.8/site-packages/pudb/debugger.py", line 468, in _runscript
+    self.run(statement)
+  File "/usr/lib/python3.8/bdb.py", line 580, in run
+    exec(cmd, globals, locals)
+  File "<string>", line 1, in <module>
+  File "test_functions.py", line 1, in <module>
+    import unittest
+  File "test_functions.py", line 1, in <module>
+    import unittest
+  File "/usr/lib/python3.8/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib/python3.8/site-packages/pudb/debugger.py", line 189, in dispatch_line
+    self.user_line(frame)
+  File "/usr/lib/python3.8/site-packages/pudb/debugger.py", line 410, in user_line
+    self.interaction(frame)
+  File "/usr/lib/python3.8/site-packages/pudb/debugger.py", line 377, in interaction
+    self.ui.call_with_ui(self.ui.interaction, exc_tuple,
+  File "/usr/lib/python3.8/site-packages/pudb/debugger.py", line 2191, in call_with_ui
+    return f(*args, **kwargs)
+  File "/usr/lib/python3.8/site-packages/pudb/debugger.py", line 2452, in interaction
+    self.event_loop()
+  File "/usr/lib/python3.8/site-packages/pudb/debugger.py", line 2418, in event_loop
+    toplevel.keypress(self.size, k)
+  File "/usr/lib/python3.8/site-packages/pudb/ui_tools.py", line 108, in keypress
+    result = self._w.keypress(size, key)
+  File "/usr/lib/python3.8/site-packages/urwid/container.py", line 1135, in keypress
+    return self.body.keypress( (maxcol, remaining), key )
+  File "/usr/lib/python3.8/site-packages/urwid/container.py", line 2316, in keypress
+    key = w.keypress((mc,) + size[1:], key)
+  File "/usr/lib/python3.8/site-packages/urwid/container.py", line 1626, in keypress
+    key = self.focus.keypress(tsize, key)
+  File "/usr/lib/python3.8/site-packages/pudb/ui_tools.py", line 113, in keypress
+    return handler(self, size, key)
+  File "/usr/lib/python3.8/site-packages/pudb/debugger.py", line 1147, in next
+    end()
+  File "/usr/lib/python3.8/site-packages/pudb/debugger.py", line 1139, in end
+    self.debugger.save_breakpoints()
+  File "/usr/lib/python3.8/site-packages/pudb/debugger.py", line 264, in save_breakpoints
+    save_breakpoints([
+  File "/usr/lib/python3.8/site-packages/pudb/settings.py", line 592, in save_breakpoints
+    histfile = open(get_breakpoints_file_name(), 'w')
+PermissionError: [Errno 13] Permission denied: '/home/theo/.config/pudb/saved-breakpoints-3.8'

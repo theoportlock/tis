@@ -1,7 +1,8 @@
 def powerset(items: list) -> list:
     # finds all combinations of list elements
     from itertools import compress, product
-    return list(set(compress(items, mask)) for mask in product(*[[0,1]]*len(items)))[1:]
+    yield list(set(compress(items, mask)) for mask in product(*[[0,1]]*len(items)))[1:]
+
 
 def convert(arr: int) -> list:
     # conversion to see only the active bits
@@ -10,6 +11,7 @@ def convert(arr: int) -> list:
         if 2**i & arr == 2**i:
             converted_input.append(2**i)
     return converted_input
+
 
 def basechanger(number: int, base: int) -> list:
     remainder_stack = []
@@ -21,6 +23,7 @@ def basechanger(number: int, base: int) -> list:
     while remainder_stack:
         new_digits.append(2**remainder_stack.pop())
     return new_digits
+
 
 def concat(int_list: list, level: int) -> list:
     # need to be mindfull of duplicated bits

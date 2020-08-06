@@ -5,6 +5,8 @@ import functions as f
 
 class TestFunctions(unittest.TestCase):
     def test_powerset(self):
+        import ipdb
+        ipdb.set_trace()
         test_arr = [1, 4, 8, 16]
         '''
         should equal [{16}, {8}, {8, 16}, {4}, {16, 4}, {8, 4}, {8, 16, 4},
@@ -25,9 +27,9 @@ class TestFunctions(unittest.TestCase):
         integer = 2152183459839873
         print(integer)
         print(bin(integer))
-        base = 44
+        base = 24
         a = f.basechanger(integer, base)
-        catlevel = 3
+        catlevel = 8
         b = f.concat(a, catlevel)
         print(b)
 

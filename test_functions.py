@@ -21,10 +21,15 @@ class TestFunctions(unittest.TestCase):
         result = f.convert(test_int)
         self.assertEqual([1, 2, 16], result)
 
-    def test_basechanger(self):
-        base = 2
-        result = f.basechanger(15, base)
-        print(result)
+    def test_file_preparation(self):
+        integer = 2152183459839873
+        print(integer)
+        print(bin(integer))
+        base = 44
+        a = f.basechanger(integer, base)
+        catlevel = 3
+        b = f.concat(a, catlevel)
+        print(b)
 
 if __name__ == "__main__":
     unittest.main()

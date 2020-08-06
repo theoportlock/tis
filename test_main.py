@@ -52,20 +52,3 @@ class TestMain(unittest.TestCase):
             main.comb(IO.text2int("input"))
             with open("predict", "r") as of:
                 print(i, " predicts ", of.read())
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-0000000100000000100000100001
-0000000100000000000000000000 = -3
-0000000100000000100000000000 = -2

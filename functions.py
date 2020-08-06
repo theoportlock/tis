@@ -1,9 +1,9 @@
-def powerset(items):
+def powerset(items: list) -> list:
     # finds all combinations of list elements
     from itertools import compress, product
     return list(set(compress(items, mask)) for mask in product(*[[0,1]]*len(items)))[1:]
 
-def convert(arr):
+def convert(arr: int) -> list:
     # conversion to see only the active bits
     converted_input = []
     for i in range(arr.bit_length()):
@@ -11,16 +11,28 @@ def convert(arr):
             converted_input.append(2**i)
     return converted_input
 
-def basechanger(integer_list, prevbase, newbase):
-    ''' make a list of integers based on a decimal
-    '''
+def basechanger(number: int, base: int) -> list:
+    remainder_stack = []
+    while number > 0:
+        remainder = number % base
+        remainder_stack.append(remainder)
+        number = number // base
+    new_digits = []
+    while remainder_stack:
+        new_digits.append(2**remainder_stack.pop())
+    return new_digits
 
-    # for i in integer_list:
-    # UNFINISHED
-
-    dec = str(integer)
-    output = []
-    for position, digit in enumerate(dec[::-1]):
-        int(digit) * prevbase * position
-        #output.append(int(digit) * (10 * position / base))
-    return output
+def concat(int_list: list, level: int) -> list:
+    # need to be mindfull of duplicated bits
+    new = []
+    count = 0
+    out = 0
+    for j in int_list:
+        count += 1 
+        out += j
+        if count == 3:
+            new.append(out)
+            count = 0
+    if not count:
+        new.append(out)
+    return new

@@ -1,11 +1,12 @@
 import unittest
 import os
 import IO
+import functions as f
 from main import comb
 
 class TestMain(unittest.TestCase):
     def cleanup(self):
-        self.testing_files = {"inp": "test_input", "mem": "test_memory", "pre": "test_predict"}
+        self.testing_files = {"inp": "temp_input", "mem": "temp_memory", "pre": "temp_predict"}
         [os.remove(testing_file) for testing_file in self.testing_files if os.path.isfile(testing_file)]
         
     def setUp(self):
@@ -25,10 +26,9 @@ class TestMain(unittest.TestCase):
                 "10001000010", #ABC
                 "00000010010"] #CX
         for i in data:
-            with open(self.testing_files["inp"], 'w') as of: of.write(i)
-            result = worker.load({"inp":self.testing_files['inp'],
-                    "mem":self.testing_files['mem'],
-                    "pre":self.testing_files['pre']}).run()
+            with open(self.testing_files["inp"], 'w') as of:
+                of.write(i)
+            result = worker.load({"inp":self.testing_files["inp"], "mem":self.testing_files["mem"], "pre":self.testing_files["pre"]}).run()
             print(result.pre_int)
         #self.assertTrue(
 
@@ -44,15 +44,12 @@ class TestMain(unittest.TestCase):
                 "b",
                 "a"]
         for i in data[1:]:
-            self.cleanup()
-            # remember abc
-            with open("input", 'w') as of: of.write(data[0])
-            print(worker.load().run().pre_int)
-
-            # run prediction
-            with open("input", 'w') as of: of.write(i)
-            print(worker.load().run().pre_int)
-            with open("predict", "r") as of: print(i, " predicts ", of.read())
+            with open(self.testing_files["inp"], 'w') as of: of.write(data[0])
+            with open(self.testing_files["inp"], 'w') as of: of.write(i)
+            worker.load({"inp":self.testing_files["inp"], "mem":self.testing_files["mem"], "pre":self.testing_files["pre"]})
+            worker.run().save({"mem":self.testing_files["mem"], "pre":self.testing_files["pre"]})
+            print(os.path.isfile(self.testing_files["pre"]))
+            #os.path.isfile(open(self.testing_files["pre"], "r") as of: print(of.read())
 
     # @unittest.expectedFailure
     # def test_ultimate_goal(self):
@@ -60,6 +57,17 @@ class TestMain(unittest.TestCase):
     #    In order to affect sparceness, it is necessary to convert some of the active bits to 0 from the input string.  This, I believe is done incorrectly by traditional HTM architectures where that effect is mandated manually by external preprocessing algorythms. Conversely, the reverse process of input compression is also necessary.
     #    '''
     #    assert 1 == 2
+
+    def test_big_text(self):
+        worker = comb().load({"inp":self.testing_files["inp"], "mem":self.testing_files["mem"], "pre":self.testing_files["pre"]})
+        data = "What is the meaning?"
+        with open(self.testing_files["inp"], 'w') as of: of.write(data)
+        converted_integer = f.basechanger(IO.textfile2int(self.testing_files["inp"]), 2900)
+        for i in f.concat(converted_integer, 2):
+            print(i)
+            worker.inp_int = i
+            worker.run().save({"mem":self.testing_files["mem"], "pre":self.testing_files["pre"]})
+            print(worker.pre_int)
 
 if __name__ == '__main__':
     unittest.main(module="test_main")

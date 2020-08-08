@@ -6,16 +6,16 @@ import functions as f
 
 class TestFunctions(unittest.TestCase):
     def test_powerset(self):
-        test_arr = list(random.sample(range(1, 100), 5))
+        test_arr = list(random.sample(range(1, 100), 10))
         result = f.powerset(test_arr)
-        self.assertTrue(type(result) == list)
-        self.assertTrue(type(result[0]) == set)
-        self.assertEqual(len(result), (2**len(test_arr)) - 1)
+        resultlist = list(result)
+        self.assertTrue(type(resultlist[0]) == set)
+        self.assertEqual(len(resultlist), (2**len(test_arr)) - 1)
 
     def test_convert(self):
         test_int = 19
         result = f.convert(test_int)
-        self.assertEqual([1, 2, 16], result)
+        self.assertEqual([1, 2, 16], list(result))
 
     def test_file_preparation(self):
         integer = random.randint(1, 10000000000)

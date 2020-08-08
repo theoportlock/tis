@@ -1,20 +1,16 @@
 import unittest
+import random
 import numpy as np
 import os
 import functions as f
 
 class TestFunctions(unittest.TestCase):
     def test_powerset(self):
-        test_arr = [1, 4, 8, 16]
-        '''
-        should equal [{16}, {8}, {8, 16}, {4}, {16, 4}, {8, 4}, {8, 16, 4},
-        {1}, {16, 1}, {8, 1}, {8, 1, 16}, {1, 4}, {16, 1, 4}, {8, 1, 4},
-        {8, 1, 4, 16}]
-        '''
+        test_arr = list(random.sample(range(1, 100), 5))
         result = f.powerset(test_arr)
         self.assertTrue(type(result) == list)
         self.assertTrue(type(result[0]) == set)
-        self.assertEqual(len(result), (len(test_arr)**2) - 1)
+        self.assertEqual(len(result), (2**len(test_arr)) - 1)
 
     def test_convert(self):
         test_int = 19
@@ -22,14 +18,14 @@ class TestFunctions(unittest.TestCase):
         self.assertEqual([1, 2, 16], result)
 
     def test_file_preparation(self):
-        integer = 2152183459839873
-        print(integer)
-        print(bin(integer))
-        base = 44
-        a = f.basechanger(integer, base)
-        catlevel = 3
-        b = f.concat(a, catlevel)
-        print(b)
+        integer = random.randint(1, 10000000000)
+        base = random.randint(2, 10000)
+        converted_integer = f.basechanger(integer, base)
+        catlevel = random.randint(5, 10)
+        concat_converted_int = f.concat(converted_integer, catlevel)
+        self.assertEqual(type(converted_integer), list)
+        self.assertEqual(type(concat_converted_int), list)
+        self.assertNotEqual(len(converted_integer), len(concat_converted_int))
 
 if __name__ == "__main__":
     unittest.main()

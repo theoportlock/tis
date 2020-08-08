@@ -13,11 +13,11 @@ def file2set(filename):
     with open(filename,'r') as of:
         return(set([int(i[::-1],2) for i in of.read().splitlines()]))
 
-def mem2set():
+def mem2set(filename):
     import os.path
-    if not os.path.isfile("memory"):
-        set2file(set(), "memory")
-    return file2set("memory")
+    if not os.path.isfile(filename):
+        set2file(set(), filename)
+    return file2set(filename)
 
 def set2file(setnam,filename):
     # saves the set in a file

@@ -3,13 +3,14 @@ import IO
 import functions as f
 import sys
 
+
 class comb:
     def __init__(self):
         self.files = dict()
         self.inp_int = 0
         self.mem_lst = []
         self.pre_int = 0
-    
+
     def load(self, files={}, default=True):
         self.files = files
         if default:
@@ -32,13 +33,13 @@ class comb:
         ''' Takes an integer, converts to binary, finds predicted bits based on a
         memory file, then updates a "memory" and "predict" file
         '''
-        if self.inp_int == None:
+        if self.inp_int is None:
             print("No input")
             quit()
-        if self.mem_lst == None:
+        if self.mem_lst is None:
             print("No memory")
             quit()
-        if self.pre_int == None:
+        if self.pre_int is None:
             print("No prediction")
             quit()
 
@@ -77,5 +78,8 @@ class comb:
 
 if __name__ == "__main__":
     worker = comb()
-    if len(sys.argv) == 2: worker.load({"inp":sys.argv[1], "mem":"memory", "pre":"predict"}).run().save()
+    if len(sys.argv) == 2: worker.load({
+        "inp": sys.argv[1],
+        "mem": "memory",
+        "pre": "predict"}).run().save()
     else: worker.load().run().save()

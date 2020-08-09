@@ -3,8 +3,8 @@ import random
 import os
 import IO
 
+
 class TestIO(unittest.TestCase):
-    
     def cleanup(self):
         self.testfile = "testfile"
         if os.path.isfile(self.testfile):
@@ -32,6 +32,7 @@ class TestIO(unittest.TestCase):
         result = IO.textfile2int(self.testfile)
         self.assertEqual(type(result), int)
         self.assertEqual(result, random_integer)
+
 
 if __name__ == '__main__':
     unittest.main()

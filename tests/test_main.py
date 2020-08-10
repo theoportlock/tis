@@ -7,7 +7,9 @@ from src.main import comb
 
 class TestMain(unittest.TestCase):
     def cleanup(self):
-        [os.remove(testing_file) for testing_file in self.testing_files if os.path.isfile(testing_file)]
+        for testing_file in self.testing_files.values():
+            if os.path.isfile(testing_file):
+                os.remove(testing_file) 
 
     def setUp(self):
         self.worker = comb()
@@ -31,9 +33,9 @@ class TestMain(unittest.TestCase):
                 "00000010010"]  # CX
         for i in data:
             with open(self.testing_files["inp"], 'w') as of: of.write(i)
-            self.worker.load(self.testing_files, default=False)
+            self.worker.load(files=self.testing_files, from_text=False)
             self.worker.run()
-            self.worker.save(self.testing_files, to_text=False)
+            self.worker.save(files=self.testing_files, to_text=False)
 
     def test_text(self):
         # same as test_abcd but with text
@@ -50,19 +52,19 @@ class TestMain(unittest.TestCase):
                 of.write(data[0])
             with open(self.testing_files["inp"], 'w') as of:
                 of.write(i)
-            self.worker.load(self.testing_files, default=False)
-            self.worker.run().save(self.testing_files)
+            self.worker.load(files=self.testing_files, from_text=True)
+            self.worker.run().save(files=self.testing_files, to_text=True)
             self.assertTrue(os.path.isfile(self.testing_files["pre"]))
 
     def test_big_text(self):
-        self.worker.load(self.testing_files, default=False)
         data = "Hello World"
         with open(self.testing_files["inp"], 'w') as of: of.write(data)
         converted_integer = f.basechanger(IO.textfile2int(self.testing_files["inp"]), 3000)
         for i in f.concat(converted_integer, 2):
+            self.worker.load(files=self.testing_files, from_text=True)
             print(bin(i))
-            self.worker.inp_int = i
-            self.worker.run().save(self.testing_files, to_text=True)
+            self.worker.inp = i
+            self.worker.run().save(files=self.testing_files, to_text=True)
 
     """
     @unittest.expectedFailure

@@ -19,11 +19,17 @@ def mem2set(filename):
         set2intfile(set(), filename)
     return intfile2set(filename)
 
-def pre2int(filename):
+def textpre2int(filename):
     import os.path
     if not os.path.isfile(filename):
         int2textfile(1, filename)
     return textfile2int(filename)
+
+def intpre2int(filename):
+    import os.path
+    if not os.path.isfile(filename):
+        int2intfile(1, filename)
+    return intfile2int(filename)
 
 def set2intfile(setnam, filename):
     # saves the set in a file

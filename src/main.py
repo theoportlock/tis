@@ -7,33 +7,34 @@ import sys
 class comb:
     def __init__(self):
         self.files = dict()
-        self.inp_int = 0
-        self.mem_lst = []
-        self.pre_int = 0
+        self.inp = 0
+        self.mem_set = {}
+        self.pre = 0
 
-    def load(self, files={}):
+    def load(self, files={}, from_text=True):
         # needs to be either more like save or completeley seperate
         self.files = dict(files)
-        if files != {}:
+        if self.files:
+            self.mem_set = IO.mem2set(self.files["mem"])
+            if from_text:
+                self.inp = IO.textfile2int(self.files["inp"])
+                self.pre = IO.textpre2int(self.files["pre"])
+            else:
+                self.inp = IO.intfile2int(self.files["inp"])
+                self.pre = IO.intpre2int(self.files["pre"])
+        else:
             self.files["inp"] = "data/input"
             self.files["mem"] = "data/memory"
             self.files["pre"] = "data/predict"
-            self.inp_int = IO.textfile2int(self.files["inp"])
-            self.mem_lst = IO.mem2set(self.files["mem"])
-            self.pre_int = IO.pre2int(self.files["pre"])
-        else:
-            if type(files["inp"]) == str:
-                self.files["inp"] = IO.textfile2int(files["inp"])
+            if from_text:
+                self.inp = IO.textfile2int(self.files["inp"])
+                self.mem_set = IO.mem2set(self.files["mem"])
+                self.pre = IO.pre2int(self.files["pre"])
             else:
-                self.files["inp"] = files["inp"]
-            if type(files["mem"]) == str:
-                self.files["mem"] = IO.mem2set(files["mem"])
-            else:
-                self.files["mem"] = files["mem"]
-            if type(files["pre"]) == str:
-                self.files["pre"] = IO.pre2int(files["pre"])
-            else:
-                self.files["pre"] = files["pre"]
+                self.inp = IO.intfile2int(self.files["inp"])
+                self.mem_set = IO.mem2set(self.files["mem"])
+                self.pre = IO.pre2int(self.files["pre"])
+
         return self
 
     def run(self):
@@ -41,36 +42,36 @@ class comb:
         a memory file, then updates a "memory" and "predict" file
         """
         # finds all combinations of active bits in an integer
-        for com_lst in f.powerset(f.convert(self.inp_int)):
-            com_int = sum(com_lst)
-            self.mem_lst.add(com_int)
+        for com_lst in f.powerset(f.convert(self.inp)):
+            com = sum(com_lst)
+            self.mem_set.add(com)
             # if the combination is found in memory, predict the difference
             # <-- this needs speeding up
-            for mem_int in self.mem_lst:
-                if com_int & mem_int == com_int:
-                    self.pre_int |= mem_int - com_int
+            for mem in self.mem_set:
+                if com & mem == com:
+                    self.pre |= mem - com
                     """
-                    print("com_int = ", bin(com_int)[:1:-1])
-                    print("mem_int = ", bin(mem_int)[:1:-1])
-                    print("mem-com = ", bin(mem_int - com_int)[:1:-1])
-                    print("out =     ", bin(pre_int)[:1:-1])
+                    print("com = ", bin(com)[:1:-1])
+                    print("mem = ", bin(mem)[:1:-1])
+                    print("mem-com = ", bin(mem - com)[:1:-1])
+                    print("out =     ", bin(pre)[:1:-1])
                     """
-            # for difference:  pre_int -= (pre_int & inp_int)
+            # for difference:  pre -= (pre & inp)
         return self
 
     def save(self, files={}, to_text=True):
-        if files != {}:
-            IO.set2intfile(self.mem_lst, self.files["mem"])
+        if files:
+            IO.set2intfile(self.mem_set, files["mem"])
             if to_text:
-                IO.int2textfile(self.pre_int, self.files["pre"])
+                IO.int2textfile(self.pre, files["pre"])
             else:
-                IO.int2intfile(self.pre_int, self.files["pre"])
+                IO.int2intfile(self.pre, files["pre"])
         else:
-            IO.set2intfile(self.mem_lst, files["mem"])
+            IO.set2intfile(self.mem_set, self.files["mem"])
             if to_text:
-                IO.int2textfile(self.pre_int, files["pre"])
+                IO.int2textfile(self.pre, self.files["pre"])
             else:
-                IO.int2intfile(self.pre_int, files["pre"])
+                IO.int2intfile(self.pre, self.files["pre"])
 
 
 if __name__ == "__main__":

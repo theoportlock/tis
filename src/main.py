@@ -56,7 +56,7 @@ class comb:
                     print("mem-com = ", bin(mem - com)[:1:-1])
                     print("out =     ", bin(pre)[:1:-1])
                     """
-            # for difference:  pre -= (pre & inp)
+            # for difference: pre -= (pre & inp)
         return self
 
     def save(self, files={}, to_text=True):

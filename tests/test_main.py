@@ -36,8 +36,8 @@ class TestMain(unittest.TestCase):
             print(self.worker.inp, prediction)
             accuracy = self.worker.inp - prediction
             print("accuracy = ", accuracy)
-            with open(self.testing_files["inp"], 'w') as of: of.write(i)
             self.worker.load(files=self.testing_files, from_text=False)
+            with open(self.testing_files["inp"], 'w+') as of: of.write(i)
             self.worker.run()
             prediction = self.worker.pre
             self.worker.save(files=self.testing_files, to_text=False)

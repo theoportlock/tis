@@ -3,41 +3,13 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: the_upgrade.aux
 The style file: apacite.bst
 A level-1 auxiliary file: chapters/introduction/introduction.aux
-I couldn't open auxiliary file chapters/datastreams/datastreams.aux
----line 27 of file the_upgrade.aux
- : \@input{chapters/datastreams/datastreams.aux
- :                                             }
-I'm skipping whatever remains of this command
-I couldn't open auxiliary file chapters/combinations/combinations.aux
----line 28 of file the_upgrade.aux
- : \@input{chapters/combinations/combinations.aux
- :                                               }
-I'm skipping whatever remains of this command
-I couldn't open auxiliary file chapters/memory/memory.aux
----line 29 of file the_upgrade.aux
- : \@input{chapters/memory/memory.aux
- :                                   }
-I'm skipping whatever remains of this command
-I couldn't open auxiliary file chapters/action/action.aux
----line 30 of file the_upgrade.aux
- : \@input{chapters/action/action.aux
- :                                   }
-I'm skipping whatever remains of this command
-I couldn't open auxiliary file chapters/runtime/runtime.aux
----line 31 of file the_upgrade.aux
- : \@input{chapters/runtime/runtime.aux
- :                                     }
-I'm skipping whatever remains of this command
-I couldn't open auxiliary file chapters/conclusion/conclusion.aux
----line 32 of file the_upgrade.aux
- : \@input{chapters/conclusion/conclusion.aux
- :                                           }
-I'm skipping whatever remains of this command
-I couldn't open auxiliary file chapters/appendix/appendix.aux
----line 37 of file the_upgrade.aux
- : \@input{chapters/appendix/appendix.aux
- :                                       }
-I'm skipping whatever remains of this command
+A level-1 auxiliary file: chapters/datastreams/datastreams.aux
+A level-1 auxiliary file: chapters/combinations/combinations.aux
+A level-1 auxiliary file: chapters/memory/memory.aux
+A level-1 auxiliary file: chapters/action/action.aux
+A level-1 auxiliary file: chapters/runtime/runtime.aux
+A level-1 auxiliary file: chapters/conclusion/conclusion.aux
+A level-1 auxiliary file: chapters/appendix/appendix.aux
 Reallocated glb_str_ptr (elt_size=8) to 20 items from 10.
 Reallocated global_strs (elt_size=20001) to 20 items from 10.
 Reallocated glb_str_end (elt_size=8) to 20 items from 10.
@@ -90,4 +62,3 @@ warning$ -- 0
 while$ -- 4
 width$ -- 0
 write$ -- 24
-(There were 7 error messages)

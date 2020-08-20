@@ -3,6 +3,11 @@ from src import IO
 from src import functions as f
 import sys
 
+'''
+maybe this?
+import collections
+memory = collections.Counter()
+'''
 
 class comb:
     def __init__(self):
@@ -46,7 +51,8 @@ class comb:
             com = sum(com_lst)
             self.mem_set.add(com)
             # if the combination is found in memory, predict the difference
-            # <-- this needs speeding up
+            # <-- this needs speeding up, maybe with red-black binary trees?
+            # maybe use set intersect here
             for mem in self.mem_set:
                 if com & mem == com:
                     self.pre |= mem - com

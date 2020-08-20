@@ -1,51 +1,45 @@
-\documentclass[12pt]{book}
+\documentclass{book}
 \usepackage[hidelinks]{hyperref}
 \usepackage{apacite}
-\usepackage{textgreek}
-\usepackage{graphicx}
-\usepackage{gensymb}
-\usepackage{setspace}
-\usepackage{siunitx}
-\usepackage{textcomp}
+\bibliographystyle{apacite}
+\usepackage[left=4cm,right=3cm,top=3cm,bottom=2cm]{geometry}
+%\usepackage{textgreek}
+%\usepackage{graphicx}
+%\usepackage{gensymb}
+%\usepackage{setspace}
+%\usepackage{siunitx}
+%\usepackage{textcomp}
 \usepackage{booktabs}
 
-\usepackage[left=4cm,right=3cm,top=3cm,bottom=2cm]{geometry}
-\usepackage{fancyhdr} 
-\fancyhf{}
-\cfoot{\thepage}
-\pagestyle{fancy}    
-%\includeonly{
-    %chapters/appendix/appendix,
-    %}
+\usepackage{fancyhdr}
+\fancyhead{}
+\fancyhead[LE,RO]{\slshape \leftmark}
+\fancyfoot[C]{\thepage}
+\pagestyle{fancy}
+
+\includeonly{
+    chapters/introduction/introduction,
+    }
 
 \title{The Upgrade Proposal}
 \author{Theo Portlock}
-\bibliographystyle{apacite}
-\newacronym{T2SS}{T2SS}{Type II Secretion System}
-
-\newcolumntype{L}[1]{>{\raggedright\let\newline\arraybackslash\hspace{0pt}}m{#1}}
-\newcolumntype{C}[1]{>{\centering\let\newline\arraybackslash\hspace{0pt}}m{#1}}
-\newcolumntype{R}[1]{>{\raggedleft\let\newline\arraybackslash\hspace{0pt}}m{#1}}
 
 \begin{document}
 \frontmatter
 \maketitle
 
 \chapter{Abstract}
-In our lives, we try to make decisions that increase the possiblity of a moral outcome. We judge others by their morality and their adherance to it. The aim of The Upgrade is to create a tool that will make more moral choices than a human. The possibility of suceeding in this creation is low but increases with effort, time, expertise, and help. The possibility of this project achieving that aim is incalculable. However, if it does, the consequences will pave the way for the future of a more moral society.
+In our lives, we try to make decisions that increase the possiblity of a moral outcome.
+We judge others by their morality and their adherance to it.
+Identifying, understanding, and mitigating the flaws of human thought process and decision making is essential for human progress.
+The aim of The Upgrade is to create a tool that will make better, and more informed moral decisions than a human.
+The possibility of suceeding in this creation is low but increases with effort, time, expertise, and help.
+The possibility of this project achieving that aim is incalculable. However, if it does, the consequences will pave the way for the future of a more moral society.
 
 \cleardoublepage
 \phantomsection
 \addcontentsline{toc}{chapter}{Table of Contents}
 \tableofcontents
-
-\cleardoublepage
-\phantomsection
-\addcontentsline{toc}{chapter}{Abbreviations}
-\singlespacing
-\glsfindwidesttoplevelname
-\printglossary[title={Abbreviations},style=alttree]
-\doublespacing
 
 \cleardoublepage
 \phantomsection
@@ -59,11 +53,11 @@ In our lives, we try to make decisions that increase the possiblity of a moral o
 
 \mainmatter
 \include{chapters/introduction/introduction}
-\include{chapters/bitarray_datastreams/bitarray_datastreams}
+\include{chapters/datastreams/datastreams}
 \include{chapters/combinations/combinations}
 \include{chapters/memory/memory}
 \include{chapters/action/action}
-\include{chapters/running_the_upgrade/running_the_upgrade}
+\include{chapters/runtime/runtime}
 \include{chapters/conclusion/conclusion}
 
 \backmatter

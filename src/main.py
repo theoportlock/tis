@@ -7,6 +7,7 @@ import sys
 maybe this?
 import collections
 memory = collections.Counter()
+need to move to super combinations for sparcity
 '''
 
 class comb:

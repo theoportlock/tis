@@ -2,14 +2,12 @@
 from src import IO
 from src import functions as f
 import sys
-
 '''
 maybe this?
 import collections
 memory = collections.Counter()
 need to move to super combinations for sparcity
 '''
-
 class comb:
     def __init__(self):
         self.files = dict()
@@ -35,29 +33,30 @@ class comb:
             if from_text:
                 self.inp = IO.textfile2int(self.files["inp"])
                 self.mem_set = IO.mem2set(self.files["mem"])
-                self.pre = IO.pre2int(self.files["pre"])
+                self.pre = IO.textpre2int(self.files["pre"])
             else:
                 self.inp = IO.intfile2int(self.files["inp"])
                 self.mem_set = IO.mem2set(self.files["mem"])
-                self.pre = IO.pre2int(self.files["pre"])
+                self.pre = IO.intpre2int(self.files["pre"])
 
         return self
 
     def run(self):
-        """ Takes an integer, converts to binary, finds predicted bits based on
+        """
+        Takes an integer, converts to binary, finds predicted bits based on
         a memory file, then updates a "memory" and "predict" file
         """
         # finds all combinations of active bits in an integer
         for com_lst in f.powerset(f.convert(self.inp)):
             com = sum(com_lst)
             self.mem_set.add(com)
+            """
             # if the combination is found in memory, predict the difference
             # <-- this needs speeding up, maybe with red-black binary trees?
             # maybe use set intersect here
-            for mem in self.mem_set:
-                if com & mem == com:
-                    self.pre |= mem - com
-                    """
+            #for mem in self.mem_set:
+                #if com & mem == com:
+                    #self.pre |= mem - com
                     print("com = ", bin(com)[:1:-1])
                     print("mem = ", bin(mem)[:1:-1])
                     print("mem-com = ", bin(mem - com)[:1:-1])

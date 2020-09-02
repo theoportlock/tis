@@ -7,6 +7,7 @@ maybe this?
 import collections
 memory = collections.Counter()
 need to move to super combinations for sparcity
+dont forget about OR combinatorics
 '''
 class comb:
     def __init__(self):

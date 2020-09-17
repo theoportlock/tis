@@ -18,18 +18,18 @@ class TestIO(unittest.TestCase):
 
     def test_setfileio(self):
         testset = set(random.sample(range(1, 1000), 50))
-        IO.set2intfile(testset, self.testfile)
+        IO.setfile(obj=testset, mode="out", filename=self.testfile)
         self.assertTrue(os.path.exists(self.testfile))
-        result = IO.intfile2set(self.testfile)
+        result = IO.intfile(filename=self.testfile)
         self.assertEqual(type(result), set)
         self.assertEqual(result, testset)
 
     def test_text2int(self):
-        random_integer = random.randint(0,1000)
-        IO.int2textfile(random_integer, self.testfile)
+        random_integer = random.randint(0, 1000)
+        IO.txtfile(obj=random_integer, mode="out", filename=self.testfile)
         self.assertTrue(os.path.isfile(self.testfile))
 
-        result = IO.textfile2int(self.testfile)
+        result = IO.txtfile(filename=self.testfile)
         self.assertEqual(type(result), int)
         self.assertEqual(result, random_integer)
 

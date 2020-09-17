@@ -16,30 +16,21 @@ class comb:
         self.mem_set = {}
         self.pre = 0
 
-    def load(self, files={}, from_text=True):
+    def load(self, files={}, text=True):
         # needs to be either more like save or completeley seperate
         self.files = dict(files)
-        if self.files:
-            self.mem_set = IO.mem2set(self.files["mem"])
-            if from_text:
-                self.inp = IO.textfile2int(self.files["inp"])
-                self.pre = IO.textpre2int(self.files["pre"])
-            else:
-                self.inp = IO.intfile2int(self.files["inp"])
-                self.pre = IO.intpre2int(self.files["pre"])
-        else:
+        if not self.files:
             self.files["inp"] = "data/input"
             self.files["mem"] = "data/memory"
             self.files["pre"] = "data/predict"
-            if from_text:
-                self.inp = IO.textfile2int(self.files["inp"])
-                self.mem_set = IO.mem2set(self.files["mem"])
-                self.pre = IO.textpre2int(self.files["pre"])
-            else:
-                self.inp = IO.intfile2int(self.files["inp"])
-                self.mem_set = IO.mem2set(self.files["mem"])
-                self.pre = IO.intpre2int(self.files["pre"])
 
+        self.mem_set = IO.setfile(filename=self.files["mem"])
+        if text:
+            self.inp = IO.txtfile(filename=self.files["inp"])
+            self.pre = IO.txtfile(filename=self.files["pre"])
+        else:
+            self.inp = IO.intfile(filename=self.files["inp"])
+            self.pre = IO.intfile(filename=self.files["pre"])
         return self
 
     def run(self):
@@ -66,21 +57,21 @@ class comb:
             # for difference: pre -= (pre & inp)
         return self
 
-    def save(self, files={}, to_text=True):
-        if files:
-            IO.set2intfile(self.mem_set, files["mem"])
-            if to_text:
-                IO.int2textfile(self.pre, files["pre"])
-            else:
-                IO.int2intfile(self.pre, files["pre"])
+    def save(self, files={}, text=True):
+        # needs to be either more like save or completeley seperate
+        self.files = dict(files)
+        if not self.files:
+            self.files["inp"] = "data/input"
+            self.files["mem"] = "data/memory"
+            self.files["pre"] = "data/predict"
+        
+        IO.setfile(obj=self.mem_set, mode="out", filename=self.files["mem"])
+        if text:
+            IO.txtfile(obj=self.pre, mode="out", filename=self.files["pre"])
         else:
-            IO.set2intfile(self.mem_set, self.files["mem"])
-            if to_text:
-                IO.int2textfile(self.pre, self.files["pre"])
-            else:
-                IO.int2intfile(self.pre, self.files["pre"])
-
-
+            IO.intfile(obj=self.pre, mode="out", filename=self.files["pre"])
+        return self
+    
 if __name__ == "__main__":
     worker = comb()
     if len(sys.argv) == 2:

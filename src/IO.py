@@ -29,7 +29,7 @@ def setfile(obj={}, mode='in', filename=''):
                 of.write(str(bin(i))[:1:-1]+"\n")
 
 
-def txtfile(obj="", mode='in', filename=''):
+def txtfile(obj=0, mode='in', filename=''):
     if mode == "in":
         # write a new textfile to file before reading if one doesnt exist
         if not os.path.isfile(filename):

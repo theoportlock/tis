@@ -20,7 +20,7 @@ class TestIO(unittest.TestCase):
         testset = set(random.sample(range(1, 1000), 50))
         IO.setfile(obj=testset, mode="out", filename=self.testfile)
         self.assertTrue(os.path.exists(self.testfile))
-        result = IO.intfile(filename=self.testfile)
+        result = IO.setfile(filename=self.testfile)
         self.assertEqual(type(result), set)
         self.assertEqual(result, testset)
 

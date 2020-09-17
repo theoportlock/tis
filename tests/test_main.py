@@ -36,11 +36,11 @@ class TestMain(unittest.TestCase):
             print(self.worker.inp, prediction)
             accuracy = self.worker.inp - prediction
             print("accuracy = ", accuracy)
-            self.worker.load(files=self.testing_files, from_text=False)
+            self.worker.load(files=self.testing_files, text=False)
             with open(self.testing_files["inp"], 'w+') as of: of.write(i)
             self.worker.run()
             prediction = self.worker.pre
-            self.worker.save(files=self.testing_files, to_text=False)
+            self.worker.save(files=self.testing_files, text=False)
 
     def test_text(self):
         # same as test_abcd but with text
@@ -57,8 +57,8 @@ class TestMain(unittest.TestCase):
                 of.write(data[0])
             with open(self.testing_files["inp"], 'w') as of:
                 of.write(i)
-            self.worker.load(files=self.testing_files, from_text=True)
-            self.worker.run().save(files=self.testing_files, to_text=True)
+            self.worker.load(files=self.testing_files, text=True)
+            self.worker.run().save(files=self.testing_files, text=True)
             self.assertTrue(os.path.isfile(self.testing_files["pre"]))
 
 '''
@@ -70,7 +70,7 @@ class TestMain(unittest.TestCase):
         for i in f.concat(converted_integer, 4):
             self.worker.load(files=self.testing_files, from_text=True)
             self.worker.inp = i
-            self.worker.run().save(files=self.testing_files, to_text=True)
+            self.worker.run().save(files=self.testing_files, text=True)
             with open("results", 'a') as of: of.write(bin(self.worker.pre)[:2:-1] + "\n")
             df.loc[i] = [bin(self.worker.inp)[:2:-1], bin(self.worker.pre)[:2:-1]]
         df.to_csv("outdf.csv")
@@ -86,7 +86,7 @@ class TestMain(unittest.TestCase):
         for i in f.concat(f.basechanger(IO.textfile2int(self.testing_files["inp"]), 8), 4):
             self.worker.load(files=self.testing_files, from_text=True)
             self.worker.inp = i
-            self.worker.run().save(files=self.testing_files, to_text=True)
+            self.worker.run().save(files=self.testing_files, text=True)
             with open("results", 'a') as of: of.write(bin(self.worker.pre)[:2:-1] + "\n")
             df.loc[i] = [bin(self.worker.inp)[:2:-1], bin(self.worker.pre)[:2:-1]]
         # df.to_csv("outdf.csv")

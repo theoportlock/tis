@@ -33,9 +33,6 @@ class TestMain(unittest.TestCase):
                 "00000000000000000001000010"]  # CX
         prediction = 0
         for i in data:
-            print(self.worker.inp, prediction)
-            accuracy = self.worker.inp - prediction
-            print("accuracy = ", accuracy)
             self.worker.load(files=self.testing_files, text=False)
             with open(self.testing_files["inp"], 'w+') as of: of.write(i)
             self.worker.run()

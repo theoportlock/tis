@@ -38,11 +38,12 @@ class TestIO(unittest.TestCase):
 
 
     def test_txtfile(self):
-        test = ''.join(random.choice(string.ascii_lowercase) for i in range(random.randint(0, 100)))
+        test = random.randint(0, 1000)
+        # test = ''.join(random.choice(string.ascii_lowercase) for i in range(random.randint(0, 100)))
         IO.txtfile(obj=test, mode="out", filename=self.testfile)
         self.assertTrue(os.path.exists(self.testfile))
         result = IO.txtfile(filename=self.testfile)
-        self.assertEqual(type(result), str)
+        self.assertEqual(type(result), int)
         self.assertEqual(result, test)
 
 

@@ -23,22 +23,28 @@ class comb:
             self.files["inp"] = "data/input"
             self.files["mem"] = "data/memory"
             self.files["pre"] = "data/predict"
-
         self.mem_set = IO.setfile(filename=self.files["mem"])
         if text:
             self.inp = IO.txtfile(filename=self.files["inp"])
-            self.pre = IO.txtfile(filename=self.files["pre"])
         else:
             self.inp = IO.intfile(filename=self.files["inp"])
-            self.pre = IO.intfile(filename=self.files["pre"])
         return self
 
+    def save(self, files={}, text=False):
+        # needs to be either more like save or completeley seperate
+        self.files = dict(files)
+        if not self.files:
+            self.files["inp"] = "data/input"
+            self.files["mem"] = "data/memory"
+            self.files["pre"] = "data/predict"
+        IO.setfile(obj=self.mem_set, mode="out", filename=self.files["mem"])
+        if text:
+            IO.txtfile(obj=self.pre, mode="out", filename=self.files["pre"])
+        else:
+            IO.intfile(obj=self.pre, mode="out", filename=self.files["pre"])
+        return self
+    
     def run(self):
-        """
-        Takes an integer, converts to binary, finds predicted bits based on
-        a memory file, then updates a "memory" and "predict" file
-        """
-        # finds all combinations of active bits in an integer
         for com_lst in f.powerset(f.convert(self.inp)):
             com = sum(com_lst)
             self.mem_set.add(com)
@@ -57,21 +63,6 @@ class comb:
             # for difference: pre -= (pre & inp)
         return self
 
-    def save(self, files={}, text=True):
-        # needs to be either more like save or completeley seperate
-        self.files = dict(files)
-        if not self.files:
-            self.files["inp"] = "data/input"
-            self.files["mem"] = "data/memory"
-            self.files["pre"] = "data/predict"
-        
-        IO.setfile(obj=self.mem_set, mode="out", filename=self.files["mem"])
-        if text:
-            IO.txtfile(obj=self.pre, mode="out", filename=self.files["pre"])
-        else:
-            IO.intfile(obj=self.pre, mode="out", filename=self.files["pre"])
-        return self
-    
 if __name__ == "__main__":
     worker = comb()
     if len(sys.argv) == 2:

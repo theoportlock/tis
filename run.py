@@ -11,4 +11,4 @@ if __name__ == "__main__":
             {"inp": sys.argv[1], "mem": "memory", "pre": "predict"}
         ).run().save()
     else:
-        worker.load(from_text=False).run().save()
+        worker.load().run().save()

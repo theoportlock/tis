@@ -7,7 +7,7 @@ def intfile(obj=0, mode='in', filename=''):
         # write a new integer to file before reading if one doesnt exist
         if not os.path.isfile(filename):
             with open(filename, "w") as of:
-                of.write(str(bin(1)[:1:-1]))
+                of.write(str(bin(0)[:1:-1]))
         with open(filename, 'r') as of:
             return (int(of.read()[::-1],2))
     elif mode == "out":

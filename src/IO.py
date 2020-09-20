@@ -1,5 +1,4 @@
 import os.path
-
 # write a new set/int/txt to file before reading if one doesnt exist
 
 def intfile(obj=0, mode='in', filename=''):
@@ -29,9 +28,8 @@ def setfile(obj={}, mode='in', filename=''):
                 of.write(str(bin(i))[:1:-1]+"\n")
 
 
-def txtfile(obj=0, mode='in', filename=''):
+def txtfile(obj="", mode='in', filename=''):
     if mode == "in":
-        # write a new textfile to file before reading if one doesnt exist
         if not os.path.isfile(filename):
             with open(filename, "wb") as of:
                 of.write(obj.to_bytes((obj.bit_length() + 7) // 8, 'big') or b'\0')

@@ -3,7 +3,6 @@ import os.path
 
 def intfile(obj=0, mode='in', filename=''):
     if mode == "in":
-        # write a new integer to file before reading if one doesnt exist
         if not os.path.isfile(filename):
             with open(filename, "w") as of:
                 of.write(str(bin(0)[:1:-1]))
@@ -21,7 +20,7 @@ def setfile(obj={}, mode='in', filename=''):
                 for i in obj:
                     of.write(str(bin(i))[:1:-1]+"\n")
         with open(filename, 'r') as of:
-            return(set([int(i[::-1], 2) for i in of.read().splitlines()]))
+            return set([int(i[::-1], 2) for i in of.read().splitlines()])
     elif mode == "out":
         with open(filename, "w") as of:
             for i in obj:

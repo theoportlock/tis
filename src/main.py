@@ -52,14 +52,14 @@ class comb:
             # if the combination is found in memory, predict the difference
             # <-- this needs speeding up, maybe with red-black binary trees?
             # maybe use set intersect here
-            #for mem in self.mem_set:
-                #if com & mem == com:
-                    #self.pre |= mem - com
+            for mem in self.mem_set:
+                if com & mem == com:
+                    self.pre |= mem - com
                     print("com = ", bin(com)[:1:-1])
                     print("mem = ", bin(mem)[:1:-1])
                     print("mem-com = ", bin(mem - com)[:1:-1])
                     print("out =     ", bin(pre)[:1:-1])
-                    """
+            """
             # for difference: pre -= (pre & inp)
         return self
 

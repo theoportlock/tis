@@ -3,7 +3,7 @@ import unittest
 import os
 from src import IO
 from src import functions as f
-from src.main import comb
+from src.main import worker
 
 class TestMain(unittest.TestCase):
     def cleanup(self):
@@ -13,7 +13,7 @@ class TestMain(unittest.TestCase):
 
 
     def setUp(self):
-        self.worker = comb()
+        self.worker = worker()
         self.testing_files = {
             "inp": "data/temp_input",
             "mem": "data/temp_memory",

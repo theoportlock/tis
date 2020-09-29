@@ -45,6 +45,7 @@ class worker:
         return self
     
     def run(self):
+        self.pre = 0
         for com_lst in f.powerset(f.convert(self.inp)):
             com = sum(com_lst)
             self.mem.add(com)

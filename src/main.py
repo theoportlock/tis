@@ -49,25 +49,15 @@ class worker:
         for com_lst in f.powerset(f.convert(self.inp)):
             com = sum(com_lst)
             self.mem.add(com)
-            # if the combination is found in memory, predict the difference
-            # <-- this needs speeding up, maybe with red-black binary trees?
-            # maybe use set intersect here
-            for mem in self.mem:
-                if com & mem == com:
-                    self.pre |= mem - com
-                    #print("com = ", bin(com)[:1:-1])
-                    #print("mem = ", bin(mem)[:1:-1])
-                    #print("mem-com = ", bin(mem - com)[:1:-1])
-                    #print("out =     ", bin(pre)[:1:-1])
-            # for difference:
+            #for mem in self.mem:
+            #    if com & mem == com:
+            #        self.pre |= mem - com
             #pre -= (pre & inp)
         return self
 
 if __name__ == "__main__":
     steve = worker()
     if len(sys.argv) == 2:
-        steve.load(
-            {"inp": sys.argv[1], "mem": "memory", "pre": "predict"}
-        ).run().save()
+        steve.load({"inp": sys.argv[1], "mem": "memory", "pre": "predict"}).run().save()
     else:
         steve.load().run().save()

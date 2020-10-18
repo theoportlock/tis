@@ -23,32 +23,29 @@
 \BOOKMARK [2][-]{subsection.1.5.2}{The paperclip problem}{section.1.5}% 23
 \BOOKMARK [1][-]{section.1.6}{Project aims}{chapter.1}% 24
 \BOOKMARK [0][-]{chapter.2}{Datastreams}{}% 25
-\BOOKMARK [1][-]{section.2.1}{Chapter introduction}{chapter.2}% 26
-\BOOKMARK [1][-]{section.2.2}{Sources of data}{chapter.2}% 27
-\BOOKMARK [1][-]{section.2.3}{Binary conversion}{chapter.2}% 28
+\BOOKMARK [1][-]{section.2.1}{Sources of data}{chapter.2}% 26
+\BOOKMARK [1][-]{section.2.2}{Binary conversion}{chapter.2}% 27
+\BOOKMARK [1][-]{section.2.3}{Sparcity}{chapter.2}% 28
 \BOOKMARK [1][-]{section.2.4}{Tandem data input}{chapter.2}% 29
-\BOOKMARK [1][-]{section.2.5}{Time resolution}{chapter.2}% 30
-\BOOKMARK [0][-]{chapter.3}{Combinations}{}% 31
-\BOOKMARK [1][-]{section.3.1}{Classical combinatorics}{chapter.3}% 32
-\BOOKMARK [2][-]{subsection.3.1.1}{The combination problem of scale}{section.3.1}% 33
-\BOOKMARK [1][-]{section.3.2}{The combinations array}{chapter.3}% 34
-\BOOKMARK [1][-]{section.3.3}{Slicing the combinations array}{chapter.3}% 35
-\BOOKMARK [2][-]{subsection.3.3.1}{Combinations of combinations}{section.3.3}% 36
-\BOOKMARK [0][-]{chapter.4}{Memory}{}% 37
-\BOOKMARK [1][-]{section.4.1}{Chapter introduction}{chapter.4}% 38
-\BOOKMARK [1][-]{section.4.2}{Persistance of activation}{chapter.4}% 39
-\BOOKMARK [1][-]{section.4.3}{Delay function}{chapter.4}% 40
-\BOOKMARK [1][-]{section.4.4}{Transfer and Storage}{chapter.4}% 41
-\BOOKMARK [1][-]{section.4.5}{Summary}{chapter.4}% 42
-\BOOKMARK [0][-]{chapter.5}{Action}{}% 43
-\BOOKMARK [1][-]{section.5.1}{Chapter introduction}{chapter.5}% 44
-\BOOKMARK [1][-]{section.5.2}{The random-pianist method}{chapter.5}% 45
-\BOOKMARK [1][-]{section.5.3}{Summary}{chapter.5}% 46
-\BOOKMARK [0][-]{chapter.6}{Runtime}{}% 47
-\BOOKMARK [1][-]{section.6.1}{Chapter introduction}{chapter.6}% 48
-\BOOKMARK [0][-]{chapter.7}{Conclusion}{}% 49
-\BOOKMARK [1][-]{section.7.1}{Chapter introduction}{chapter.7}% 50
-\BOOKMARK [0][-]{chapter*.8}{References}{}% 51
-\BOOKMARK [0][-]{chapter*.9}{Acknowledgements}{}% 52
-\BOOKMARK [0][-]{chapter*.10}{Appendix}{}% 53
-\BOOKMARK [1][-]{section.7.2}{Chapter introduction}{chapter*.10}% 54
+\BOOKMARK [0][-]{chapter.3}{Combinations}{}% 30
+\BOOKMARK [1][-]{section.3.1}{Classical combinatorics}{chapter.3}% 31
+\BOOKMARK [1][-]{section.3.2}{The combination problem of scale}{chapter.3}% 32
+\BOOKMARK [1][-]{section.3.3}{The combinations array}{chapter.3}% 33
+\BOOKMARK [1][-]{section.3.4}{Slicing the combinations array}{chapter.3}% 34
+\BOOKMARK [2][-]{subsection.3.4.1}{Combinations of combinations}{section.3.4}% 35
+\BOOKMARK [0][-]{chapter.4}{Memory}{}% 36
+\BOOKMARK [1][-]{section.4.1}{Persistance of activation}{chapter.4}% 37
+\BOOKMARK [1][-]{section.4.2}{Delay function}{chapter.4}% 38
+\BOOKMARK [1][-]{section.4.3}{Transfer and Storage}{chapter.4}% 39
+\BOOKMARK [1][-]{section.4.4}{Mind meld}{chapter.4}% 40
+\BOOKMARK [0][-]{chapter.5}{Action}{}% 41
+\BOOKMARK [1][-]{section.5.1}{How do machines act}{chapter.5}% 42
+\BOOKMARK [1][-]{section.5.2}{The random-pianist method}{chapter.5}% 43
+\BOOKMARK [0][-]{chapter.6}{Runtime}{}% 44
+\BOOKMARK [1][-]{section.6.1}{Chapter introduction}{chapter.6}% 45
+\BOOKMARK [0][-]{chapter.7}{Conclusion}{}% 46
+\BOOKMARK [1][-]{section.7.1}{Chapter introduction}{chapter.7}% 47
+\BOOKMARK [0][-]{chapter*.8}{References}{}% 48
+\BOOKMARK [0][-]{chapter*.9}{Acknowledgements}{}% 49
+\BOOKMARK [0][-]{chapter*.10}{Appendix}{}% 50
+\BOOKMARK [1][-]{section.7.2}{Chapter introduction}{chapter*.10}% 51

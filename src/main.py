@@ -49,10 +49,10 @@ class worker:
         for com_lst in f.powerset(f.convert(self.inp)):
             com = sum(com_lst)
             self.mem.add(com)
-            #for mem in self.mem:
-            #    if com & mem == com:
-            #        self.pre |= mem - com
-            #pre -= (pre & inp)
+            for mem in self.mem:
+                if com & mem == com:
+                    self.pre |= mem - com
+            self.pre -= (self.pre & self.inp)
         return self
 
 if __name__ == "__main__":

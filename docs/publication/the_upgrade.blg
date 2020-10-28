@@ -8,7 +8,7 @@ A level-1 auxiliary file: chapters/combinations/combinations.aux
 A level-1 auxiliary file: chapters/memory/memory.aux
 A level-1 auxiliary file: chapters/action/action.aux
 A level-1 auxiliary file: chapters/runtime/runtime.aux
-A level-1 auxiliary file: chapters/conclusion/conclusion.aux
+A level-1 auxiliary file: chapters/testing/testing.aux
 A level-1 auxiliary file: chapters/appendix/appendix.aux
 Reallocated glb_str_ptr (elt_size=8) to 20 items from 10.
 Reallocated global_strs (elt_size=20001) to 20 items from 10.
@@ -23,7 +23,7 @@ Database file #1: library.bib
 apacite.bst [2013/07/21 v6.03 APA bibliography style]
 You've used 1 entry,
             6951 wiz_defined-function locations,
-            1279 strings with 10970 characters,
+            1279 strings with 10964 characters,
 and the built_in function-call counts, 1249 in all, are:
 = -- 150
 > -- 10

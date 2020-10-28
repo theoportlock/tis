@@ -43,9 +43,17 @@
 \contentsline {section}{\numberline {5.2}The random-pianist method}{9}{section.5.2}%
 \contentsline {chapter}{\numberline {6}Runtime}{11}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Chapter introduction}{11}{section.6.1}%
-\contentsline {chapter}{\numberline {7}Conclusion}{13}{chapter.7}%
+\contentsline {chapter}{\numberline {7}Testing}{13}{chapter.7}%
 \contentsline {section}{\numberline {7.1}Chapter introduction}{13}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Test 1 - Mathematics}{13}{section.7.2}%
+\contentsline {subsection}{\numberline {7.2.1}Addition}{13}{subsection.7.2.1}%
+\contentsline {section}{\numberline {7.3}Test 2 - Natural language modelling}{13}{section.7.3}%
+\contentsline {subsection}{\numberline {7.3.1}Text prediction}{13}{subsection.7.3.1}%
+\contentsline {section}{\numberline {7.4}Test 3 - Signal processing}{13}{section.7.4}%
+\contentsline {subsection}{\numberline {7.4.1}Voice recognition}{13}{subsection.7.4.1}%
+\contentsline {section}{\numberline {7.5}Test 4 - Image classification}{13}{section.7.5}%
+\contentsline {subsection}{\numberline {7.5.1}Medical diagnosis}{13}{subsection.7.5.1}%
 \contentsline {chapter}{References}{15}{chapter*.8}%
 \contentsline {chapter}{Acknowledgements}{17}{chapter*.9}%
 \contentsline {chapter}{Appendix}{19}{chapter*.10}%
-\contentsline {section}{\numberline {7.2}Chapter introduction}{19}{section.7.2}%
+\contentsline {section}{\numberline {7.6}Chapter introduction}{19}{section.7.6}%

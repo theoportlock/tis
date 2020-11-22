@@ -1,15 +1,13 @@
 #!/usr/bin/env python3
+'''
+COMMUNICATION
+Interactions between workers
+'''
 import pandas as pd
 from src import IO
 from src import functions as f
 from src.main import worker
 
-'''
-COMMUNICATION
-I
-Interactions between workers can be summerised in the following ways:
-    1. The input of a worker is 
-'''
 bindata = ["10001000000011", # ABCD
            "10001000100001", # ABXD
            "10000000000000", # A

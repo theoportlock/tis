@@ -1,15 +1,17 @@
 #!/usr/bin/env python3
+'''
+This test will be turing like
+In order to affect sparceness, it is necessary to convert some of the active
+bits to 0 from the input string.  This, I believe is done incorrectly by
+traditional HTM architectures where that effect is mandated manually by
+external preprocessing algorythms. Conversely, the reverse process of input compression is also necessary.
+'''
 import unittest
 import os
 from src import IO
 from src import functions as f
 from src.main import worker
 
-
-# In order to affect sparceness, it is necessary to convert some of the active
-# bits to 0 from the input string.  This, I believe is done incorrectly by
-# traditional HTM architectures where that effect is mandated manually by
-# external preprocessing algorythms. Conversely, the reverse process of input compression is also necessary.
 df = pd.DataFrame(columns=["inp","pre"])
 data = "Hello Jello"
 with open(self.testing_files["inp"], 'w') as of: of.write(data)

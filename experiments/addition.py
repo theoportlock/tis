@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 '''
 ADDITION
+Should be the first experiment to succeed
 Equation tree discovery test
 This experiment should test the workers ability to perform basic mathematical operations without pre-exhisting memory for a calculation. The experiment should consist of a learning phase, a testing phase, and a result recording phase.
 Need to move this into the docs

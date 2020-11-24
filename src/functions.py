@@ -1,7 +1,6 @@
 def powerset(items: list) -> list:
     # finds all combinations of list elements
     from itertools import compress, product, islice
-    #yield list(set(compress(items, mask)) for mask in product(*[[0,1]]*len(items)))[1:]
     for mask in islice(product(*[[0,1]]*len(items)), 1, None):
         yield set(compress(items, mask))
 

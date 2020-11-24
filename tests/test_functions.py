@@ -1,8 +1,7 @@
 import unittest
 import random
-import numpy as np
-import os
 from src import functions as f
+
 
 class TestFunctions(unittest.TestCase):
     def test_powerset(self):
@@ -26,6 +25,7 @@ class TestFunctions(unittest.TestCase):
         self.assertEqual(type(converted_integer), list)
         self.assertEqual(type(concat_converted_int), list)
         self.assertNotEqual(len(converted_integer), len(concat_converted_int))
+
 
 if __name__ == "__main__":
     unittest.main()

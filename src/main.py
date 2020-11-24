@@ -9,6 +9,8 @@ memory = collections.Counter()
 need to move to super combinations for sparcity
 dont forget about OR combinatorics
 '''
+
+
 class worker:
     def __init__(self):
         self.files = dict()
@@ -43,7 +45,7 @@ class worker:
         else:
             IO.intfile(obj=self.pre, mode="out", filename=self.files["pre"])
         return self
-    
+
     def run(self):
         self.pre = 0
         for com_lst in f.powerset(f.convert(self.inp)):
@@ -54,6 +56,7 @@ class worker:
                     self.pre |= mem - com
             self.pre -= (self.pre & self.inp)
         return self
+
 
 if __name__ == "__main__":
     steve = worker()

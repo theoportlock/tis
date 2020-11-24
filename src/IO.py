@@ -1,6 +1,7 @@
 import os.path
 # write a new set/int/txt to file before reading if one doesnt exist
 
+
 def intfile(obj=0, mode='in', filename=''):
     if mode == "in":
         if not os.path.isfile(filename):

@@ -1,8 +1,8 @@
 import unittest
-import string
 import random
 import os
 from src import IO
+
 
 class TestIO(unittest.TestCase):
     def cleanup(self):
@@ -10,14 +10,11 @@ class TestIO(unittest.TestCase):
         if os.path.isfile(self.testfile):
             os.remove(self.testfile)
 
-
     def setUp(self):
         self.cleanup()
 
-
     def tearDown(self):
         self.cleanup()
-
 
     def test_setfile(self):
         test = set(random.sample(range(1, 1000), 50))
@@ -27,7 +24,6 @@ class TestIO(unittest.TestCase):
         self.assertEqual(type(result), set)
         self.assertEqual(result, test)
 
-
     def test_intfile(self):
         test = random.randint(0, 1000)
         IO.intfile(obj=test, mode="out", filename=self.testfile)
@@ -36,7 +32,6 @@ class TestIO(unittest.TestCase):
         self.assertEqual(type(result), int)
         self.assertEqual(result, test)
 
-
     def test_txtfile(self):
         test = random.randint(0, 1000)
         IO.txtfile(obj=test, mode="out", filename=self.testfile)
@@ -44,7 +39,6 @@ class TestIO(unittest.TestCase):
         result = IO.txtfile(filename=self.testfile)
         self.assertEqual(type(result), int)
         self.assertEqual(result, test)
-
 
 if __name__ == '__main__':
     unittest.main()

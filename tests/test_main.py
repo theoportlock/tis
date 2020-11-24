@@ -1,16 +1,14 @@
 #!/usr/bin/env python3
 import unittest
 import os
-from src import IO
-from src import functions as f
 from src.main import worker
+
 
 class TestMain(unittest.TestCase):
     def cleanup(self):
         for testing_file in self.testing_files.values():
             if os.path.isfile(testing_file):
-                os.remove(testing_file) 
-
+                os.remove(testing_file)
 
     def setUp(self):
         self.worker = worker()
@@ -20,10 +18,8 @@ class TestMain(unittest.TestCase):
             "pre": "data/temp_predict"}
         self.cleanup()
 
-
     def tearDown(self):
         self.cleanup()
-
 
     def test_load_and_save(self):
         text = "test"
@@ -32,7 +28,6 @@ class TestMain(unittest.TestCase):
         self.worker.load(files=self.testing_files, text=True)
         self.worker.save(files=self.testing_files, text=True)
         self.assertTrue(os.path.isfile(self.testing_files["pre"]))
-
 
     def test_run(self):
         data = ["abc",
@@ -51,4 +46,3 @@ class TestMain(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-

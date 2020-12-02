@@ -15,7 +15,7 @@
    viewBox="0 0 210 297"
    version="1.1"
    id="svg8"
-   inkscape:version="0.92.1 r15371"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
    sodipodi:docname="drawing.svg">
   <defs
      id="defs2">
@@ -99,17 +99,17 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.979899"
-     inkscape:cx="469.66531"
-     inkscape:cy="715.37371"
+     inkscape:zoom="1.4"
+     inkscape:cx="403.11506"
+     inkscape:cy="753.27425"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="a5215"
      showgrid="false"
-     inkscape:window-width="1920"
-     inkscape:window-height="1027"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
-     inkscape:window-maximized="1" />
+     inkscape:window-width="958"
+     inkscape:window-height="1018"
+     inkscape:window-x="1"
+     inkscape:window-y="31"
+     inkscape:window-maximized="0" />
   <metadata
      id="metadata5">
     <rdf:RDF>
@@ -118,7 +118,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -147,19 +147,52 @@
        inkscape:connector-curvature="0" />
     <a
        xlink:href="../monitor.py"
-       target=""
-       id="a5215">
+       id="a5215"
+       target="">
       <text
          id="text4825"
-         y="129.53951"
-         x="119.89188"
+         y="128.48119"
+         x="119.36271"
          style="font-style:normal;font-weight:normal;font-size:3.52777767px;line-height:1;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
          xml:space="preserve"><tspan
            style="font-size:3.52777767px;stroke-width:0.26458332"
-           y="129.53951"
-           x="119.89188"
+           y="128.48119"
+           x="119.36271"
            id="tspan4823"
-           sodipodi:role="line">Input</tspan></text>
+           sodipodi:role="line">Input1</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:3.52777767px;line-height:1;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         x="127.30019"
+         y="139.59354"
+         id="text34"><tspan
+           sodipodi:role="line"
+           id="tspan32"
+           x="127.30019"
+           y="139.59354"
+           style="font-size:3.52777767px;stroke-width:0.26458332">Input2</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:3.88055563px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         x="52.25119"
+         y="92.538811"
+         id="text38"><tspan
+           sodipodi:role="line"
+           id="tspan36"
+           x="52.25119"
+           y="92.538811"
+           style="font-size:3.88055563px;stroke-width:0.26458332">Action</tspan></text>
+      <text
+         id="text42"
+         y="92.271538"
+         x="114.35709"
+         style="font-style:normal;font-weight:normal;font-size:3.88055563px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         xml:space="preserve"><tspan
+           style="font-size:3.88055563px;stroke-width:0.26458332"
+           y="92.271538"
+           x="114.35709"
+           id="tspan40"
+           sodipodi:role="line">Combination</tspan></text>
     </a>
     <path
        inkscape:connector-curvature="0"
@@ -196,5 +229,11 @@
          x="150.17191"
          id="tspan5125"
          sodipodi:role="line">Prediction</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 124.74429,101.58631 V 57.259235 H 55.592061 v 79.111775 h 76.439079 c 0,-16.1698 0,-57.652259 0,-57.652259"
+       id="path30"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccc" />
   </g>
 </svg>

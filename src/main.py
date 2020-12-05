@@ -19,7 +19,6 @@ class worker:
         self.pre = 0
 
     def load(self, files={}, text=False):
-        # needs to be either more like save or completeley seperate
         self.files = dict(files)
         if not self.files:
             self.files["inp"] = "data/input"
@@ -33,7 +32,6 @@ class worker:
         return self
 
     def save(self, files={}, text=False):
-        # needs to be either more like save or completeley seperate
         self.files = dict(files)
         if not self.files:
             self.files["inp"] = "data/input"

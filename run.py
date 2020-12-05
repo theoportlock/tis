@@ -1,7 +1,5 @@
 #!/usr/bin/env python3
 from src.main import worker
-from src import IO
-from src import functions as f
 import sys
 
 if __name__ == "__main__":

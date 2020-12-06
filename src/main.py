@@ -19,7 +19,6 @@ class worker:
         self.pre = 0
 
     def load(self, files={}, text=False):
-        # needs to be either more like save or completeley seperate
         self.files = dict(files)
         if not self.files:
             self.files["inp"] = "data/input"
@@ -33,7 +32,6 @@ class worker:
         return self
 
     def save(self, files={}, text=False):
-        # needs to be either more like save or completeley seperate
         self.files = dict(files)
         if not self.files:
             self.files["inp"] = "data/input"
@@ -47,6 +45,8 @@ class worker:
         return self
 
     def run(self):
+        
+        '''
         self.pre = 0
         for com_lst in f.powerset(f.convert(self.inp)):
             com = sum(com_lst)
@@ -55,6 +55,7 @@ class worker:
                 if com & mem == com:
                     self.pre |= mem - com
             self.pre -= (self.pre & self.inp)
+        '''
         return self
 
 

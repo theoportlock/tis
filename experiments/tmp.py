@@ -5,6 +5,9 @@ def expand(int_number):
     active_list = [pos for pos, char in enumerate(binary) if char == "1"]
     final = 0
     for i in range(2**len(active_list)):
+        for pos, char in enumerate(bin(i)):
+            if char == "1":
+
         final += sum([2**i for i in active_list])
 
     return active_list

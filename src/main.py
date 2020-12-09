@@ -44,16 +44,9 @@ class worker:
         return self
 
     def run(self):
-        #self.pre = 0
         for com_lst in f.powerset(f.convert(self.inp)):
-            print(f"comlist{com_lst}") 
-            com = sum(com_lst)
-            print(f"com{com}") 
+            com = sum(com_lst) - 1
             self.mem = self.mem | 2**com
-            #for mem in self.mem:
-            #    if com & mem == com:
-            #        self.pre |= mem - com
-            #self.pre -= (self.pre & self.inp)
         return self
 
 

@@ -10,12 +10,11 @@ need to move to super combinations for sparcity
 dont forget about OR combinatorics
 '''
 
-
 class worker:
     def __init__(self):
         self.files = dict()
         self.inp = 0
-        self.mem = set()
+        self.mem = 0
         self.pre = 0
 
     def load(self, files={}, text=False):
@@ -24,7 +23,7 @@ class worker:
             self.files["inp"] = "data/input"
             self.files["mem"] = "data/memory"
             self.files["pre"] = "data/predict"
-        self.mem = IO.setfile(filename=self.files["mem"])
+        self.mem = IO.intfile(filename=self.files["mem"])
         if text:
             self.inp = IO.txtfile(filename=self.files["inp"])
         else:
@@ -37,7 +36,7 @@ class worker:
             self.files["inp"] = "data/input"
             self.files["mem"] = "data/memory"
             self.files["pre"] = "data/predict"
-        IO.setfile(obj=self.mem, mode="out", filename=self.files["mem"])
+        IO.intfile(obj=self.mem, mode="out", filename=self.files["mem"])
         if text:
             IO.txtfile(obj=self.pre, mode="out", filename=self.files["pre"])
         else:
@@ -45,17 +44,16 @@ class worker:
         return self
 
     def run(self):
-        
-        '''
-        self.pre = 0
+        #self.pre = 0
         for com_lst in f.powerset(f.convert(self.inp)):
+            print(f"comlist{com_lst}") 
             com = sum(com_lst)
-            self.mem.add(com)
-            for mem in self.mem:
-                if com & mem == com:
-                    self.pre |= mem - com
-            self.pre -= (self.pre & self.inp)
-        '''
+            print(f"com{com}") 
+            self.mem = self.mem | 2**com
+            #for mem in self.mem:
+            #    if com & mem == com:
+            #        self.pre |= mem - com
+            #self.pre -= (self.pre & self.inp)
         return self
 
 

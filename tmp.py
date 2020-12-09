@@ -1,17 +1,20 @@
 #!/usr/bin/env python
-def expand(number):
-    for i in bin(number)[:1:-1]:
-        yield i
+import re
+def expand(int_number):
+    binary = bin(int_number)[:1:-1]
+    active_list = [pos for pos, char in enumerate(binary) if char == "1"]
+    final = 0
+    for i in range(2**len(active_list)):
+        final += sum([2**i for i in active_list])
 
+    return active_list
 
-def contract(number):
-    for i in bin(number):
-        print(i)
+def contract(binary_number):
+    return int(binary_number, 2)
 
 if __name__ == "__main__":
-    a = 24
+    a = 6
     b = expand(a)
-    print(list(b))
-    """
-    c = contract(b)
-    """
+    #c = contract(b)
+    print(b)
+    #print(c)

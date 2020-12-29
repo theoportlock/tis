@@ -47,6 +47,7 @@ class worker:
         for com_lst in f.powerset(f.convert(self.inp)):
             com = sum(com_lst) - 1
             self.mem = self.mem | 2**com
+        self.inp = 0
         return self
 
 

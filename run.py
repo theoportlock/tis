@@ -5,8 +5,7 @@ import sys
 if __name__ == "__main__":
     steve = worker()
     if len(sys.argv) == 2:
-        steve.load(
-                {"inp":sys.argv[1], "mem":"memory", "pre":"predict"}
-                ).run().save()
+        steve.inp = int(sys.argv[1])
+        steve.run().io(mode='out')
     else:
-        steve.load().run().save()
+        steve.io(mode='in').run().io(mode='out')

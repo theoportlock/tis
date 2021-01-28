@@ -40,9 +40,8 @@ class TestMain(unittest.TestCase):
         for i in data:
             with open(self.testing_files["inp"], 'w') as of:
                 of.write(i)
-            self.worker.load(files=self.testing_files, text=True)
-            self.worker.run().save(files=self.testing_files, text=True)
-            self.assertTrue(os.path.isfile(self.testing_files["pre"]))
+            self.worker.io(files=self.testing_files)
+            self.worker.run().io(files=self.testing_files, mode='out')
 
 
 if __name__ == '__main__':

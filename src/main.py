@@ -31,8 +31,19 @@ class worker:
         return self
 
     def run(self):
+        print(bin(self.inp)[:1:-1])
+        combination = 0
         for position, value in enumerate(bin(self.inp)[:1:-1]):
-            if value:
-                self.mem = self.mem | 2**position
-        print(self.mem)
+            if value == "1":
+                combination += 2**position
+                print(bin(combination)[:1:-1])
+        self.mem = self.mem | combination
+        print(bin(self.mem)[:1:-1])
         return self
+
+    converted_input = []
+    for i in range(arr.bit_length()):
+        if 2**i & arr == 2**i:
+            converted_input.append(2**i)
+    return converted_input
+

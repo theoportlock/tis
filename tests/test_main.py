@@ -13,30 +13,31 @@ class TestMain(unittest.TestCase):
     def setUp(self):
         self.worker = worker()
         self.testing_files = {
-            "inp": "data/temp_input",
-            "mem": "data/temp_memory",
-            "pre": "data/temp_predict"}
+            "inp": "data/test_input",
+            "mem": "data/test_memory",
+            "pre": "data/test_predict"}
         self.cleanup()
 
     def tearDown(self):
         self.cleanup()
 
-    def test_load_and_save(self):
-        text = "test"
+    def test_file_io(self):
+        testtext = "test"
         with open(self.testing_files["inp"], 'w') as of:
-            of.write(text)
-        self.worker.load(files=self.testing_files, text=True)
-        self.worker.save(files=self.testing_files, text=True)
-        self.assertTrue(os.path.isfile(self.testing_files["pre"]))
+            of.write(testtext)
+        self.worker.io(files=self.testing_files, mode='in')
+        self.cleanup()
+        self.worker.io(files=self.testing_files, mode='out')
+        with open(self.testing_files["inp"], 'r') as of:
+            result = of.read()
+        self.assertEqual(testtext, result)
 
     def test_run(self):
         data = ["abc",
                 "ab",
                 "b",
                 "a"]
-        for i in data[1:]:
-            with open(self.testing_files["inp"], 'w') as of:
-                of.write(data[0])
+        for i in data:
             with open(self.testing_files["inp"], 'w') as of:
                 of.write(i)
             self.worker.load(files=self.testing_files, text=True)

@@ -5,7 +5,15 @@ import sys
 if __name__ == "__main__":
     steve = worker()
     if len(sys.argv) == 2:
-        steve.inp = int(sys.argv[1])
-        steve.run().io(mode='out')
+        steve.io(mode='in')
+        steve.inp = int(sys.argv[1][::-1],2)
+        steve.run()
+        steve.predict()
+        print(steve)
+        steve.io(mode='out')
     else:
-        steve.io(mode='in').run().io(mode='out')
+        steve.io(mode='in')
+        steve.run()
+        steve.predict()
+        print(steve)
+        steve.io(mode='out')

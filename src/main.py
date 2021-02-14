@@ -1,14 +1,18 @@
 #!/usr/bin/env python3
 from src import IO
+import src.functions as f
 import os.path
 import sys
 
 class worker:
     def __init__(self):
-        self.files = dict()
         self.inp, self.mem, self.pre = 0, 0, 0
 
+    def __repr__(self):
+        return f"inp:{bin(self.inp)[:1:-1]}\nmem:{bin(self.mem)[:1:-1]}\npre:{bin(self.pre)[:1:-1]}"
+
     def io(self, files={}, mode='in'):
+        self.files = dict()
         def parse(obj=0, mode='in', filename=''):
             if mode == "in":
                 if not os.path.isfile(filename):
@@ -30,20 +34,26 @@ class worker:
         self.pre = parse(obj=self.pre, mode=mode, filename=self.files["pre"])
         return self
 
+    def predict(self):
+        from math import sqrt
+        from statistics import mean
+        pre = []
+        for i in f.convert(self.mem):
+            pre.append(bin(len(bin(i)[2:]))[:1:-1])
+        print("combinations stored in memory \n", pre)
+        j = 0
+        final = []
+        while True:
+            j += 1
+            filtered = []
+            [filtered.append(x) for x in pre if len(x) >= j]
+            if len(filtered) == 0:
+                break
+            final.append(mean([int(i[j-1]) for i in filtered]))
+        self.pre = int("".join([str(round(i)) for i in final[::-1]]),2)
+
     def run(self):
-        print(bin(self.inp)[:1:-1])
-        combination = 0
-        for position, value in enumerate(bin(self.inp)[:1:-1]):
-            if value == "1":
-                combination += 2**position
-                print(bin(combination)[:1:-1])
-        self.mem = self.mem | combination
-        print(bin(self.mem)[:1:-1])
+        for com_lst in f.powerset(f.convert(self.inp)):
+            com = sum(com_lst) - 1
+            self.mem = self.mem | 2**com
         return self
-
-    converted_input = []
-    for i in range(arr.bit_length()):
-        if 2**i & arr == 2**i:
-            converted_input.append(2**i)
-    return converted_input
-

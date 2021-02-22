@@ -5,7 +5,7 @@ from src import IO
 from src import functions as f
 from src.main import worker
 
-df = pd.DataFrame(columns=["inp","pre"])
+df = pd.DataFrame(columns=["inp", "pre"])
 inp = range(20)
 bininp = [bin(i)[2:] for i in inp]
 df = pd.DataFrame(zip(inp, bininp), columns=["inp", "bininp"])

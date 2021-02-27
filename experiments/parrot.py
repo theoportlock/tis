@@ -1,22 +1,27 @@
 #!/usr/bin/env python3
 '''
-ADDITION
-Should succeed after abcd-abxd
-Equation tree discovery test
-This experiment should test the workers ability to perform basic mathematical operations without pre-exhisting memory for a calculation. The experiment should consist of a learning phase, a testing phase, and a result recording phase.
-Need to move this into the docs
-Should learn like:
-    1 when you see equals sign, produce a number
-        
+PARROT
+Simple script that runs random input of defined density and records output        
 '''
 import pandas as pd
-import random
-from src import IO
+from random import random
 from src import functions as f
 from src.main import worker
 
 # creates and writes training data
 df = pd.DataFrame(columns=["inp","pre"])
+arrlen = 10
+bitlen = 10
+bindata = []
+for i in range(arrlen):
+    teststring = []
+    bindata.append([
+            "".join([
+                teststring.append(str(round(random()**2))) for i in range(bitlen)])
+            ])
+
+print(bindata)
+'''
 bindata = [
     "0100", #t1-1  1
     "1000", #t1-2  +
@@ -31,3 +36,4 @@ df = pd.DataFrame(zip(bindata, data), columns=["bininp", "inp"])
 df["pre"] = 0
 df["binpre"] = 0
 print(df)
+'''

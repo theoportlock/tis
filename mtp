@@ -1,0 +1,8 @@
+echo "$(date +%H:%M:%S): start"
+pids=()
+timeout 10 bash -c 'sleep 5; echo "$(date +%H:%M:%S): job 1 terminated successfully"' &
+pids+=($!)
+timeout 2 bash -c 'sleep 5; echo "$(date +%H:%M:%S): job 2 terminated successfully"' &
+pids+=($!)
+wait "${pids[@]}"
+echo "$(date +%H:%M:%S): done waiting. both jobs terminated on their own or via timeout; resuming script"

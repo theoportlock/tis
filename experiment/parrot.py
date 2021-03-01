@@ -24,8 +24,8 @@ df["pre"] = 0
 def conv(x):
     return bin(x)[:1:-1]
 
+steve = worker()
 def work(integer):
-    steve = worker()
     steve.inp = integer
     steve.run()
     steve.predict()

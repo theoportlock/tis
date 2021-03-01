@@ -40,7 +40,7 @@ class worker:
         pre = []
         for i in f.convert(self.mem):
             pre.append(bin(len(bin(i)[2:]))[:1:-1])
-        print("combinations stored in memory \n", pre)
+        #print("combinations stored in memory \n", pre)
         j = 0
         final = []
         while True:

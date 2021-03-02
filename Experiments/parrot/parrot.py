@@ -12,7 +12,7 @@ import sys
 df = pd.DataFrame(columns=["inp","pre"])
 bindata = []
 for i in range(40):
-    bindata.append("".join(np.random.binomial(1, 0.3, size=18).astype('U')))
+    bindata.append("".join(np.random.binomial(1, 0.3, size=17).astype('U')))
 
 data = [int(i[::-1], 2) for i in bindata]
 df = pd.DataFrame(zip(bindata, data), columns=["bininp", "inp"])

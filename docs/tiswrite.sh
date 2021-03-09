@@ -1,3 +1,3 @@
 #!/bin/bash
-cd ~/tis/docs/journal/ &&
+cd journal &&
 vim chapters/*/*.tex

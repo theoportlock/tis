@@ -4,17 +4,14 @@
 name="parrot.py"
 timelim=50
 
-results="Experiments/$(basename $name .py)/results"
-mkdir -p $results
+result_dir="Experiments/$(basename $name .py)/results"
+result="$(date +"%T").csv"
+
+mkdir -p $result_dir
 
 trap "[ ! -e $name ] || rm $name " EXIT
 cp Experiments/$(basename $name .py)/$name . 
 
-#timeout $timelim \
-#	mprof -o $results \
-#		python $name \
-#			> $results.log
+timeout $timelim python $name > $result_dir/$result
 
-timeout $timelim \
-	python $name \
-		> $results.log
+#mprof -o $results

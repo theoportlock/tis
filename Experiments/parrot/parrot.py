@@ -7,13 +7,12 @@ from src.main import worker
 from datetime import datetime
 import random
 import time
-import sys
 
 steve = worker()
 
+print("time, inp, bininp, pre, binpre")
 while True:
-    time_now = datetime.now().strftime("%H:%M:%S")
-    d1 = [0]*12 + [1]*3
+    d1 = [0]*9 + [1]*3
     random.shuffle(d1)
     bininp = "".join(str(i) for i in d1)
     inp = int(bininp[::-1], 2)
@@ -26,4 +25,4 @@ while True:
     binpre = bin(steve.pre)[:1:-1]
     time_now = datetime.now().strftime("%H:%M:%S")
 
-    print(f"{time_now}, {inp}, {bininp}, {pre}, {binpre}\n")
+    print(f"{time_now}, {inp}, {bininp}, {pre}, {binpre}")

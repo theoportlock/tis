@@ -12,7 +12,7 @@ steve = worker()
 
 print("time, inp, bininp, pre, binpre")
 while True:
-    d1 = [0]*9 + [1]*3
+    d1 = [0]*10 + [1]*2
     random.shuffle(d1)
     bininp = "".join(str(i) for i in d1)
     inp = int(bininp[::-1], 2)

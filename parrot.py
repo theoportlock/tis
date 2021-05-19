@@ -17,7 +17,7 @@ with open(f"Experiments/parrot/{start_time}", mode="w+") as csv_file:
 
 while True:
     time_now = datetime.now().strftime("%H:%M:%S")
-    d1 = [0]*20 + [1]*10
+    d1 = [0]*10 + [1]*3
     random.shuffle(d1)
     bininp = "".join(str(i) for i in d1)
     inp = int(bininp[::-1], 2)

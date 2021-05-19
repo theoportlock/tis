@@ -38,6 +38,7 @@ class worker:
         from math import sqrt
         from statistics import mean
         pre = []
+        # need to change this to only look at the inactive bits (slice the memory array)
         for i in f.convert(self.mem):
             pre.append(bin(len(bin(i)[2:]))[:1:-1])
         #print("combinations stored in memory \n", pre)

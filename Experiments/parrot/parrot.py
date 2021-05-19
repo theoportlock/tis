@@ -7,27 +7,23 @@ from src.main import worker
 from datetime import datetime
 import random
 import time
-import sys
 
 steve = worker()
-start_time = str(datetime.now().strftime("%H:%M:%S"))
 
-with open(f"Experiments/parrot/{start_time}", mode="w+") as csv_file:
-    csv_file.writelines("time, inp, bininp, pre, binpre")
-
+print("time, inp, bininp, pre, binpre")
 while True:
-    time_now = datetime.now().strftime("%H:%M:%S")
-    d1 = [0]*10 + [1]*3
-    random.shuffle(d1)
-    bininp = "".join(str(i) for i in d1)
-    inp = int(bininp[::-1], 2)
+    for i in range(15):
+        d1 = [0]*i + [1]*2
+        random.shuffle(d1)
+        bininp = "".join(str(i) for i in d1)
+        inp = int(bininp[::-1], 2)
 
-    steve.inp = inp
-    steve.run()
-    steve.predict()
-    pre = steve.pre
-    binpre = bin(steve.pre)[:1:-1]
+        steve.inp = inp
+        steve.run()
+        steve.predict()
 
-    with open(f"Experiments/parrot/{start_time}", mode="w+") as csv_file:
+        pre = steve.pre
+        binpre = bin(steve.pre)[:1:-1]
         time_now = datetime.now().strftime("%H:%M:%S")
-        csv_file.writelines(f"{time_now}, {inp}, {bininp}, {pre}, {binpre}")
+
+        print(f"{time_now}, {inp}, {bininp}, {pre}, {binpre}")

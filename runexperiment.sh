@@ -13,6 +13,10 @@ mkdir -p $result_dir
 
 trap "[ ! -e $name ] || rm $name " EXIT
 cp experiments/$(basename $name .py)/$name . 
+echo "$(date): $name begin"
+
+timeout $timelim python3.9 $name > $result_dir/$result
+echo "$(date): $name done"
 
 timeout $timelim python $name > $result_dir/$result
 

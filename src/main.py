@@ -36,8 +36,6 @@ class worker:
 
     def predict(self):
         import math
-        # for each combination of input
-
         # inversion of input
         Ih = "".join('1' if x == '0' else '0' for x in f.int2bin(steve.inp))
 

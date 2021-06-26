@@ -45,7 +45,10 @@ def int2bin(integer):
     return bin(integer)[:1:-1]
 
 def bin2int(binary):
-    return int(binary[::-1],2)
+    if binary: 
+        return int(binary[::-1],2)
+    else:
+        return 0
 
 def comb(integer):
     out = 0

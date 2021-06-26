@@ -35,23 +35,27 @@ class worker:
         return self
 
     def predict(self):
+        if self.mem == 0:
+            return
         import math
         # inversion of input
-        Ih = "".join('1' if x == '0' else '0' for x in f.int2bin(steve.inp))
+        Ih = "".join('1' if x == '0' else '0' for x in f.int2bin(self.inp))
 
         # extend the inversion to match max bitlength of comb
-        mmax = len(f.int2bin(math.floor(math.log(steve.mem, 2))))
-        Ih+=('1'*(mmax - len(Ih)))
-        Ih=f.bin2int(Ih)
+        mmax = len(f.int2bin(math.floor(math.log(self.mem, 2))))
+        Ih += ('1'*(mmax - len(Ih)))
+        Ih = f.bin2int(Ih)
 
         # find difference between the memory and the prediction
-        matches = steve.mem - (steve.mem & (f.comb(Ih) + f.comb(steve.inp)))
+        matches = self.mem - (self.mem & (f.comb(Ih) + f.comb(self.inp)))
 
         converted = [int(math.log(i,2)+1) for i in f.convert(matches)]
-
-        converted_int = [[int(j) for j in list(f.int2bin(i))] for i in converted]
+        converted_filtered = [f.int2bin(i - (self.inp & i)) for i in converted]
+        #converted_int = [[int(j) for j in list(f.int2bin(i))] for i in converted_filtered]
+        converted_int = [[int(j) for j in list(i)] for i in converted_filtered]
         votearray = [sum(i) for i in list(zip(*converted_int))]
         norm_votearray = [float(i)/max(votearray) for i in votearray]
+        print(norm_votearray)
         self.pre = f.bin2int("".join([str(round(i)) for i in norm_votearray]))
 
     def run(self):

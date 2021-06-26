@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 from src.main import worker
 import sys
+# runs either from command line e.g. python run.py 10100010
+# or without arguments from data/input
 
 if __name__ == "__main__":
     steve = worker()

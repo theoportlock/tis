@@ -5,7 +5,7 @@ name="parrot.py"
 timelim=10
 
 result_dir="experiments/$(basename $name .py)/results"
-result="$(date +"%T").csv"
+result="$(date +"%T").tsv"
 
 echo "saving to $result_dir/$result"
 

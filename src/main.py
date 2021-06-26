@@ -3,6 +3,10 @@ from src import IO
 import src.functions as f
 import os.path
 import sys
+'''
+#for testing
+import src.functions as f; from src.main import worker; self = worker()
+'''
 
 class worker:
     def __init__(self):
@@ -35,8 +39,9 @@ class worker:
         return self
 
     def predict(self):
-        if self.mem == 0:
-            return
+        if self.mem == 0 or self.inp == 0:
+            self.pre = 0
+            return self
         import math
         # inversion of input
         Ih = "".join('1' if x == '0' else '0' for x in f.int2bin(self.inp))
@@ -48,14 +53,18 @@ class worker:
 
         # find difference between the memory and the prediction
         matches = self.mem - (self.mem & (f.comb(Ih) + f.comb(self.inp)))
-
+        if not matches:
+            self.pre = 0
+            return self
         converted = [int(math.log(i,2)+1) for i in f.convert(matches)]
         converted_filtered = [f.int2bin(i - (self.inp & i)) for i in converted]
         #converted_int = [[int(j) for j in list(f.int2bin(i))] for i in converted_filtered]
         converted_int = [[int(j) for j in list(i)] for i in converted_filtered]
+        max_length = max((len(i) for i in converted_int))
+        for i in converted_int:
+            i.extend([0] * (max_length - len(i)))
         votearray = [sum(i) for i in list(zip(*converted_int))]
         norm_votearray = [float(i)/max(votearray) for i in votearray]
-        print(norm_votearray)
         self.pre = f.bin2int("".join([str(round(i)) for i in norm_votearray]))
 
     def run(self):

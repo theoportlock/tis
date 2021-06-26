@@ -35,41 +35,27 @@ class worker:
         return self
 
     def predict(self):
-        '''New
+        import math
+        # for each combination of input
 
         # inversion of input
-        Ih1 = "".join('1' if x == '0' else '0' for x in f.int2bin(steve.inp))
+        Ih = "".join('1' if x == '0' else '0' for x in f.int2bin(steve.inp))
 
         # extend the inversion to match max bitlength of comb
         mmax = len(f.int2bin(math.floor(math.log(steve.mem, 2))))
-        Ih1+=('1'*(mmax - len(Ih1)))
+        Ih+=('1'*(mmax - len(Ih)))
+        Ih=f.bin2int(Ih)
 
-        for active_memory in f.convert(self.mem):
-            for remaining in unsearched_bits
-        '''
+        # find difference between the memory and the prediction
+        matches = steve.mem - (steve.mem & (f.comb(Ih) + f.comb(steve.inp)))
 
-        #'''old
-        from math import sqrt
-        from statistics import mean
-        pre = []
-        for i in f.convert(self.mem):
-            pre.append(bin(len(bin(i)[2:]))[:1:-1])
-        #print("combinations stored in memory \n", pre)
-        j = 0
-        final = []
-        while True:
-            j += 1
-            filtered = []
-            [filtered.append(x) for x in pre if len(x) >= j]
-            if len(filtered) == 0:
-                break
-            final.append(mean([int(i[j-1]) for i in filtered]))
-        self.pre = int("".join([str(round(i)) for i in final[::-1]]),2)
-        #'''
+        converted = [int(math.log(i,2)+1) for i in f.convert(matches)]
+
+        converted_int = [[int(j) for j in list(f.int2bin(i))] for i in converted]
+        votearray = [sum(i) for i in list(zip(*converted_int))]
+        norm_votearray = [float(i)/max(votearray) for i in votearray]
+        self.pre = f.bin2int("".join([str(round(i)) for i in norm_votearray]))
 
     def run(self):
-        #for com_lst in f.powerset(f.convert(self.inp)):
-        #    com = sum(com_lst) - 1
-        #    self.mem = self.mem | 2**com
         self.mem = self.mem | f.comb(self.inp)
         return self

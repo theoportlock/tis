@@ -38,10 +38,13 @@ class worker:
         from math import sqrt
         from statistics import mean
         pre = []
-        # need to change this to only look at the inactive bits (slice the memory array)
+
+        #for i in f.convert(self.inp):
+
+
+        '''
         for i in f.convert(self.mem):
             pre.append(bin(len(bin(i)[2:]))[:1:-1])
-        #print("combinations stored in memory \n", pre)
         j = 0
         final = []
         while True:
@@ -52,6 +55,7 @@ class worker:
                 break
             final.append(mean([int(i[j-1]) for i in filtered]))
         self.pre = int("".join([str(round(i)) for i in final[::-1]]),2)
+        '''
 
     def run(self):
         for com_lst in f.powerset(f.convert(self.inp)):

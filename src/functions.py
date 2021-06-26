@@ -40,3 +40,9 @@ def concat(int_list: list, level: int) -> list:
     if not count:
         new.append(out)
     return new
+
+def int2bin(integer):
+    return bin(integer)[:1:-1]
+
+def bin2int(binary):
+    return int.from_bytes(binary, byteorder="big")

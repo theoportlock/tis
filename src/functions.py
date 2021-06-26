@@ -40,3 +40,16 @@ def concat(int_list: list, level: int) -> list:
     if not count:
         new.append(out)
     return new
+
+def int2bin(integer):
+    return bin(integer)[:1:-1]
+
+def bin2int(binary):
+    return int(binary[::-1],2)
+
+def comb(integer):
+    out = 0
+    for com_lst in powerset(convert(integer)):
+        com = sum(com_lst) - 1
+        out = out | 2**com
+    return out

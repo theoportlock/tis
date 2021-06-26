@@ -35,10 +35,23 @@ class worker:
         return self
 
     def predict(self):
+        '''New
+
+        # inversion of input
+        Ih1 = "".join('1' if x == '0' else '0' for x in f.int2bin(steve.inp))
+
+        # extend the inversion to match max bitlength of comb
+        mmax = len(f.int2bin(math.floor(math.log(steve.mem, 2))))
+        Ih1+=('1'*(mmax - len(Ih1)))
+
+        for active_memory in f.convert(self.mem):
+            for remaining in unsearched_bits
+        '''
+
+        #'''old
         from math import sqrt
         from statistics import mean
         pre = []
-        # need to change this to only look at the inactive bits (slice the memory array)
         for i in f.convert(self.mem):
             pre.append(bin(len(bin(i)[2:]))[:1:-1])
         #print("combinations stored in memory \n", pre)
@@ -52,9 +65,11 @@ class worker:
                 break
             final.append(mean([int(i[j-1]) for i in filtered]))
         self.pre = int("".join([str(round(i)) for i in final[::-1]]),2)
+        #'''
 
     def run(self):
-        for com_lst in f.powerset(f.convert(self.inp)):
-            com = sum(com_lst) - 1
-            self.mem = self.mem | 2**com
+        #for com_lst in f.powerset(f.convert(self.inp)):
+        #    com = sum(com_lst) - 1
+        #    self.mem = self.mem | 2**com
+        self.mem = self.mem | f.comb(self.inp)
         return self

@@ -6,6 +6,7 @@ import sys
 '''
 #for testing
 import src.functions as f; from src.main import worker; self = worker()
+import src.functions as f; from src.main import worker; self = worker(); self.inp=f.bin2int('1101'); self.run(); self.inp=f.bin2int('11')
 '''
 
 class worker:
@@ -39,10 +40,11 @@ class worker:
         return self
 
     def predict(self):
+        import math
         if self.mem == 0 or self.inp == 0:
             self.pre = 0
             return self
-        import math
+
         # inversion of input
         Ih = "".join('1' if x == '0' else '0' for x in f.int2bin(self.inp))
 
@@ -50,15 +52,18 @@ class worker:
         mmax = len(f.int2bin(math.floor(math.log(self.mem, 2))))
         Ih += ('1'*(mmax - len(Ih)))
         Ih = f.bin2int(Ih)
+        I = self.inp
 
         # find difference between the memory and the prediction
-        matches = self.mem - (self.mem & (f.comb(Ih) + f.comb(self.inp)))
+        #matches = self.mem - (self.mem & (f.comb(Ih) + f.comb(self.inp)))
+        matches = self.mem - (self.mem & f.paircomb(Ih, I))
+        matches = f.paircomb(Ih, I) & self.mem
         if not matches:
             self.pre = 0
             return self
-        converted = [int(math.log(i,2)+1) for i in f.convert(matches)]
+        #converted = f.uncomb(matches)
+        converted = [i+1 for i in f.uncomb(matches)]
         converted_filtered = [f.int2bin(i - (self.inp & i)) for i in converted]
-        #converted_int = [[int(j) for j in list(f.int2bin(i))] for i in converted_filtered]
         converted_int = [[int(j) for j in list(i)] for i in converted_filtered]
         max_length = max((len(i) for i in converted_int))
         for i in converted_int:

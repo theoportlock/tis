@@ -1,4 +1,29 @@
 \chapter{Memory}
+\section{Storage}
+\section{Prediction}
+%^M = a,b,ab,d,ad,bd,abd
+%I = a,b
+%Ih = c,d
+%^C(I) = a,b,ab
+%^C(Ih) = c,d,cd
+%^C(I)+C(Ih) = a,b,ab,c,d,cd
+%^M | (C(I)+C(Ih)) = ad,bd,abd
+%^^C(C(I)+C(Ih)) = [a],[b],[a,b],[ab],[a,ab],[b,ab],[a,b,ab],[c],[c,a],[c,b],[c,a,b],[c,ab],[c,a,ab],[c,b,ab],[c,a,b,ab].... 
+%extract the paired combinations that weren't found in either of the lists
+%^^C(C(I)+C(Ih))-(C(C(I))+C(C(Ih)) = [a,c],[a,d],[a,c,d],[a,cd],[a,c,cd],[a,d,cd],[b,c]...
+%^^C(C(I)+C(Ih))-(C(C(I))+C(C(Ih))-notpairs = [a,c],[a,d],[a,cd],[b,c],[b,d],[b,cd],[ab,c],[ab,d],[ab,cd]
+%^agg.sum(C(C(I)+C(Ih))-(C(C(I))+C(C(Ih))-notpairs) = ac,ad,acd,bc,bd,bcd,abc,abd,abcd
+%^agg.sum(C(C(I)+C(Ih))-(C(C(I))+C(C(Ih))-notpairs) | M = ad,bd,abd
+%^^agg.sum(C(C(I)+C(Ih))-(C(C(I))+C(C(Ih))-notpairs) | M = [a,d],[b,d],[a,b,d]
+%^I = a,b
+
+%Move to factorial based function generation for the slicing of memory arrays - for speed
+%This would mean that loading the full memory array into RAM would be unnecessary, just use function to look for bits in memory binary file
+
+%weighted probability - giving a higher score prediction for a better match
+%the democratic effect
+
+	
 \section{Persistance of activation}
 \section{Edge contraction}
 \section{Delay function}

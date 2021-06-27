@@ -1,48 +1,28 @@
-def powerset(items: list) -> list:
-    # finds all combinations of list elements
-    from itertools import compress, product, islice
-    for mask in islice(product(*[[0,1]]*len(items)), 1, None):
-        yield set(compress(items, mask))
+'''
+import src.functions as f
+load src/functions.py
+'''
 
+def comb(integer):
+    converted = [2**(i-1) for i in uncomb(integer)]
+    out=[]
+    for i in range(1, 2**len(converted)):
+        out.append(sum([converted[j-1] for j in uncomb(i)]))
+    #print(sum([2**(i-1) for i in out]))
+    return sum([2**(i-1) for i in out])
 
-def convert(arr: int) -> list:
-    # conversion to see only the active bits
+def uncomb(arr: int) -> list:
     converted_input = []
     for i in range(arr.bit_length()):
         if 2**i & arr == 2**i:
-            converted_input.append(2**i)
+            converted_input.append(i+1)
     return converted_input
 
-
-def basechanger(number: int, base: int) -> list:
-    remainder_stack = []
-    while number > 0:
-        remainder = number % base
-        remainder_stack.append(remainder)
-        number = number // base
-    new_digits = []
-    while remainder_stack:
-        new_digits.append(2**remainder_stack.pop())
-    return new_digits
-
-
-def concat(int_list: list, level: int) -> list:
-    # need to be mindfull of duplicated bits
-    new = []
-    count = 0
-    out = 0
-    for j in int_list:
-        count += 1 
-        out += j
-        if count == 3:
-            new.append(out)
-            count = 0
-    if not count:
-        new.append(out)
-    return new
-
 def int2bin(integer):
-    return bin(integer)[:1:-1]
+    if integer:
+        return bin(integer)[:1:-1]
+    else:
+        return ""
 
 def bin2int(binary):
     if binary: 
@@ -50,9 +30,9 @@ def bin2int(binary):
     else:
         return 0
 
-def comb(integer):
+def paircomb(int1, int2):
     out = 0
-    for com_lst in powerset(convert(integer)):
-        com = sum(com_lst) - 1
-        out = out | 2**com
+    for i in uncomb(comb(int1)):
+        for j in uncomb(comb(int2)):
+            out+=2**(i+j-1)
     return out

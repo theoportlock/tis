@@ -13,19 +13,20 @@ import math
 steve = worker()
 
 print("time\t inp\t pre\t bininp\t binpre\t lstinp\t lstpre")
-percent=9
-length=12
+percent=5
+length=10
 while True:
     testcase = [1]*percent + [0]*(100-percent)
     bininp = "".join(str(random.choice(testcase)) for i in range(length))
     inp = int(bininp[::-1], 2)
+
     steve.inp = inp
     steve.predict()
     steve.run()
+
     pre = steve.pre
-    lstinp = [int(math.log(i,2)) for i in f.convert(inp)]
-    lstpre = [int(math.log(i,2)) for i in f.convert(pre)]
-    #lstpre = f.convert(pre)
+    lstinp = f.uncomb(inp)
+    lstpre = f.uncomb(pre)
     binpre = bin(steve.pre)[:1:-1]
     time_now = datetime.now().strftime("%H:%M:%S")
     print(f"{time_now}\t {inp}\t {pre}\t {bininp}\t {binpre}\t {lstinp}\t {lstpre}")

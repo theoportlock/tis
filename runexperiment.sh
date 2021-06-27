@@ -2,7 +2,7 @@
 #name=$(basename $(ls experiments/* | fzf))
 
 name="parrot.py"
-timelim=30
+timelim=4
 
 result_dir="experiments/$(basename $name .py)/results"
 result="$(date +"%T").tsv"

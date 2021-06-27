@@ -12,7 +12,7 @@ import math
 
 steve = worker()
 
-print("time\t inp\t pre\t bininp\t binpre\t lstinp\t lstpre")
+print("time\t inp\t pre\t bininp\t binpre\t lstinp\t lstpre\t votepre")
 percent=5
 length=10
 while True:
@@ -28,5 +28,6 @@ while True:
     lstinp = f.uncomb(inp)
     lstpre = f.uncomb(pre)
     binpre = bin(steve.pre)[:1:-1]
+    votepre = steve.votearray
     time_now = datetime.now().strftime("%H:%M:%S")
-    print(f"{time_now}\t {inp}\t {pre}\t {bininp}\t {binpre}\t {lstinp}\t {lstpre}")
+    print(f"{time_now}\t {inp}\t {pre}\t {bininp}\t {binpre}\t {lstinp}\t {lstpre}\t {votepre}")

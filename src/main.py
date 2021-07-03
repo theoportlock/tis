@@ -12,7 +12,7 @@ import src.functions as f; from src.main import worker; self = worker(); self.in
 class worker:
     def __init__(self):
         self.inp, self.mem, self.pre = 0, 0, 0
-        #self.votearray = []
+        self.votearray = []
 
     def __repr__(self):
         return f"inp:{bin(self.inp)[:1:-1]}\nmem:{bin(self.mem)[:1:-1]}\npre:{bin(self.pre)[:1:-1]}"
@@ -68,7 +68,7 @@ class worker:
             i.extend([0] * (max_length - len(i)))
         votearray = [sum(i) for i in list(zip(*converted_int))]
         norm_votearray = [float(i)/max(votearray) for i in votearray]
-        #self.votearray = votearray
+        self.votearray = votearray
         self.pre = f.bin2int("".join([str(round(i)) for i in norm_votearray]))
 
     def run(self):

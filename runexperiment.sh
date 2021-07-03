@@ -1,7 +1,7 @@
 #!/bin/bash -e
-#name=$(basename $(ls experiments/* | fzf))
-
 name="parrot.py"
+name=$(basename $(ls experiments/* | fzf))
+
 timelim=60
 
 result_dir="experiments/$(basename $name .py)/results"

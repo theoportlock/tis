@@ -41,7 +41,6 @@ class worker:
         return self
 
     def predict(self):
-        import math
         if self.mem == 0 or self.inp == 0:
             self.pre = 0
             return self
@@ -50,20 +49,18 @@ class worker:
         Ih = "".join('1' if x == '0' else '0' for x in f.int2bin(self.inp))
 
         # extend the inversion to match max bitlength of comb
-        mmax = len(f.int2bin(math.floor(math.log(self.mem, 2))))
+        #import math / mmax = len(f.int2bin(math.floor(math.log(self.mem, 2))))
+        mmax = len(f.int2bin(f.uncomb(self.mem)[-1]))
         Ih += ('1'*(mmax - len(Ih)))
         Ih = f.bin2int(Ih)
         I = self.inp
 
         # find difference between the memory and the prediction
-        #matches = self.mem - (self.mem & (f.comb(Ih) + f.comb(self.inp)))
-        #matches = self.mem - (self.mem & f.paircomb(Ih, I))
         matches = f.paircomb(Ih, I) & self.mem
         if not matches:
             self.pre = 0
             return self
         converted = f.uncomb(matches)
-        #converted = [i+1 for i in f.uncomb(matches)]
         converted_filtered = [f.int2bin(i - (self.inp & i)) for i in converted]
         converted_int = [[int(j) for j in list(i)] for i in converted_filtered]
         max_length = max((len(i) for i in converted_int))

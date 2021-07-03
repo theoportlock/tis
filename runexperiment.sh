@@ -1,5 +1,4 @@
 #!/bin/bash -e
-name="parrot.py"
 name=$(basename $(ls experiments/* | fzf))
 
 timelim=60

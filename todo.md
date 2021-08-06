@@ -17,3 +17,5 @@ focus on more basic experiments (bit adding etc)
 figure out how to change slice of combination search during search
 make intracombination priority list for active bit checking
 change all functions to yield
+
+# Look at memoristor technology - nature biotechnology

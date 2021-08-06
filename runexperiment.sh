@@ -1,7 +1,7 @@
 #!/bin/bash -e
 name=$(basename $(ls experiments/* | fzf))
 
-timelim=60
+timelim=60000
 
 result_dir="experiments/$(basename $name .py)/results"
 result="$(date +"%T").tsv"

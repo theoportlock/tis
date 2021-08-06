@@ -14,7 +14,7 @@ steve = worker()
 
 print("time\t inp\t pre\t bininp\t binpre\t lstinp\t lstpre\t votepre")
 percent=5
-length=10
+length=15
 while True:
     testcase = [1]*percent + [0]*(100-percent)
     bininp = "".join(str(random.choice(testcase)) for i in range(length))

@@ -19,3 +19,5 @@ make intracombination priority list for active bit checking
 change all functions to yield
 
 # Look at memoristor technology - nature biotechnology
+Causality - how does one action lead to another world
+how to make a graph of actions using combinatorics - causal graph

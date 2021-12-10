@@ -4,7 +4,6 @@ import src.functions as f
 import os.path
 import sys
 '''
-#for testing
 import src.functions as f; from src.main import worker; self = worker()
 import src.functions as f; from src.main import worker; self = worker(); self.inp=f.bin2int('1101'); self.run(); self.inp=f.bin2int('11')
 '''

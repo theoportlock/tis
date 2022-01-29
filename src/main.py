@@ -3,6 +3,7 @@ from src import IO
 import src.functions as f
 import os.path
 import sys
+import random
 '''
 import src.functions as f; from src.main import worker; self = worker()
 import src.functions as f; from src.main import worker; self = worker(); self.inp=f.bin2int('1101'); self.run(); self.inp=f.bin2int('11')
@@ -10,11 +11,11 @@ import src.functions as f; from src.main import worker; self = worker(); self.in
 
 class worker:
     def __init__(self):
-        self.inp, self.mem, self.pre = 0, 0, 0
+        self.inp, self.mem, self.pre, self.act = 0, 0, 0, 0
         self.votearray = []
 
     def __repr__(self):
-        return f"inp:{bin(self.inp)[:1:-1]}\nmem:{bin(self.mem)[:1:-1]}\npre:{bin(self.pre)[:1:-1]}"
+        return f"inp:{bin(self.inp)[:1:-1]}\nmem:{bin(self.mem)[:1:-1]}\npre:{bin(self.pre)[:1:-1]}\nact:{bin(self.act)[:1:-1]}"
 
     def io(self, files={}, mode='in'):
         self.files = dict()
@@ -72,4 +73,8 @@ class worker:
 
     def run(self):
         self.mem = self.mem | f.comb(self.inp)
+        return self
+    
+    def action(self):
+        self.act = random.getrandbits(4)
         return self

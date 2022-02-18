@@ -29,3 +29,7 @@ bitstring
 big_text
 conversation
 final_goal
+
+#ideas
+Simultaneous equations
+flux

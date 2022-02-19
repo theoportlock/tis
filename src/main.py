@@ -7,6 +7,17 @@ import random
 '''
 import src.functions as f; from src.main import worker; self = worker()
 import src.functions as f; from src.main import worker; self = worker(); self.inp=f.bin2int('1101'); self.run(); self.inp=f.bin2int('11')
+#randarray = [np.random.randint(18) for i in range(1000000)]
+randarray = np.random.shuffle(np.range(10000000))
+self.mem=0
+self.inp = 3
+while True:
+    self.run()
+    self.act = randarray[self.mem]
+    self.inp = self.act
+    self
+    self.mem= 0
+    time.sleep(1)
 '''
 
 class worker:

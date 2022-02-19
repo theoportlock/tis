@@ -1,5 +1,5 @@
 #!/bin/bash -e
-name=$(basename $(ls experiments/*/code/*.py | fzf))
+name=$(find experiments/*/code/*.py -type f | sed 's|.*/.*/||g' | fzf)
 bname=$(basename -s .py $name)
 timelim=60
 result_dir="experiments/$bname/results"
@@ -13,7 +13,7 @@ trap "[ ! -e $name ] || rm $name " EXIT
 ln experiments/$bname/code/$name . 
 echo "$(date): $name begin"
 
-timeout $timelim python $name | tee $result_dir/$result
+timeout $timelim python -u $name | tee $result_dir/$result
 echo "$(date): $name done"
 
 #timeout $timelim python -c 'print("testing")' > test.txt

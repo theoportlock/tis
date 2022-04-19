@@ -28,6 +28,18 @@ bindata = [
     "0001"] #t2-4  3
 data = [int(i[::-1], 2) for i in bindata]
 df = pd.DataFrame(zip(bindata, data), columns=["bininp", "inp"])
-df["pre"] = 0
 df["binpre"] = 0
+df["pre"] = 0
 print(df)
+
+steve = worker()
+steve.inp = f.bin2int("1110000")
+steve.predict()
+steve.inp = steve.pre
+#steve.inp = f.bin2int("0111000")
+steve.predict()
+steve.inp = steve.pre
+#steve.inp = f.bin2int("0011100")
+steve.predict()
+steve.inp = steve.pre
+

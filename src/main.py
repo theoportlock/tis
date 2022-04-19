@@ -3,18 +3,30 @@ from src import IO
 import src.functions as f
 import os.path
 import sys
+import random
 '''
 import src.functions as f; from src.main import worker; self = worker()
 import src.functions as f; from src.main import worker; self = worker(); self.inp=f.bin2int('1101'); self.run(); self.inp=f.bin2int('11')
+#randarray = [np.random.randint(18) for i in range(1000000)]
+randarray = np.random.shuffle(np.range(10000000))
+self.mem=0
+self.inp = 3
+while True:
+    self.run()
+    self.act = randarray[self.mem]
+    self.inp = self.act
+    self
+    self.mem= 0
+    time.sleep(1)
 '''
 
 class worker:
     def __init__(self):
-        self.inp, self.mem, self.pre = 0, 0, 0
+        self.inp, self.mem, self.pre, self.act = 0, 0, 0, 0
         self.votearray = []
 
     def __repr__(self):
-        return f"inp:{bin(self.inp)[:1:-1]}\nmem:{bin(self.mem)[:1:-1]}\npre:{bin(self.pre)[:1:-1]}"
+        return f"inp:{bin(self.inp)[:1:-1]}\nmem:{bin(self.mem)[:1:-1]}\npre:{bin(self.pre)[:1:-1]}\nact:{bin(self.act)[:1:-1]}"
 
     def io(self, files={}, mode='in'):
         self.files = dict()
@@ -72,4 +84,8 @@ class worker:
 
     def run(self):
         self.mem = self.mem | f.comb(self.inp)
+        return self
+    
+    def action(self):
+        self.act = random.getrandbits(4)
         return self

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 '''
-Shold save this test for the last minute
+Should save this test for the last minute
 '''
 import pandas as pd
 from src import IO

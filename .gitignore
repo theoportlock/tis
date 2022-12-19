@@ -415,4 +415,4 @@ TSWLatexianTemp*
 *.lpz
 
 # USER
-experiments/*/results/
+experiments/**/results

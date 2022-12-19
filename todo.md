@@ -1,6 +1,7 @@
 # docs
 remake figure for input memory action plan
 complete project aims in publication docs
+continue work on background
 
 # recuitment
 for portlock lab - work on google colab maybe?

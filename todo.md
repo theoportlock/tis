@@ -43,5 +43,7 @@ final_goal
 #ideas
 Simultaneous equations
 flux
-
 DATASETS FROM openml https://www.openml.org/search?type=data&sort=runs&status=active&id=31
+Need some way of having continuous running in background
+
+

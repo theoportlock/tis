@@ -3,6 +3,7 @@ Start with understanding the schematic
 Need whiteboard and network plotting to create plan
 Input nodes the same as output in structure?
 Only do/recreate whats seen before - random differences can change the output (mutation) - if those  differences increase the chance of survival then there is a higher probablity that that action will be seen
+Three sources of learning, I/I, I/O, and O/O
 
 # Input
 Important to have a way of dealing with time
@@ -27,8 +28,9 @@ Random activation from combination of memory
 Same time conciderations of input
 
 # Process
-1. random output -> input are memorised
-1. 
+1. random output -> input are memorised (I/O)
+1. input combinations are memorised (I/I)
+1. work on predicting the inputs using output and memory
 
 	
 # Performance metric

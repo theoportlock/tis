@@ -4,11 +4,19 @@ import src.functions as f
 import os.path
 import sys
 import random
+import numpy as np
+
 '''
 # for testing
-import src.functions as f; from src.main import worker; self = worker()
-import src.functions as f; from src.main import worker; self = worker(); self.inp=f.bin2int('1101'); self.run(); self.inp=f.bin2int('11')
-#randarray = [np.random.randint(18) for i in range(1000000)]
+import src.functions as f
+from src.main import worker
+self = worker()
+self.inp=f.bin2int('1101')
+self.run()
+self.inp=f.bin2int('11')
+
+
+# another test
 randarray = np.random.shuffle(np.range(10000000))
 self.mem=0
 self.inp = 3
@@ -42,9 +50,9 @@ class worker:
                     of.write(obj.to_bytes((obj.bit_length() + 7) // 8, 'big') or b'\0')
                 return obj
         self.files = dict(files)
-        self.inp = parse(obj=self.inp, mode=mode, filename=self.files.setdefault('inp', 'data/input')
-        self.mem = parse(obj=self.mem, mode=mode, filename=self.files.setdefault('mem', 'data/memory')
-        self.pre = parse(obj=self.pre, mode=mode, filename=self.files.setdefault('pre', 'data/predict')
+        self.inp = parse(obj=self.inp, mode=mode, filename=self.files.setdefault('inp', 'data/input'))
+        self.mem = parse(obj=self.mem, mode=mode, filename=self.files.setdefault('mem', 'data/memory'))
+        self.pre = parse(obj=self.pre, mode=mode, filename=self.files.setdefault('pre', 'data/predict'))
         return self
 
     def predict(self):

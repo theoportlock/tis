@@ -11,9 +11,9 @@ mkdir -p $result_dir
 
 trap "[ ! -e $name ] || rm $name " EXIT
 ln -s experiments/$bname/code/$name . 
-echo "$(date): $name begin"
+#echo "$(date): $name begin"
 
-timeout $timelim python -u $name | tee $result_dir/$result
+#timeout $timelim python -u $name | tee $result_dir/$result
 echo "$(date): $name done"
 
 #timeout $timelim python -c 'print("testing")' > test.txt

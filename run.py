@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from src.main import worker
 import sys
+import subprocess
 # runs either from command line e.g. python run.py 10100010
 # or without arguments from data/input
 
@@ -14,8 +15,14 @@ if __name__ == "__main__":
         print(steve)
         steve.io(mode='out')
     else:
+        '''
         steve.io(mode='in')
         steve.run()
         steve.predict()
         print(steve)
         steve.io(mode='out')
+        '''
+        while True:
+            print(steve)
+            steve.action()
+            subprocess.call(['clear'])

@@ -4,10 +4,19 @@ import src.functions as f
 import os.path
 import sys
 import random
+import numpy as np
+
 '''
-import src.functions as f; from src.main import worker; self = worker()
-import src.functions as f; from src.main import worker; self = worker(); self.inp=f.bin2int('1101'); self.run(); self.inp=f.bin2int('11')
-#randarray = [np.random.randint(18) for i in range(1000000)]
+# for testing
+import src.functions as f
+from src.main import worker
+self = worker()
+self.inp=f.bin2int('1101')
+self.run()
+self.inp=f.bin2int('11')
+
+
+# another test
 randarray = np.random.shuffle(np.range(10000000))
 self.mem=0
 self.inp = 3
@@ -29,7 +38,6 @@ class worker:
         return f"inp:{bin(self.inp)[:1:-1]}\nmem:{bin(self.mem)[:1:-1]}\npre:{bin(self.pre)[:1:-1]}\nact:{bin(self.act)[:1:-1]}"
 
     def io(self, files={}, mode='in'):
-        self.files = dict()
         def parse(obj=0, mode='in', filename=''):
             if mode == "in":
                 if not os.path.isfile(filename):
@@ -40,15 +48,11 @@ class worker:
             elif mode == "out":
                 with open(filename, "wb") as of:
                     of.write(obj.to_bytes((obj.bit_length() + 7) // 8, 'big') or b'\0')
-
+                return obj
         self.files = dict(files)
-        if not self.files:
-            self.files["inp"] = "data/input"
-            self.files["mem"] = "data/memory"
-            self.files["pre"] = "data/predict"
-        self.inp = parse(obj=self.inp, mode=mode, filename=self.files["inp"])
-        self.mem = parse(obj=self.mem, mode=mode, filename=self.files["mem"])
-        self.pre = parse(obj=self.pre, mode=mode, filename=self.files["pre"])
+        self.inp = parse(obj=self.inp, mode=mode, filename=self.files.setdefault('inp', 'data/input'))
+        self.mem = parse(obj=self.mem, mode=mode, filename=self.files.setdefault('mem', 'data/memory'))
+        self.pre = parse(obj=self.pre, mode=mode, filename=self.files.setdefault('pre', 'data/predict'))
         return self
 
     def predict(self):

@@ -46,4 +46,28 @@ Numenta, N\BPBI H.%
 \APACrefbtitle {Home page, Numenta Inc, 2007.} {Home page, numenta inc, 2007.}
 \PrintBackRefs{\CurrentBib}
 
+\bibitem [\protect \citeauthoryear {%
+Pinker%
+}{%
+Pinker%
+}{%
+{\protect \APACyear {2011}}%
+}]{%
+pinker2011better}
+\APACinsertmetastar {%
+pinker2011better}%
+\begin{APACrefauthors}%
+Pinker, S.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2011}.
+\newblock
+\APACrefbtitle {The better angels of our nature: The decline of violence in
+  history and its causes} {The better angels of our nature: The decline of
+  violence in history and its causes}.
+\newblock
+\APACaddressPublisher{}{Penguin uk}.
+\PrintBackRefs{\CurrentBib}
+
 \end{thebibliography}

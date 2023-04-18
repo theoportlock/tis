@@ -99,3 +99,8 @@ Selling the three node model
 
 # Deadlines
 
+# READING
+Why value philosophy?
+"The value of philosophy is, in fact, to be sought largely in its very uncertainty. The man who has no tincture of philosophy goes through life imprisoned in the prejudices derived from common sense, from the habitual beliefs of his age or his nation, and from convictions which have grown up in his mind without the co-operation or consent of his deliberate reason. To such a man the world tends to become definite, finite, obvious; common objects rouse no questions, and unfamiliar possibilities are contemptuously rejected. As soon as we begin to philosophize, on the contrary, we find that even the most everyday things lead to problems to which only very incomplete answers can be given."
+— Bertrand Russell, The Problems of Philosophy (1912), Ch. XV: The Value of Philosophy, p. 141
+

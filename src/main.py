@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
-from src import IO
 import src.functions as f
 import os.path
-import sys
 import random
 import numpy as np
 
@@ -11,10 +9,9 @@ import numpy as np
 import src.functions as f
 from src.main import worker
 self = worker()
-self.inp=f.bin2int('1101')
+self.inp = f.bin2int('1101')
 self.run()
-self.inp=f.bin2int('11')
-
+self.inp = f.bin2int('11')
 
 # another test
 randarray = np.random.shuffle(np.range(10000000))

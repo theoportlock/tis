@@ -22,12 +22,10 @@ while True:
     ### Produce random input
     bininp = "".join(str(random.choice(testcase)) for i in range(length))
     inp = int(bininp[::-1], 2)
-
     ### Give input to worker, predict, and run
     steve.inp = inp
     steve.predict()
     steve.run()
-
     ### Collect results from worker
     pre = steve.pre
     lstinp = f.uncomb(inp)

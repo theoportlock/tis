@@ -4,6 +4,7 @@ import sys
 import subprocess
 # runs either from command line e.g. python run.py 10100010
 # or without arguments from data/input
+# Need a way to run in realtime
 
 if __name__ == "__main__":
     steve = worker()

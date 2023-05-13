@@ -8,6 +8,7 @@ external preprocessing algorythms. Conversely, the reverse process of input comp
 '''
 import unittest
 import os
+import pandas as pd
 from src import IO
 from src import functions as f
 from src.main import worker

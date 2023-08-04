@@ -48,6 +48,7 @@ final
 Simultaneous equations
 DATASETS FROM openml https://www.openml.org/search?type=data&sort=runs&status=active&id=31
 Need some way of having continuous running and monitoring dashboard
+
 # TODO
 Start with understanding the schematic
 Need whiteboard and network plotting to create plan
@@ -104,3 +105,29 @@ Why value philosophy?
 "The value of philosophy is, in fact, to be sought largely in its very uncertainty. The man who has no tincture of philosophy goes through life imprisoned in the prejudices derived from common sense, from the habitual beliefs of his age or his nation, and from convictions which have grown up in his mind without the co-operation or consent of his deliberate reason. To such a man the world tends to become definite, finite, obvious; common objects rouse no questions, and unfamiliar possibilities are contemptuously rejected. As soon as we begin to philosophize, on the contrary, we find that even the most everyday things lead to problems to which only very incomplete answers can be given."
 — Bertrand Russell, The Problems of Philosophy (1912), Ch. XV: The Value of Philosophy, p. 141
 
+# Application of Upgrade framework - create scenario to test
+NOTATION XI/OY , X = node, Y = time
+Attempt to denoise the world
+
+SCENARIO ONE
+Andy is in a mathematics class. The teacher asks him: 'what is 1+1?' . [ 1i1 ]
+Andy answers the question correctly by chance: '2' . [ 1i1 + 1o2 ]
+The teacher achnowledges the correct answer: 'Correct' . [ 1i1 + 1o2 + 2i3 ] 
+- Somebody has to answer correctly for the determination of correctness to be made (2i3)
+
+SCENARIO ONE REDO
+Andy's friend Ben answers correctly 
+- There needs to be recognition that Ben's actions can be replicated by Andy
+
+SCENARIO ONE REDO REDO
+Andy's friend Ben says the word '2' . [ i4 ]
+Ben says the same word by chance: '2' . [ o1 + i4 ]
+
+SCENARIO ONE REDO REDO REDO final
+Ben says the word '2'
+Ben recognises the input: '2'
+Andy's friend Ben says the word '2'
+Ben recognises the same word '2'
+The teacher asks Ben: 'what is 1+1?'
+Ben answers the question correctly by chance: '2'
+The teacher achnowledges the correct answer: 'Correct'

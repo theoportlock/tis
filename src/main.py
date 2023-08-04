@@ -12,18 +12,6 @@ self = worker()
 self.inp = f.bin2int('1101')
 self.run()
 self.inp = f.bin2int('11')
-
-# another test
-randarray = np.random.shuffle(np.range(10000000))
-self.mem=0
-self.inp = 3
-while True:
-    self.run()
-    self.act = randarray[self.mem]
-    self.inp = self.act
-    self
-    self.mem= 0
-    time.sleep(1)
 '''
 
 class worker:
@@ -53,6 +41,40 @@ class worker:
         return self
 
     def predict(self):
+        # Filter the memory array by different resolutions of the input 
+        # Search through the non-activated input nodes
+        if self.mem == 0 or self.inp == 0:
+            self.pre = 0
+            return self
+
+        # invert the input
+        Ih = "".join('1' if x == '0' else '0' for x in f.int2bin(self.inp))
+
+        # extend the inversion to match max bitlength of comb
+        #import math / mmax = len(f.int2bin(math.floor(math.log(self.mem, 2))))
+        mmax = len(f.int2bin(f.uncomb(self.mem)[-1]))
+        Ih += ('1'*(mmax - len(Ih)))
+        Ih = f.bin2int(Ih)
+        I = self.inp
+
+        # find difference between the memory and the prediction
+        matches = f.paircomb(Ih, I) & self.mem
+        if not matches:
+            self.pre = 0
+            return self
+        converted = f.uncomb(matches)
+        converted_filtered = [f.int2bin(i - (self.inp & i)) for i in converted]
+        converted_int = [[int(j) for j in list(i)] for i in converted_filtered]
+        max_length = max((len(i) for i in converted_int))
+        for i in converted_int:
+            i.extend([0] * (max_length - len(i)))
+        votearray = [sum(i) for i in list(zip(*converted_int))]
+        norm_votearray = [float(i)/max(votearray) for i in votearray]
+        self.votearray = votearray
+        self.pre = f.bin2int("".join([str(round(i)) for i in norm_votearray]))
+
+    def newpredict(self):
+        # work on this
         if self.mem == 0 or self.inp == 0:
             self.pre = 0
             return self

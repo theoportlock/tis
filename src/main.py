@@ -6,6 +6,7 @@ import src.functions as f
 
 '''
 # for testing
+from src.main import worker
 self = worker()
 self.inp = f.bin2int('1101')
 self.run()

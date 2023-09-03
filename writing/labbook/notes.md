@@ -123,7 +123,7 @@ SCENARIO ONE REDO REDO
 Andy's friend Ben says the word '2' . [ i4 ]
 Ben says the same word by chance: '2' . [ o1 + i4 ]
 
-SCENARIO ONE REDO REDO REDO final
+SCENARIO ONE REDO REDO REDO
 Ben says the word '2'
 Ben recognises the input: '2'
 Andy's friend Ben says the word '2'
@@ -131,3 +131,13 @@ Ben recognises the same word '2'
 The teacher asks Ben: 'what is 1+1?'
 Ben answers the question correctly by chance: '2'
 The teacher achnowledges the correct answer: 'Correct'
+
+SCENARIO ONE REDO REDO REDO REDO
+Ben says the word '2'
+Andy recognises the input: '2'
+Andy says the word '2'
+Andy recognises the connection between what he says and what Ben says
+The teacher asks Ben: 'what is 1+1?'
+Ben answers the question correctly: '2'
+The teacher achnowledges the correct answer: 'Correct'
+Andy recognises the connection between ben's '2' (and '2' in general) and the teachers 'Correct' subsequently

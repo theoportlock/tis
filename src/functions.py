@@ -40,6 +40,6 @@ def paircomb(int1, int2):
 def newpaircomb(int1, int2):
     return int1*int2*2
 
-a = np.random.randint(1, 24, size=(10, 2))
-for i in a:
-    print(paircomb(int(i[0]), int(i[1])), newpaircomb(int(i[0]), int(i[1])))
+#a = np.random.randint(1, 24, size=(10, 2))
+#for i in a:
+    #print(paircomb(int(i[0]), int(i[1])), newpaircomb(int(i[0]), int(i[1])))

@@ -1,13 +1,11 @@
 #!/usr/bin/env python3
-import src.functions as f
+import numpy as np
 import os.path
 import random
-import numpy as np
+import src.functions as f
 
 '''
 # for testing
-import src.functions as f
-from src.main import worker
 self = worker()
 self.inp = f.bin2int('1101')
 self.run()

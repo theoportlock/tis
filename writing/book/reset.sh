@@ -1,3 +1,4 @@
-mv the_upgrade.tex asdf &&
-rm the_upgrade* &&
-mv asdf the_upgrade.tex
+cp main.tex /tmp &&
+cp main.tex backup.tex &&
+rm main.* &&
+mv backup.tex main.tex

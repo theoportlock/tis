@@ -1,0 +1,369 @@
+% For styling
+\documentclass{book}
+\setlength\parindent{0pt}
+\setlength{\parskip}{\baselineskip}
+\usepackage[hidelinks]{hyperref}
+\usepackage{authblk}
+\usepackage{graphicx}
+\usepackage{a4wide}
+
+% For pandas dataframe
+\usepackage{booktabs}
+\usepackage{longtable}
+
+% For referencing
+%\let\cite\shortcite
+%\bibliographystyle{apacite}
+%\bibliographystyle{plain}
+\usepackage[super]{natbib}
+\usepackage{hyperref}
+\bibliographystyle{unsrtnat}
+
+% For glossaries
+\usepackage[nonumberlist]{glossaries}
+\makeglossaries
+\newacronym{SHAP}{SHAP}{SHapley Additive exPlanations}
+\newacronym{MAM}{MAM}{Moderate Acute Malnutrition}
+\newacronym{EC}{EC}{Expressive Communication}
+\newacronym{EEG}{EEG}{Electroencephalogram}
+\newacronym{AUCROC}{AUCROC}{Area Under the Curve}
+\newacronym{LMIC}{LMIC}{low- and middle- income countries}
+\newacronym{MWU}{MWU}{Mann-Whitney U test}
+\newacronym{WLZ/WHZ}{WLZ/WHZ}{weight-for-length/height}
+\newacronym{PSD}{PSD}{power spectral density}
+\newacronym{BBB}{BBB}{Blood Brain Barrier}
+\newacronym{MUAC}{MUAC}{Mid-upper arm circumference}
+\newacronym{PCoA}{PCoA}{Principal Coordinates Analysis}
+\newacronym{PERMANOVA}{PERMANOVA}{permutational multivariate analysis of variance}
+\newacronym{FDR}{FDR}{False Discovery Rate}
+\newacronym{HC}{HC}{Head Circumference}
+\newacronym{SCFA}{SCFA}{Short Chain Fatty Acid}
+
+% For drafts
+\usepackage{setspace}
+\doublespacing
+\usepackage{lineno}
+\linenumbers
+% For captions at end of document
+%\usepackage{figcaps}
+
+\title{A Combinatorics Approach to Pattern Recognition of Bitarray Datastreams}
+\author{Theo Portlock}
+
+\begin{document}
+\frontmatter
+\maketitle
+
+\chapter{Abstract}
+In our lives, we try to make decisions that increase the possiblity of moral outcomes.
+We judge others by their moral objectives and their adherance to them.
+Identifying, understanding, and mitigating the flaws of human thought process and decision making is essential for human progress.
+Despite much progress made in the field of artificial intelligence, a tool that makes better, more informed moral decisions than a human has not been developed and is the aim of this study.
+A novel approach that involves the field of combinatorics to bitarray datastreams with a likeness to the neuronal communication in the brain was developed to achieve these ends.
+The possibility of succeeding is incalcuable but increases with effort, time, and expertise.
+However, if good progress towards these aims are made, the consequences will pave the way for the future of a more moral society.
+
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{Table of Contents}
+\tableofcontents
+
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{List of Figures}
+\listoffigures
+
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{List of Tables}
+\listoftables
+
+\mainmatter
+\chapter{Introduction}
+\section{Morality}
+Morality is the principles that define right and wrong actions.
+A moral agent acts according to a moral system.
+Those moral systems can contain moral subsytems that they may chose or not.
+In a moral system, an event is considered morally good if its consequences increase the probability of a moral end.
+% Define choice
+
+\subsection{Moral origins}
+Moral systems can be descibed as natural or non-natural in origin.
+Natural morals are those that are installed without observation.
+A proportion of all moral agents will act randomly.
+Actions that are observed implies that those actions did not result in the death of the other individual.
+This filter ensures that random actions that result in death are not observed and are therefore not continued.
+Non-natural morals are those that are installed from observation.
+
+\subsection{Moral relationships - Interaction between two moral systems}
+Moral ends vary between individuals.
+The morality of others and their moral compatibility can be only be predicted from a record of past actions.
+When individual moral agents interact, one of three possible interactions can be observed.
+Firstly, a Rejective interaction manifests as an assumption that each other's actions are bad (-/-). 
+Secondly, an Assymetric interaction is a consequence of the willingness of only one moral agent to encourage the others pursuit of their respective moral systemi (+/-).
+Lastly, an Acceptive interaction is the understanding that the ends described by a moral system converges to the point that their continued actions weighted by their estimated probability is similar to those actions taken by the moral system of another individual (+/+).
+% interaction between two moral systems in the body - natrualsm vs new morals - belief-behavious gap or value action gap
+% the measurement of morality - how to convince others
+% how do we pick our morals
+% moral interactions are between moral agents based on the number of Acceptive interactions
+% moral appearance vs intrinsic moral feeling - can only judge others based on their moral appearance
+
+\subsection{Moral consensus - Majority moral opinion}
+An estimation of common "good" is essential for collective progress.
+The search for this consensus is done at a personal or a collective level when we vote, poll, or protest. 
+An estimation of common "good" is also necessary for collective arbitration of an action; a field referred to as descriptive or comparative ethics.
+Once a consensus is established, the application of the golden rule, the principle of treating others as you wish to be treated, forms the basic principles of justice and social contract.
+Communication of intention can often be reciprocal, that is to say one individual has and understanding of the others understanding of your understanding (and so on).
+An understanding of the consequences of breaking this rule encourages the enforcement of a social contract.
+The lesser the amount of knowledge surrounding subject matter, the greater the room for reasonable disagreement. 
+Factual consensus has no claim to moral authority.
+
+\subsection{Moral evolution - How morality changes over time}
+Consensus morality changes over time.
+Although opinions of an action can be changed by a greater understanding of probabilities of consequences that arise after the action, morals are unaffected by facts.
+Moral re-evaluation is also possible through the revelation of inconsistencies.
+The cause of this can be due to incomplete data relating to a moral question or cognitive dissonance.
+% SHOULD MAKE THIS A PART OF THE MORAL ORIGINS or remove the word evolution from previous section
+% A couple of case studies (slavery, womens/gay rights etc.)
+% Should new facts change moral opinion?
+% As in the scientific field, conjecture and refutation can be used to shift majority moral opinion.
+% Judgement of people from different timepoints
+% time dependant moral graphs
+% axiom pca plot with arrow - vector plot
+% the history of human morality
+
+\section{The state of current majority moral opinion}
+Although the secularisation of western countries and adoption of enlightenment ideals is often considered a loss of moral congruency, the opposite is most likely as a consequence of interreligious moral alignment.
+Based on polling data, core moral principles include:
+% Define progress in terms of morality
+
+\subsection{How is society improving?}
+With respect to the current moral consensus, there has been significant moral progress \cite{pinker2011better}.
+
+\subsection{How is society deteriorating?}
+% Talk about media and public perception
+% List areas that are in decline and tie with how 
+% List three specific areas with their causes rooted in natural morality (7 deadly sins)
+% maybe diet, climate change, and 
+% lack of consensus, increasing variance around the mean morality
+
+\section{Fallibilities and limitations of human decision making}
+In all humans there is a preinstalled moral operating system referred to as natural morality.
+This system has evolved to promote reproduction and survival.
+Consensus morality today is different from natural morality
+In order to supress these naturalistic urges and reverse these forms of societal deterioration, it is important to look at the origins.
+The pursuit of overcoming these urges is one which we should all share \cite{nietzsche1968will}.
+
+\subsection{Bias and Discrimination, Misinformation, and Information deficit}
+
+\subsection{The scale of human computation}
+With the advancements in electronic data storage, the availability of data brings with it the potential for more accurate predictive tools than any point previously.
+However, the current restraints of human computational load limits the rate at which these tools can be utilised.
+
+\section{Alternative decision making algorithms}
+Computation makes decisions
+Currently, there has been no success in the construction of an artificial moral agent that mitigates the real issues in human moral decision making process.
+% the case for alternate tools for moral decision making
+
+\subsection{Deep learning}
+
+\subsection{HTM}
+Numenta \cite{numentahome}, alpha go, etc
+
+\subsection{How to align intelligent systems with consensus moral beliefs}
+As with humans, if an agent has greater intelligence then there is a greater importance that the agent has a moral system that aligns with the core values that supports the current majority moral opinion.
+Transparency of decision making process is cruicial for the public arbitration of artificial decision making algorithms>
+
+\section{AI safety and responsibility}
+% The "off button" problem
+% The paperclip problem
+% Also called the stamp maker problem
+% the assurance of alignment of the upgrade with consensus core moral beliefs.
+% an appeal to the upgrade for aligning with the preferences of peoples moral systems
+
+\section{Project aims}
+Current attempts have fallen short at achieving these ends and resulted in hyperspecific reward seeking behaviour.
+The aim of this study is to leverage the advancements of computing to create a system that will make more moral choices than those made by a human.
+Separate from traditional neural network architectures, Hirachical Temporal Memory (HTM) is a technique developed by Numenta that more closely resembles the connections between axons in the brain.
+In this study, the guiding principles of HTM combined with a novel system for self validation will be designed to evaluate \emph{ab initio} learning of a new machine learning model.
+Python will be used principally for development, testing, and validation.
+% factors that affect this probability to succeed
+% passion
+% time
+% expertise
+% manpower
+% justify the writing of this document 
+% Probablilty machines
+% How to convince other people that this is a good idea
+% How to filter those people to those most suitable
+% Issues with current ML techniques: Missing values (or missing features) can result in biases. Those biases are mitigated by imputation. Using a model to predict that missing feature may be an interesting solution. 
+% how do humands use tools - making tool work
+% ORder theory, Abstract algebra, category theory and lattices
+
+\chapter{Input}
+\section{Sources of data}
+% compare to how humans intereperate biological data in brains
+% compare time dependent/independent learning
+% review of datastreams
+
+\section{Binary conversion}
+% talk about the virtues of working with binary data
+
+\section{Sparcity}
+% talk about self controling for levels of sparcity
+
+\section{Tandem data input}
+% ensure that all data streams are consistent - shouldn't be essential
+
+\chapter{Output}
+\section{How are decisions made}
+Decision field theory is a method of mathematically modelling the change in utility when comparing multiple choices \cite{busemeyer2002survey}.
+Currently, machines do not act this way.
+% the need for actions/outputs to be recognised by inputs for memory
+% how do you determine if an action happens beacuse of you or someone else?
+% talk if statements
+% say that the action comes from humans interperating the computational results of machines
+% look into jaccard similarty between binary strings
+% action that is goverened by an asymmetric binary variable (i.e. the value of 1 is more important than 0) - there are way more things that it could not be than it could be - do we lose thee ability to view in negative?
+
+\section{The random-pianist method}
+% Difference between action and prediction
+% compare to neurological likeness
+% talk about the fact that people only do what they have observed before
+% think about free will here (or maybe in the intro?)
+
+\section{The Upgrade workflow}
+% consequences of random actions on input are put into memory
+% input and actions are memorised
+% an input causes a precition - AB -> ABCT
+%% if prediction was different, then action would be different
+% The prediction is used as input to 
+% when you predict an action you activate it
+% How to measure the extent of influence of the new input from the consesequences of the actions of the old input - repeat
+% The contribution of random to the action determines the level of understanding?
+% If random get's it right then
+No delayed combinations
+only reinforce if you see it muliple times
+I = input that does not result from an action
+A = input that results from an action
+R = random input (or choice of previous set: pseudorandom)
+[] = combination expansion
+Both the action and the actions effects should be recognised by combinations
+
+I1, R1        -->    A1[I1, R1]
+I2, A1, R2    -->    A2[I2, A1, R2]
+I3, A2, R3    -->    A3[I3, A2, R3]
+I4, A3, R4    -->    A4[I4, A3, R4]
+
+Aims:
+1: Learn actions from inputs
+2: Decrease entropy from the UEI
+3: Learn inputs from inputs
+
+Whats being combined for each timepoint:
+Random doping
+I1, R1
+I2, R2, A1[I1, R1]
+I3, R3, A2[I2, R2, A1[I1, R1]]
+...
+
+actions included
+I1, A1
+I2, A1(I1)
+I3, A2(I2), A2(A1(I1)), A2(I2 + A1(T1))
+
+W/O random doping
+I1
+I2, A1[I1]
+I3, A2[I2, A1[I1]]
+...
+
+expanded W/O random doping
+I1
+I2, A1(I1)
+I3, A2(I2), A2(A1(I1)), A2(I2 + A1(T1))
+...
+
+translated:
+new input
+the action resulting from the second input
+the action resulting from the action resulting from the first input
+the action resulting from a combination of the second input and the action resulting from the first input 
+
+R1, I1, A1
+
+\chapter{Memory}
+\section{Classical combinatorics}
+% Mathematical introduction to combinatorics
+% set theory
+% visualisation for human understanding
+% how we use it (file systems etc)
+% biological comparisons to brain networks etc
+
+\section{The combination problem of scale}
+% previously attempted solutions in deep learning, the human brain, and folder management
+
+\section{Slicing the combinations array}
+\subsection{Combinations of combinations}
+% Filtering/narrowing combination space with input
+% time adjustment
+% skew/scale adjustment
+% pair finding
+% probabilities of probabilities
+% adjust to include figure of time dependent pattern recognition
+\section{Storage}
+\section{Prediction}
+%^M = a,b,ab,d,ad,bd,abd
+%I = a,b
+%Ih = c,d
+%^C(I) = a,b,ab
+%^C(Ih) = c,d,cd
+%^C(I)+C(Ih) = a,b,ab,c,d,cd
+%^M | (C(I)+C(Ih)) = ad,bd,abd
+%^^C(C(I)+C(Ih)) = [a],[b],[a,b],[ab],[a,ab],[b,ab],[a,b,ab],[c],[c,a],[c,b],[c,a,b],[c,ab],[c,a,ab],[c,b,ab],[c,a,b,ab].... 
+%extract the paired combinations that weren't found in either of the lists
+%^^C(C(I)+C(Ih))-(C(C(I))+C(C(Ih)) = [a,c],[a,d],[a,c,d],[a,cd],[a,c,cd],[a,d,cd],[b,c]...
+%^^C(C(I)+C(Ih))-(C(C(I))+C(C(Ih))-notpairs = [a,c],[a,d],[a,cd],[b,c],[b,d],[b,cd],[ab,c],[ab,d],[ab,cd]
+%^agg.sum(C(C(I)+C(Ih))-(C(C(I))+C(C(Ih))-notpairs) = ac,ad,acd,bc,bd,bcd,abc,abd,abcd
+%^agg.sum(C(C(I)+C(Ih))-(C(C(I))+C(C(Ih))-notpairs) | M = ad,bd,abd
+%^^agg.sum(C(C(I)+C(Ih))-(C(C(I))+C(C(Ih))-notpairs) | M = [a,d],[b,d],[a,b,d]
+%^I = a,b
+
+%Move to factorial based function generation for the slicing of memory arrays - for speed
+%This would mean that loading the full memory array into RAM would be unnecessary, just use function to look for bits in memory binary file
+
+%weighted probability - giving a higher score prediction for a better match
+%the democratic effect
+
+\section{Persistance of activation}
+\section{Edge contraction}
+\section{Delay function}
+\section{Transfer and Storage}
+\section{Memory merging}
+
+\chapter{Runtime}
+\section{Chapter introduction}
+% PRINCIPLE OF MAXIMAL UTILISATION
+% In order to run at a constant operations per unit time, input must be substituted by prediction when it contains fewer active bits and vica versa.
+
+\chapter{Testing}
+\section{Chapter introduction}
+This chapter will focus on some of the more well known problems that face current machine learning models. 
+As opposed to traditional testing nomenclature in software design (unit testing, integration testing), I will refer to all forms of experimentation as testing (such as Turing testing).
+\section{Test 1 - Parrot}
+\section{Test 2 - Mathematics}
+\subsection{True/False}
+\subsection{Addition}
+\subsection{Sine prediction}
+\subsection{Modelling and the stock market}
+\section{Test 3 - Natural language modelling}
+\subsection{Text prediction}
+\section{Test 4 - Sound signal processing}
+\subsection{Voice recognition}
+\section{Test 5 - Image classification}
+\subsection{Breast cancer tissue classification}
+
+\backmatter
+\bibliography{library}
+
+\end{document}

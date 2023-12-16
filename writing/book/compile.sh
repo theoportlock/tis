@@ -1,9 +1,6 @@
 #!/bin/bash
-fullnam="the_upgrade.tex"
-#nam=$(echo $fullnam | cut -f 1 -d  '.')
-nam=$(basename $fullnam .tex)
-pdflatex -shell-escape $fullnam && 
-# makeindex -s $nam.ist -t $nam.glg -o $nam.gls $nam.glo &&
-bibtex $nam && 
-pdflatex -shell-escape $fullnam && 
-pdflatex -shell-escape $fullnam &
+pdflatex -shell-escape main.tex &&
+makeindex -s main.ist -t main.glg -o main.gls main.glo &&
+bibtex main && 
+pdflatex -shell-escape main.tex &&
+pdflatex -shell-escape main.tex

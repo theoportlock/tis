@@ -141,3 +141,7 @@ The teacher asks Ben: 'what is 1+1?'
 Ben answers the question correctly: '2'
 The teacher achnowledges the correct answer: 'Correct'
 Andy recognises the connection between ben's '2' (and '2' in general) and the teachers 'Correct' subsequently
+
+# Can work without but Issues to solve
+Zoom and stretch
+Explosion

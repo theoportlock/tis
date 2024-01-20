@@ -50,7 +50,6 @@ class worker:
         Ih = "".join('1' if x == '0' else '0' for x in f.int2bin(self.inp))
 
         # extend the inversion to match max bitlength of comb
-        #import math / mmax = len(f.int2bin(math.floor(math.log(self.mem, 2))))
         mmax = len(f.int2bin(f.uncomb(self.mem)[-1]))
         Ih += ('1'*(mmax - len(Ih)))
         Ih = f.bin2int(Ih)

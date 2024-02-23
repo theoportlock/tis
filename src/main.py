@@ -110,3 +110,17 @@ class worker:
     def action(self):
         self.act = random.getrandbits(4)
         return self
+
+## Testing area
+'''
+'''
+out = []
+maxim = 5
+for i in range(20):
+    test = 2**maxim  - 1 - i
+    Ih = "".join('1' if x == '0' else '0' for x in f.int2bin(i))
+    f.bin2int(Ih)
+    out.append((i, f.bin2int(Ih), test))
+
+outdf = pd.DataFrame(out)
+sns.scatterplot(data=outdf, x=0, y=1)

@@ -8,7 +8,6 @@ def comb(integer):
     out=[]
     for i in range(1, 2**len(converted)):
         out.append(sum([converted[j-1] for j in uncomb(i)]))
-    #print(sum([2**(i-1) for i in out]))
     return sum([2**(i-1) for i in out])
 
 def uncomb(arr: int) -> list:

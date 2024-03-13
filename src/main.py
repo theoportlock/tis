@@ -50,7 +50,6 @@ class worker:
         Ih = "".join('1' if x == '0' else '0' for x in f.int2bin(self.inp))
 
         # extend the inversion to match max bitlength of comb
-        #import math / mmax = len(f.int2bin(math.floor(math.log(self.mem, 2))))
         mmax = len(f.int2bin(f.uncomb(self.mem)[-1]))
         Ih += ('1'*(mmax - len(Ih)))
         Ih = f.bin2int(Ih)
@@ -111,3 +110,17 @@ class worker:
     def action(self):
         self.act = random.getrandbits(4)
         return self
+
+## Testing area
+'''
+'''
+out = []
+maxim = 5
+for i in range(20):
+    test = 2**maxim  - 1 - i
+    Ih = "".join('1' if x == '0' else '0' for x in f.int2bin(i))
+    f.bin2int(Ih)
+    out.append((i, f.bin2int(Ih), test))
+
+outdf = pd.DataFrame(out)
+sns.scatterplot(data=outdf, x=0, y=1)

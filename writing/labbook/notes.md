@@ -148,6 +148,7 @@ Andy recognises the connection between ben's '2' (and '2' in general) and the te
 # PROBLEMS
 Zoom and stretch
 Explosion
+<<<<<<< HEAD
 ABCD ABXD
 Action
 
@@ -179,6 +180,5 @@ follow up - what if ben asks the question?
 if teacher answers question first then this avoids ben
 maths follows this
 
-
-
-
+# need a new test - determinism
+>>>>>>> 8a4097b6a265fb58bc8d2673c8d76141e8db3da8

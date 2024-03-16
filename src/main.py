@@ -2,6 +2,7 @@
 import numpy as np
 import os.path
 import random
+import pandas as pd
 import src.functions as f
 
 '''
@@ -113,7 +114,6 @@ class worker:
 
 ## Testing area
 '''
-'''
 out = []
 maxim = 5
 for i in range(20):
@@ -124,3 +124,4 @@ for i in range(20):
 
 outdf = pd.DataFrame(out)
 sns.scatterplot(data=outdf, x=0, y=1)
+'''

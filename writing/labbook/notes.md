@@ -146,5 +146,24 @@ Andy recognises the connection between ben's '2' (and '2' in general) and the te
 Zoom and stretch
 Explosion
 
-
 # need a new test - determinism
+SERVANT
+DISCEPLINE
+PURPOSE
+SOLDIER
+DESCIPLE
+HONOUR
+RESPONSIBILITY
+PRIVELAGE
+BURDEN
+MISSION
+CHALLENGE
+BLESSING
+DESTINED
+MEANING
+DIRECTION
+GREATFULL
+
+# thoughts
+integer(decimal) here is only a way of storing the binary
+conversion vs visualisation

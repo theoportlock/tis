@@ -109,6 +109,9 @@ Why value philosophy?
 NOTATION XI/OY , X = node, Y = time
 Attempt to denoise the world
 
+# WHAT DID I SAY?
+
+
 SCENARIO ONE
 Andy is in a mathematics class. The teacher asks him: 'what is 1+1?' . [ 1i1 ]
 Andy answers the question correctly by chance: '2' . [ 1i1 + 1o2 ]
@@ -142,9 +145,12 @@ Ben answers the question correctly: '2'
 The teacher achnowledges the correct answer: 'Correct'
 Andy recognises the connection between ben's '2' (and '2' in general) and the teachers 'Correct' subsequently
 
-# Can work without but Issues to solve
+# PROBLEMS
 Zoom and stretch
 Explosion
+<<<<<<< HEAD
+ABCD ABXD
+Action
 
 # need a new test - determinism
 SERVANT
@@ -167,3 +173,32 @@ GREATFULL
 # thoughts
 integer(decimal) here is only a way of storing the binary
 conversion vs visualisation
+
+ABCD ABXD
+Order, Time
+Forier transform for words to find similarities
+Need to include a counting mechanism:
+C and X should have equal activation/prediction
+
+#summary of scenarios - fill the blanks left by teacher
+#forecasting and parroting and 'whay did i say?' need to be complete before this
+what memories are needed to be made to positively respond to a teacher asking 1+2?
+a = teacher
+b = 1+2
+c = Ben says 3
+x = Andy says 3
+d = correct response
+
+MINIMUM NUMBER OF MEMORIES REQUIRED
+how to make 3 sound (X=C)
+Teacher can make positive response (A=D)
+ben can answer correctly (C=D)
+Teacher asks question (A=B)
+Question has a correect response (B=D)
+Ben responds to teacher (B=C)
+
+follow up - what if ben asks the question?
+if teacher answers question first then this avoids ben
+maths follows this
+
+# need a new test - determinism

@@ -5,28 +5,36 @@ import random
 import pandas as pd
 import functions as f
 
+def memorize(inp, mem):
+    mem = mem | f.comb(inp) # Save to memory
+    return mem
+
 inp, mem, pre, act = 0, 0, 0, 0
 votearray = []
 
 # 1011001 = ABCD
-inp = f.bin2int('1011001')
+inp = f.bin2int('101')
 
-mem = mem | f.comb(inp) # Save to memory
+mem = memorize(inp, mem)
 
 f.int2bin(mem)
+f.int2bin(5 & 1)
+#f.uncomb(mem)
+[f.int2bin(i) for i in f.uncomb(mem)]
 
-f.uncomb(mem)
-f.uncomb(mem)
+inp = f.bin2int('11')
+'''
+for each memory (uncomb mem
+
+
+
+
+
+
 
 
 
 def predict(self):
-    # Filter the memory array by different resolutions of the input 
-    # Search through the non-activated input nodes
-    if mem == 0 or inp == 0:
-        pre = 0
-        return self
-
     # invert the input
     Ih = "".join('1' if x == '0' else '0' for x in f.int2bin(inp))
 

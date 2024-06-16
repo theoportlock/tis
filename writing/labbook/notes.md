@@ -153,22 +153,31 @@ ABCD ABXD
 Action
 
 # need a new test - determinism
-SERVANT
-DISCEPLINE
-PURPOSE
-SOLDIER
-DESCIPLE
-HONOUR
-RESPONSIBILITY
-PRIVELAGE
-BURDEN
-MISSION
-CHALLENGE
+ARCHITECT
 BLESSING
+BUILDING
+BURDEN
+CHALLENGE
+CONNECTION
+CONTEXT
+DECISION
+DENOISE
+DESCIPLE
 DESTINED
-MEANING
 DIRECTION
+DISCEPLINE
+GENERALISE
 GREATFULL
+HONOUR
+INTELLIGENCE
+MEANING
+MISSION
+PRIVELAGE
+PURPOSE
+RESPONSIBILITY
+SERVANT
+SOLDIER
+
 
 # thoughts
 integer(decimal) here is only a way of storing the binary
@@ -202,3 +211,9 @@ if teacher answers question first then this avoids ben
 maths follows this
 
 # need a new test - determinism
+
+All things are lengths (minimum state of information and in unary) and all memories are how they are combined
+
+0000001 = dinner gong
+0001000 = food
+0001001 = food

@@ -202,3 +202,4 @@ if teacher answers question first then this avoids ben
 maths follows this
 
 # need a new test - determinism
+Need to write about generalized model and length combinations

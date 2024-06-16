@@ -111,7 +111,6 @@ Attempt to denoise the world
 
 # WHAT DID I SAY?
 
-
 SCENARIO ONE
 Andy is in a mathematics class. The teacher asks him: 'what is 1+1?' . [ 1i1 ]
 Andy answers the question correctly by chance: '2' . [ 1i1 + 1o2 ]
@@ -189,8 +188,8 @@ Forier transform for words to find similarities
 Need to include a counting mechanism:
 C and X should have equal activation/prediction
 
-#summary of scenarios - fill the blanks left by teacher
-#forecasting and parroting and 'whay did i say?' need to be complete before this
+# summary of scenarios - fill the blanks left by teacher
+# forecasting and parroting and 'whay did i say?' need to be complete before this
 what memories are needed to be made to positively respond to a teacher asking 1+2?
 a = teacher
 b = 1+2
@@ -210,10 +209,11 @@ follow up - what if ben asks the question?
 if teacher answers question first then this avoids ben
 maths follows this
 
-# need a new test - determinism
-
 All things are lengths (minimum state of information and in unary) and all memories are how they are combined
 
 0000001 = dinner gong
 0001000 = food
 0001001 = food
+
+Need to write about generalized model and length combinations
+need a new test - determinism

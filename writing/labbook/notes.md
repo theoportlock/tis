@@ -18,9 +18,9 @@ focus on more basic experiments (bit adding etc)
 figure out how to change slice of combination search during search
 make intracombination priority list for active bit checking
 change all functions to yield
+memory merge, delete, rebase like git
 
 # experiments
-NEED A FLOWCHART OF EXPERIMENTS
 List of checkpoints that the software must acheive before progression
 parrot
     Desc: simple repetition of input using translation through I/O
@@ -34,12 +34,12 @@ addition
 competition
     Desc: find two scores, delete failure and replicate victor 
     Goal: ?
-turing
-    Desc: generic turing test with a conversation
-    Goal: a consensus of people believe that it is also a person?
 sinepredict
     Desc: input is the sin(previous input)
     Goal: predict the next number
+turing
+    Desc: generic turing test with a conversation
+    Goal: a consensus of people believe that it is also a person?
 final
     Desc: replace human decision making
     Goal: metrics of human wellbeing
@@ -47,7 +47,7 @@ final
 # ideas
 Simultaneous equations
 DATASETS FROM openml https://www.openml.org/search?type=data&sort=runs&status=active&id=31
-Need some way of having continuous running and monitoring dashboard
+Need some way of having continuous running and monitoring dashboard possibly with workforce
 
 # TODO
 Start with understanding the schematic
@@ -147,36 +147,8 @@ Andy recognises the connection between ben's '2' (and '2' in general) and the te
 # PROBLEMS
 Zoom and stretch
 Explosion
-<<<<<<< HEAD
 ABCD ABXD
 Action
-
-# need a new test - determinism
-ARCHITECT
-BLESSING
-BUILDING
-BURDEN
-CHALLENGE
-CONNECTION
-CONTEXT
-DECISION
-DENOISE
-DESCIPLE
-DESTINED
-DIRECTION
-DISCEPLINE
-GENERALISE
-GREATFULL
-HONOUR
-INTELLIGENCE
-MEANING
-MISSION
-PRIVELAGE
-PURPOSE
-RESPONSIBILITY
-SERVANT
-SOLDIER
-
 
 # thoughts
 integer(decimal) here is only a way of storing the binary

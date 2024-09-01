@@ -3,7 +3,7 @@ import numpy as np
 import os.path
 import random
 import pandas as pd
-import functions as f
+import utils as f
 
 def memorize(inp, mem):
     mem = mem | f.comb(inp) # Save to memory
@@ -12,17 +12,22 @@ def memorize(inp, mem):
 inp, mem, pre, act = 0, 0, 0, 0
 votearray = []
 
-# 1011001 = ABCD
+# Add 101 to memory
 inp = f.bin2int('101')
-
+f.int2bin(inp)
 mem = memorize(inp, mem)
-
 f.int2bin(mem)
-f.int2bin(5 & 1)
-#f.uncomb(mem)
+f.uncomb(mem)
 [f.int2bin(i) for i in f.uncomb(mem)]
 
-inp = f.bin2int('11')
+# Add 11 to memory
+inp = f.bin2int('1100')
+f.int2bin(inp)
+mem = memorize(inp, mem)
+f.int2bin(mem)
+f.uncomb(mem)
+[f.int2bin(i) for i in f.uncomb(mem)]
+
 '''
 for each memory (uncomb mem
 

@@ -72,38 +72,6 @@ class worker:
         self.votearray = votearray
         self.pre = f.bin2int("".join([str(round(i)) for i in norm_votearray]))
 
-    def newpredict(self):
-        # work on this
-        if self.mem == 0 or self.inp == 0:
-            self.pre = 0
-            return self
-
-        # inversion of input
-        Ih = "".join('1' if x == '0' else '0' for x in f.int2bin(self.inp))
-
-        # extend the inversion to match max bitlength of comb
-        #import math / mmax = len(f.int2bin(math.floor(math.log(self.mem, 2))))
-        mmax = len(f.int2bin(f.uncomb(self.mem)[-1]))
-        Ih += ('1'*(mmax - len(Ih)))
-        Ih = f.bin2int(Ih)
-        I = self.inp
-
-        # find difference between the memory and the prediction
-        matches = f.paircomb(Ih, I) & self.mem
-        if not matches:
-            self.pre = 0
-            return self
-        converted = f.uncomb(matches)
-        converted_filtered = [f.int2bin(i - (self.inp & i)) for i in converted]
-        converted_int = [[int(j) for j in list(i)] for i in converted_filtered]
-        max_length = max((len(i) for i in converted_int))
-        for i in converted_int:
-            i.extend([0] * (max_length - len(i)))
-        votearray = [sum(i) for i in list(zip(*converted_int))]
-        norm_votearray = [float(i)/max(votearray) for i in votearray]
-        self.votearray = votearray
-        self.pre = f.bin2int("".join([str(round(i)) for i in norm_votearray]))
-
     def run(self):
         self.mem = self.mem | f.comb(self.inp)
         return self
@@ -112,16 +80,3 @@ class worker:
         self.act = random.getrandbits(4)
         return self
 
-## Testing area
-'''
-out = []
-maxim = 5
-for i in range(20):
-    test = 2**maxim  - 1 - i
-    Ih = "".join('1' if x == '0' else '0' for x in f.int2bin(i))
-    f.bin2int(Ih)
-    out.append((i, f.bin2int(Ih), test))
-
-outdf = pd.DataFrame(out)
-sns.scatterplot(data=outdf, x=0, y=1)
-'''

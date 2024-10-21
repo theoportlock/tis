@@ -1,7 +1,4 @@
-'''
-import src.functions as f
-load src/functions.py
-'''
+#!/usr/bin/env python
 
 def comb(integer):
     converted = [2**(i-1) for i in uncomb(integer)]
@@ -39,6 +36,10 @@ def paircomb(int1, int2):
 def newpaircomb(int1, int2):
     return int1*int2*2
 
-#a = np.random.randint(1, 24, size=(10, 2))
-#for i in a:
-    #print(paircomb(int(i[0]), int(i[1])), newpaircomb(int(i[0]), int(i[1])))
+def load(path):
+    with open(path, "rb") as of:
+        return int.from_bytes(of.read(), byteorder="big")
+
+def save(obj, path):
+    with open(path, "wb") as of:
+        of.write(obj.to_bytes((obj.bit_length() + 7) // 8, 'big') or b'\0')

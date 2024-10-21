@@ -189,3 +189,5 @@ All things are lengths (minimum state of information and in unary) and all memor
 
 Need to write about generalized model and length combinations
 need a new test - determinism
+
+3 tennets of intelligence are memory, morals, and choice

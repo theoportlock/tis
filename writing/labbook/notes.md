@@ -157,7 +157,6 @@ conversion vs visualisation
 
 ABCD ABXD
 Order, Time
-Forier transform for words to find similarities
 Need to include a counting mechanism:
 C and X should have equal activation/prediction
 
@@ -190,6 +189,7 @@ All things are lengths (minimum state of information and in unary) and all memor
 
 Need to write about generalized model and length combinations
 need a new test - determinism
+Need to use workforce to commit actions
 
 3 tennets of intelligence are memory, morals, and choice
 degradation - Digestion - synthesis

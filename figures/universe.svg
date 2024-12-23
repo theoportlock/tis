@@ -7,7 +7,7 @@
    viewBox="0 0 180 150"
    version="1.1"
    id="svg5"
-   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   inkscape:version="1.4 (e7c3feb100, 2024-10-09)"
    sodipodi:docname="universe.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -24,12 +24,12 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="1.084195"
-     inkscape:cx="274.8583"
-     inkscape:cy="297.45571"
-     inkscape:window-width="1916"
+     inkscape:zoom="1.5332833"
+     inkscape:cx="275.87857"
+     inkscape:cy="214.89832"
+     inkscape:window-width="956"
      inkscape:window-height="1054"
-     inkscape:window-x="0"
+     inkscape:window-x="960"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
      inkscape:current-layer="layer1" />
@@ -44,25 +44,25 @@
        id="path108"
        cx="31.791679"
        cy="75"
-       r="23.685337" />
+       r="12.126892" />
     <circle
        style="fill:#0000ff;stroke:none;stroke-width:0.129"
        id="circle218"
        cx="90"
        cy="75"
-       r="23.685337" />
+       r="12.126892" />
     <circle
        style="fill:#00ff00;stroke:none;stroke-width:0.129"
        id="circle220"
        cx="148.20834"
        cy="106.74998"
-       r="23.685337" />
+       r="12.126892" />
     <circle
        style="fill:#008000;stroke:none;stroke-width:0.129"
        id="circle245"
        cx="148.20834"
        cy="48.541668"
-       r="23.685337" />
+       r="12.126892" />
     <path
        style="fill:#008000;stroke:#000000;stroke-width:0.129"
        d="M 89.999999,75 H 31.791679"
@@ -71,5 +71,49 @@
        style="fill:none;stroke:#000000;stroke-width:0.129"
        d="M 148.20834,48.541667 89.999999,75 148.20834,106.74998"
        id="path305" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.25012px;line-height:normal;font-family:Arial;text-decoration-color:#000000;fill:#000000;stroke-width:0.352777;stroke-linejoin:round;-inkscape-stroke:none;stop-color:#000000"
+       x="82.231575"
+       y="58.783703"
+       id="text1"><tspan
+         sodipodi:role="line"
+         id="tspan1"
+         style="stroke-width:0.352777"
+         x="82.231575"
+         y="58.783703">Present</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.25012px;line-height:normal;font-family:Arial;text-decoration-color:#000000;fill:#000000;stroke-width:0.352777;stroke-linejoin:round;-inkscape-stroke:none;stop-color:#000000"
+       x="141.44875"
+       y="34.451511"
+       id="text2"><tspan
+         sodipodi:role="line"
+         id="tspan2"
+         style="stroke-width:0.352777"
+         x="141.44875"
+         y="34.451511">Action1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.25012px;line-height:normal;font-family:Arial;text-decoration-color:#000000;fill:#000000;stroke-width:0.352777;stroke-linejoin:round;-inkscape-stroke:none;stop-color:#000000"
+       x="141.79387"
+       y="92.431664"
+       id="text3"><tspan
+         sodipodi:role="line"
+         id="tspan3"
+         style="stroke-width:0.352777"
+         x="141.79387"
+         y="92.431664">Action2</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.25012px;line-height:normal;font-family:Arial;text-decoration-color:#000000;fill:#000000;stroke-width:0.352777;stroke-linejoin:round;-inkscape-stroke:none;stop-color:#000000"
+       x="27.198246"
+       y="58.783703"
+       id="text4"><tspan
+         sodipodi:role="line"
+         id="tspan4"
+         style="stroke-width:0.352777"
+         x="27.198246"
+         y="58.783703">Past</tspan></text>
   </g>
 </svg>

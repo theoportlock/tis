@@ -4,7 +4,10 @@ import pandas as pd
 import sys
 import utils as f
 
-def predict(mem):
+def predict(inp, mem):
+'''
+inp, mem = f.load(args.input), f.load(args.memory)
+'''
     # work on this
     if mem == 0 or inp == 0:
         pre = 0
@@ -36,19 +39,18 @@ def predict(mem):
     pre = f.bin2int("".join([str(round(i)) for i in norm_votearray]))
     return sense
 
-def parse_args():
+def parse_args(sysargs):
     parser = argparse.ArgumentParser(description='''
-    memorize.py - a script that updates a memory file based on the contents of an input file
+    predict.py - a script that precits the input/output based on a memory file 
     ''')
-    parser.add_argument('subject')
     parser.add_argument('-i', '--input', default='../data/input',
     help='Path of input file', type=str)
     parser.add_argument('-m', '--memory', default='../data/memory',
     help='Path of memory file to update', type=str)
-    return parser.parse_args()
+    return parser.parse_args(sysargs)
 
 if __name__ == '__main__':
-    args = parse_args(sys.argv)
-    mem = memorize(f.load(args.input), f.load(args.memory))
-    f.save(mem)
-
+    sysargs = sys.argv[1:]
+    args = parse_args(sysargs)
+    inp = predict(f.load(args.input), f.load(args.memory))
+    f.save(mem, args.memory)

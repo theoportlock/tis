@@ -14,6 +14,7 @@ Actions like dna transcription
 activating things its connected to - work out how to do the "slice memory array with input array for action"
 Sort comb by pairs etc
 need to focus on finding similar patterns to those observed and working out predictions of missing data (maybe not even missing and just comparing what you see to what you predict - binning memories)
+you only do what you've seen before
 focus on more basic experiments (bit adding etc)
 figure out how to change slice of combination search during search
 make intracombination priority list for active bit checking
@@ -151,7 +152,7 @@ ABCD ABXD
 Action
 
 # thoughts
-integer(decimal) here is only a way of storing the binary
+integer(decimal) here is only a way of storing the binary - right now it just reads the full ascii
 conversion vs visualisation
 
 ABCD ABXD
@@ -189,3 +190,7 @@ All things are lengths (minimum state of information and in unary) and all memor
 Need to write about generalized model and length combinations
 need a new test - determinism
 Need to use workforce to commit actions
+
+3 tennets of intelligence are memory, morals, and choice
+degradation - Digestion - synthesis
+prediction and action are alike, input and ouput nodes are alike

@@ -194,3 +194,6 @@ Need to use workforce to commit actions
 3 tennets of intelligence are memory, morals, and choice
 degradation - Digestion - synthesis
 prediction and action are alike, input and ouput nodes are alike
+Inference of sensory inputs 
+Find explanations for sensory data
+Balance between priors and sensory inputs

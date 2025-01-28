@@ -197,3 +197,11 @@ prediction and action are alike, input and ouput nodes are alike
 Inference of sensory inputs 
 Find explanations for sensory data
 Balance between priors and sensory inputs
+
+Predict first then memorize
+predict makes new input and memorize makes new memory
+use the old memory plus the new input for forcasting or precasting
+this makes new new input and cycle continues
+    don't you want to update your memory with your new thoughts?
+    having some way in memory to distinguish thoughs from reality
+    apply the same level of forcasting to each thourght  (may not be evolotuionarly advantageous)

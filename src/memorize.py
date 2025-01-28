@@ -14,6 +14,8 @@ def parse_args(sysargs):
     parser.add_argument('-i', '--input', default='../data/input',
     help='Path of input file', type=str)
     parser.add_argument('-m', '--memory', default='../data/memory',
+    help='Path of memory file to read', type=str)
+    parser.add_argument('-o', '--output', default='../data/memory',
     help='Path of memory file to update', type=str)
     return parser.parse_args(sysargs)
 
@@ -21,4 +23,4 @@ if __name__ == '__main__':
     sysargs = sys.argv[1:]
     args = parse_args(sysargs)
     mem = memorize(f.load(args.input), f.load(args.memory))
-    f.save(mem, args.memory)
+    f.save(mem, args.output)

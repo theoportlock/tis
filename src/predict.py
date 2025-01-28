@@ -23,6 +23,7 @@ inp, mem = f.load(args.input), f.load(args.memory)
     I = inp
 
     # find difference between the memory and the prediction
+    # pinch all worlds that match an input world (at any timepoint)
     matches = f.paircomb(Ih, I) & mem
     if not matches:
         pre = 0
@@ -52,5 +53,6 @@ def parse_args(sysargs):
 if __name__ == '__main__':
     sysargs = sys.argv[1:]
     args = parse_args(sysargs)
-    inp = predict(f.load(args.input), f.load(args.memory))
+    inp, mem = f.load(args.input), f.load(args.memory)
+    inp = predict(inp, mem)
     f.save(mem, args.memory)

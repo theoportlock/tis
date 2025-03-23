@@ -205,3 +205,20 @@ this makes new new input and cycle continues
     don't you want to update your memory with your new thoughts?
     having some way in memory to distinguish thoughs from reality
     apply the same level of forcasting to each thourght  (may not be evolotuionarly advantageous)
+
+# Predict
+Digest input
+1001 = 1000 1001 0001 in CS0
+1001 = 1 10000000000 10000000 in CS1
+
+filter(Pinch) the memory array for matches in any of the digests
+1000000001000001
+
+0000100000000100000000000
+1000000000000000100000000 *
+0000000001000001000000000 *
+1000000000000000100000000 *
+
+1000000000000001000100000
+
+

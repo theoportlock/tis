@@ -11,7 +11,7 @@ def parse_args(sysargs):
     read.py - a script that prints the binary of a file
     ''')
     parser.add_argument('-f','--filename',
-    help='File to input', default='../data/input', type=str)
+    help='File to input', default='data/input', type=str)
     return parser.parse_args(sysargs)
 
 if __name__ == '__main__':

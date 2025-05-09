@@ -11,11 +11,11 @@ def parse_args(sysargs):
     parser = argparse.ArgumentParser(description='''
     memorize.py - a script that updates a memory file based on the contents of an input file
     ''')
-    parser.add_argument('-i', '--input', default='../data/input',
+    parser.add_argument('-i', '--input', default='data/input',
     help='Path of input file', type=str)
-    parser.add_argument('-m', '--memory', default='../data/memory',
+    parser.add_argument('-m', '--memory', default='data/memory',
     help='Path of memory file to read', type=str)
-    parser.add_argument('-o', '--output', default='../data/memory',
+    parser.add_argument('-o', '--output', default='data/memory',
     help='Path of memory file to update', type=str)
     return parser.parse_args(sysargs)
 

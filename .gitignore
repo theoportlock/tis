@@ -1,3 +1,7 @@
+# User
+work/
+results/
+
 # vscode
 .vscode/
 
@@ -414,6 +418,3 @@ TSWLatexianTemp*
 
 # Makeindex log files
 *.lpz
-
-# USER
-experiments/**/results

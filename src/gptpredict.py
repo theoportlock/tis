@@ -12,9 +12,9 @@ def parse_args():
     parser = argparse.ArgumentParser(
         description='predict.py - Predict output based on a memory file.'
     )
-    parser.add_argument('-i', '--input', default='../data/input',
+    parser.add_argument('-i', '--input', default='work/input',
                         help='Path to input file', type=str)
-    parser.add_argument('-m', '--memory', default='../data/memory',
+    parser.add_argument('-m', '--memory', default='work/memory',
                         help='Path to memory file', type=str)
     return parser.parse_args()
 

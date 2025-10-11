@@ -49,11 +49,11 @@ def parse_args(sysargs):
     parser = argparse.ArgumentParser(
         description='predict.py - a script that predicts the input/output based on a memory file'
     )
-    parser.add_argument('-i', '--input', default='data/input',
+    parser.add_argument('-i', '--input', default='work/input',
                         help='Path of input file', type=str)
-    parser.add_argument('-m', '--memory', default='data/memory',
+    parser.add_argument('-m', '--memory', default='work/memory',
                         help='Path of memory file to read', type=str)
-    parser.add_argument('-o', '--output', default='data/prediction',
+    parser.add_argument('-o', '--output', default='work/prediction',
                         help='Path of output prediction file', type=str)
     return parser.parse_args(sysargs)
 

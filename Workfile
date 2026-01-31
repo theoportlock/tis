@@ -1,0 +1,130 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d12" for="edge" attr.name="status" attr.type="string"/>
+<key id="d11" for="edge" attr.name="edge_type" attr.type="string"/>
+<key id="d10" for="edge" attr.name="id" attr.type="string"/>
+<key id="d9" for="node" attr.name="error_code" attr.type="string"/>
+<key id="d8" for="node" attr.name="pid" attr.type="string"/>
+<key id="d7" for="node" attr.name="stderr" attr.type="string"/>
+<key id="d6" for="node" attr.name="stdout" attr.type="string"/>
+<key id="d5" for="node" attr.name="command" attr.type="string"/>
+<key id="d4" for="node" attr.name="status" attr.type="string"/>
+<key id="d3" for="node" attr.name="y" attr.type="string"/>
+<key id="d2" for="node" attr.name="x" attr.type="string"/>
+<key id="d1" for="node" attr.name="label" attr.type="string"/>
+<key id="d0" for="graph" attr.name="wrapper" attr.type="string"/>
+<graph edgedefault="directed"><data key="d0">bash -c '. env.sh &amp;&amp; {}'</data>
+<node id="27fbc41c-4a6a-42e0-a6e2-954634f0d0f5">
+  <data key="d1">write.py \
+  -i 10011 \
+  -o work/input</data>
+  <data key="d2">371.0</data>
+  <data key="d3">172.0</data>
+  <data key="d4">ran</data>
+  <data key="d5">bash -c '. env.sh &amp;&amp; write.py \
+  -i 10011 \
+  -o work/input'</data>
+  <data key="d6"></data>
+  <data key="d7"></data>
+  <data key="d8">17026</data>
+  <data key="d9">0</data>
+</node>
+<node id="9a8c2853-0fa9-49b4-9fce-f4c449842c10">
+  <data key="d1">write.py \
+  -i 0 \
+  -o work/memory</data>
+  <data key="d2">558.0</data>
+  <data key="d3">168.0</data>
+  <data key="d4">ran</data>
+  <data key="d5">bash -c '. env.sh &amp;&amp; write.py \
+  -i 0 \
+  -o work/memory'</data>
+  <data key="d6"></data>
+  <data key="d7"></data>
+  <data key="d8">17029</data>
+  <data key="d9">0</data>
+</node>
+<node id="927f4532-07f3-4475-bb10-1274794b54d0">
+  <data key="d1">memor.py \
+  -i work/input \
+  -m work/memory \
+  -o work/memory1</data>
+  <data key="d2">453.0</data>
+  <data key="d3">283.0</data>
+  <data key="d4">ran</data>
+  <data key="d5">bash -c '. env.sh &amp;&amp; memor.py \
+  -i work/input \
+  -m work/memory \
+  -o work/memory1'</data>
+  <data key="d6"></data>
+  <data key="d7"></data>
+  <data key="d8">17102</data>
+  <data key="d9">0</data>
+</node>
+<node id="e0d69180-2a9e-48b5-aa23-37ce012567e1">
+  <data key="d1">read.py \
+  -i work/input</data>
+  <data key="d2">293.0</data>
+  <data key="d3">412.0</data>
+  <data key="d4">ran</data>
+  <data key="d5">bash -c '. env.sh &amp;&amp; read.py \
+  -i work/input'</data>
+  <data key="d6">10011
+</data>
+  <data key="d7"></data>
+  <data key="d8">17156</data>
+  <data key="d9">0</data>
+</node>
+<node id="d7f60bda-99ac-42d0-b62b-beaed72fd76d">
+  <data key="d1">read.py \
+  -i work/memory</data>
+  <data key="d2">471.0</data>
+  <data key="d3">436.0</data>
+  <data key="d4">ran</data>
+  <data key="d5">bash -c '. env.sh &amp;&amp; read.py \
+  -i work/memory'</data>
+  <data key="d6">
+</data>
+  <data key="d7"></data>
+  <data key="d8">17171</data>
+  <data key="d9">0</data>
+</node>
+<node id="b8c1d470-741b-40a0-a4ec-1d9c65af24de">
+  <data key="d1">read.py \
+  -i work/memory1</data>
+  <data key="d2">637.0</data>
+  <data key="d3">417.0</data>
+  <data key="d4">ran</data>
+  <data key="d5">bash -c '. env.sh &amp;&amp; read.py \
+  -i work/memory1'</data>
+  <data key="d6">1000000110000001100000011
+</data>
+  <data key="d7"></data>
+  <data key="d8">17184</data>
+  <data key="d9">0</data>
+</node>
+<edge source="27fbc41c-4a6a-42e0-a6e2-954634f0d0f5" target="927f4532-07f3-4475-bb10-1274794b54d0">
+  <data key="d10">58b2ba6f-fc47-490e-b617-b0e99de999c5</data>
+  <data key="d11">blocking</data>
+  <data key="d12"></data>
+</edge>
+<edge source="9a8c2853-0fa9-49b4-9fce-f4c449842c10" target="927f4532-07f3-4475-bb10-1274794b54d0">
+  <data key="d10">61793cab-c661-4152-8ced-244719f6cb4a</data>
+  <data key="d11">blocking</data>
+  <data key="d12"></data>
+</edge>
+<edge source="927f4532-07f3-4475-bb10-1274794b54d0" target="e0d69180-2a9e-48b5-aa23-37ce012567e1">
+  <data key="d10">78d42abb-b036-4dcd-9393-7f9710eb7219</data>
+  <data key="d11">blocking</data>
+  <data key="d12"></data>
+</edge>
+<edge source="927f4532-07f3-4475-bb10-1274794b54d0" target="d7f60bda-99ac-42d0-b62b-beaed72fd76d">
+  <data key="d10">79661b75-49fb-4258-8700-843a3cc17736</data>
+  <data key="d11">blocking</data>
+  <data key="d12"></data>
+</edge>
+<edge source="927f4532-07f3-4475-bb10-1274794b54d0" target="b8c1d470-741b-40a0-a4ec-1d9c65af24de">
+  <data key="d10">dd59c76d-6e30-477a-8b8b-31f37ef528ce</data>
+  <data key="d11">blocking</data>
+  <data key="d12"></data>
+</edge>
+</graph></graphml>

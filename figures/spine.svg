@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="100mm"
+   height="200mm"
+   viewBox="0 0 100 200"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="spine.svg"
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="0.75490278"
+     inkscape:cx="-302.02565"
+     inkscape:cy="474.89559"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1">
+    <marker
+       style="overflow:visible"
+       id="Triangle"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Triangle arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Triangle-4"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Triangle arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135-8" />
+    </marker>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <circle
+       style="fill:#cccccc;stroke:none;stroke-width:0.141111;stroke-dashoffset:9.31138;stroke-opacity:0.601036"
+       id="path1"
+       cx="49.721191"
+       cy="165.89545"
+       r="5.7044611" />
+    <circle
+       style="fill:#cccccc;stroke:none;stroke-width:0.141111;stroke-dashoffset:9.31138;stroke-opacity:0.601036"
+       id="circle1"
+       cx="49.721191"
+       cy="144.72876"
+       r="5.7044611" />
+    <circle
+       style="fill:#666666;stroke:none;stroke-width:0.141111;stroke-dashoffset:9.31138;stroke-opacity:0.601036"
+       id="circle2"
+       cx="49.721191"
+       cy="123.56209"
+       r="5.7044611" />
+    <circle
+       style="fill:#cccccc;stroke:none;stroke-width:0.141111;stroke-dashoffset:9.31138;stroke-opacity:0.601036"
+       id="circle3"
+       cx="49.721191"
+       cy="102.39542"
+       r="5.7044611" />
+    <circle
+       style="fill:#cccccc;stroke:none;stroke-width:0.141111;stroke-dashoffset:9.31138;stroke-opacity:0.601036"
+       id="circle4"
+       cx="49.721191"
+       cy="81.228767"
+       r="5.7044611" />
+    <circle
+       style="fill:#cccccc;stroke:none;stroke-width:0.141111;stroke-dashoffset:9.31138;stroke-opacity:0.601036"
+       id="circle5"
+       cx="49.721191"
+       cy="60.062103"
+       r="5.7044611" />
+    <circle
+       style="fill:#cccccc;stroke:none;stroke-width:0.141111;stroke-dashoffset:9.31138;stroke-opacity:0.601036"
+       id="circle6"
+       cx="49.721191"
+       cy="38.895432"
+       r="5.7044611" />
+    <path
+       style="fill:#666666;stroke:#000000;stroke-width:0.352778;stroke-dasharray:none;stroke-dashoffset:9.31138;stroke-opacity:1;marker-end:url(#Triangle)"
+       d="m 49.72119,117.85763 v -4.74537"
+       id="path6" />
+    <path
+       style="fill:#666666;stroke:#000000;stroke-width:0.352778;stroke-dasharray:none;stroke-dashoffset:9.31138;stroke-opacity:1;marker-end:url(#Triangle-4)"
+       d="M 61.49209,87.850115 57.904129,84.744463"
+       id="path6-4" />
+    <text
+       xml:space="preserve"
+       style="font-size:7.90862px;font-family:Arial;-inkscape-font-specification:Arial;text-align:end;writing-mode:lr-tb;direction:ltr;text-anchor:end;fill:#666666;stroke:#000000;stroke-width:1.3181;stroke-dasharray:none;stroke-dashoffset:9.31138;stroke-opacity:1"
+       x="59.699394"
+       y="19.150562"
+       id="text6"><tspan
+         sodipodi:role="line"
+         id="tspan6"
+         style="fill:#0e232e;stroke:none;stroke-width:1.3181"
+         x="59.699394"
+         y="19.150562">Spine</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:5.59184px;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#666666;stroke:#000000;stroke-width:0.931969;stroke-dasharray:none;stroke-dashoffset:9.31138;stroke-opacity:1"
+       x="57.466919"
+       y="121.45668"
+       id="text7"><tspan
+         sodipodi:role="line"
+         id="tspan7"
+         style="font-style:italic;text-align:start;text-anchor:start;fill:#0e232e;stroke:none;stroke-width:0.931972"
+         x="57.466919"
+         y="121.45668">Signal</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:italic;text-align:start;text-anchor:start;fill:#0e232e;stroke:none;stroke-width:0.931972"
+         x="57.466919"
+         y="128.46007"
+         id="tspan1">propagation</tspan></text>
+    <circle
+       style="fill:#666666;stroke:none;stroke-width:0.141111;stroke-dashoffset:9.31138;stroke-opacity:0.601036"
+       id="circle7"
+       cx="65.596184"
+       cy="91.812096"
+       r="5.7044611" />
+    <path
+       style="fill:#666666;stroke:#000000;stroke-width:0.352778;stroke-dasharray:none;stroke-dashoffset:9.31138;stroke-opacity:1;marker-end:url(#Triangle-4)"
+       d="m 60.720312,94.772969 -3.587961,3.105652"
+       id="path7" />
+    <text
+       xml:space="preserve"
+       style="font-size:5.59184px;font-family:Arial;-inkscape-font-specification:Arial;text-align:end;writing-mode:lr-tb;direction:ltr;text-anchor:end;fill:#666666;stroke:#000000;stroke-width:0.931969;stroke-dasharray:none;stroke-dashoffset:9.31138;stroke-opacity:1"
+       x="55.812172"
+       y="179.05466"
+       id="text8"><tspan
+         sodipodi:role="line"
+         id="tspan8"
+         style="font-style:italic;fill:#0e232e;stroke:none;stroke-width:0.931972"
+         x="55.812172"
+         y="179.05466">Input</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:5.59184px;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#666666;stroke:#000000;stroke-width:0.931969;stroke-dasharray:none;stroke-dashoffset:9.31138;stroke-opacity:1"
+       x="72.634781"
+       y="90.293388"
+       id="text9"><tspan
+         sodipodi:role="line"
+         id="tspan9"
+         style="font-style:italic;text-align:start;text-anchor:start;fill:#0e232e;stroke:none;stroke-width:0.931972"
+         x="72.634781"
+         y="90.293388">Signal</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:italic;text-align:start;text-anchor:start;fill:#0e232e;stroke:none;stroke-width:0.931972"
+         x="72.634781"
+         y="97.296776"
+         id="tspan10">denoise</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:5.59184px;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#666666;stroke:#000000;stroke-width:0.931969;stroke-dasharray:none;stroke-dashoffset:9.31138;stroke-opacity:1"
+       x="19.337233"
+       y="28.421289"
+       id="text12"><tspan
+         sodipodi:role="line"
+         style="font-style:italic;text-align:start;text-anchor:start;fill:#0e232e;stroke:none;stroke-width:0.931972"
+         x="19.337233"
+         y="28.421289"
+         id="tspan12">Empty spine = recognition</tspan></text>
+  </g>
+</svg>

@@ -1,1 +1,6 @@
-I'm looking to create a pattern recognition algorithm that reads bitarrays (saved as an integer), saves an input array using combinatorics, and predicts a new input string. This predict.py script I want you to write. The way that it works is that it looks for all combinations between 1's in a bitarray, pinches a memorry array in combinations spcae to find all of the previously observed inupts, work out the probabiliyt of each bit within the input bitarray ( a bit similar to the fishers test with the odds and significce that the bit is a 1) and then saves the predicted input bitarray. Here are some other scirpts from the project
+A system that reads, recognises, and writes bitarrays
+data interpreted as an integer but saved as a binary (like DNA)
+predicts new input bits
+commits combinations of bits starting from a base layer and entering combination space
+event driven - pyventus
+Looks for combinations between bits, pinches a memorry array in combinations space to find all of the previously observed inupts, work out the probability of each bit within the input bitarray ( a bit similar to the fishers test with the odds and significce that the bit is a 1) and then saves the predicted input bitarray.

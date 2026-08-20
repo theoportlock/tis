@@ -227,3 +227,4 @@ filter(Pinch) the memory array for matches in any of the digests
 
 1000000000000001000100000
 
+The order of learning

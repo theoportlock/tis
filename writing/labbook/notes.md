@@ -6,6 +6,7 @@ continue work on background
 # recuitment
 for portlock lab - work on google collab maybe?
 need to delegate tasks, best way to be productive
+Best form of recruitment is evidence of success
 
 # tis
 Work out sparcity - fix the bitarrstats
@@ -18,10 +19,10 @@ you only do what you've seen before
 focus on more basic experiments (bit adding etc)
 figure out how to change slice of combination search during search
 make intracombination priority list for active bit checking
-change all functions to yield
+change all functions to yield?
 memory merge, delete, rebase like git
 
-# experiments
+# experiments - navigation to success
 List of checkpoints that the software must acheive before progression
 parrot
     Desc: simple repetition of input using translation through I/O
@@ -48,7 +49,12 @@ final
 # ideas
 Simultaneous equations
 DATASETS FROM openml https://www.openml.org/search?type=data&sort=runs&status=active&id=31
-Need some way of having continuous running and monitoring dashboard possibly with workforce
+Need some way of having continuous running and monitoring - workforce
+The wall of uncertainty and decision paralysis
+Holding the frontier of that wall gives competitive edge
+decision paralysis is when there are too many options/calculations with no clear correct option (sunken cost of computation)
+This could apply to all decisions (if ai in the future makes better decisions than we do then why decide)
+high quality decisions
 
 # TODO
 Start with understanding the schematic
@@ -221,4 +227,4 @@ filter(Pinch) the memory array for matches in any of the digests
 
 1000000000000001000100000
 
-
+The order of learning
